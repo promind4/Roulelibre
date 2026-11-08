@@ -342,4 +342,400 @@ dict(
           ('Que Choisir : le speed bike, un cyclomoteur à pédales (règles L1e)', 'https://www.quechoisir.org/decryptage-velo-electrique-le-speed-bike-un-cyclomoteur-a-pedale-n89126/')],
  lies=['louer-ou-acheter-trottinette-electrique', 'trottinette-electrique-assurance-reglementation', 'trottinette-electrique-ecologique'],
 ),
+
+# ---------------------------------------------------------------------------------------------
+dict(
+ slug='trottinette-electrique-volee-que-faire',
+ categorie='Sécurité',
+ titre_seo='Trottinette électrique volée : les 4 étapes d’urgence',
+ description='Votre trottinette a disparu ? Les 4 réflexes immédiats : blocage à distance dans l’application, plainte, déclaration d’assurance et franchise de remplacement.',
+ h1='Trottinette électrique volée&nbsp;: que faire dans l’heure qui suit&nbsp;?',
+ chapo='C’est la mauvaise surprise que tout le monde redoute en sortant d’un magasin ou de son travail. Votre trottinette n’est plus là où vous l’aviez attachée. Pas de panique : voici les démarches exactes à mener, étape par étape, pour tenter de la localiser et faire jouer vos garanties sans perdre de temps.',
+ image=('regles-trottinette-soir', 'Une trottinette électrique stationnée le soir sur un trottoir urbain bien éclairé'),
+ anim=False,
+ lecture=5,
+ en_bref=[
+  'Verrouillez immédiatement le moteur depuis votre application mobile pour la rendre inutilisable.',
+  'Déposez plainte sous 24 à 48 heures au commissariat ou via la pré-plainte en ligne avec votre numéro de série.',
+  'Déclarez le sinistre à votre assurance ou auprès de votre loueur dans les 2 jours ouvrés.',
+  'Avec l’option vol Augment (2,95 €/mois), vous recevez une nouvelle trottinette contre une franchise de 100 à 150 €.',
+ ],
+ corps='''
+<h2 id="blocage-immediat">1. Bloquer la trottinette à distance dans l’application</h2>
+<p>Dès le constat de la disparition, ouvrez l’application mobile connectée à votre trottinette. Chez Augment, l’application permet de <strong>verrouiller électroniquement le moteur</strong> à distance. Une trottinette verrouillée résiste au roulement et devient totalement inerte : impossible de l’allumer ou de repartir avec l’assistance électrique.</p>
+<p>Cette manipulation empêche le voleur de s’en servir immédiatement et décourage la revente à la sauvette auprès d’un particulier.</p>
+
+<h2 id="depot-plainte">2. Déposer plainte auprès de la police ou de la gendarmerie</h2>
+<p>Le dépôt de plainte est un préalable légal indispensable pour faire jouer n’importe quelle assurance ou garantie. Vous disposez généralement de <strong>24 à 48 heures</strong> après le vol.</p>
+<p>Pour gagner du temps, commencez par remplir une <strong>pré-plainte en ligne</strong> sur le site officiel du ministère de l’Intérieur. Rendez-vous ensuite au commissariat pour signer le procès-verbal. N’oubliez pas de vous munir des éléments suivants :</p>
+<ul class="check">
+ <li>votre <strong>pièce d’identité</strong> ;</li>
+ <li>le <strong>numéro de série</strong> exact du châssis (noté sur votre contrat de location ou votre facture d’achat) ;</li>
+ <li>une photo du véhicule et, si vous l’avez, le numéro d’identification national gravé (marquage Paravol ou Bicycode) ;</li>
+ <li>la facture de l’antivol utilisé et une photo du point fixe où elle était attachée si l’antivol a été sectionné.</li>
+</ul>
+
+<h2 id="declaration-assurance">3. Déclarer le vol à votre assurance ou à votre loueur</h2>
+<p>Vous devez contacter votre assureur dans un délai strict de <strong>2 jours ouvrés</strong> après la découverte du vol en transmettant le récépissé de dépôt de plainte.</p>
+<p>La prise en charge dépend directement de votre contrat :</p>
+<ul class="dash">
+ <li><strong>Si vous avez acheté votre trottinette</strong> : votre assurance responsabilité civile obligatoire ne couvre pas le vol. Seule une garantie spécifique « vol et dommages » (optionnelle, de 5 à 15 €/mois) ou une extension de votre multirisque habitation avec option villégiature interviendra, souvent avec une vétusté importante et une franchise de 100 à 300 €.</li>
+ <li><strong>Si vous louez chez Augment</strong> : avec l’option couverture vol à <strong>2,95 € par mois</strong>, vous êtes protégé en cas de vol avec effraction d’un antivol homologué. Après validation du dossier de plainte, Augment vous expédie une trottinette de remplacement contre le paiement d’une franchise forfaitaire (100 € pour l’Agaru Smart, 150 € pour l’Agaru Ultra).</li>
+ </ul>
+<aside class="tip"><p class="tip__t">Attention à la règle de l’antivol</p><p>Pour que la couverture vol fonctionne, que ce soit chez un assureur ou chez un loueur, votre trottinette doit obligatoirement avoir été attachée à un point fixe à l’aide d’un antivol en U ou pliant homologué (vendu ou certifié par la marque). Un simple câble fin en spirale entraîne presque systématiquement un refus de prise en charge.</p></aside>
+
+<h2 id="eviter-recidive">4. Trois habitudes simples pour éviter que ça ne recommence</h2>
+<p>La majorité des vols ont lieu lors d’un arrêt rapide de moins de dix minutes sans attache à un point fixe. Pour rouler l’esprit tranquille :</p>
+<ol>
+ <li><strong>Ne laissez jamais la trottinette seule dans la rue la nuit.</strong> En rentrant chez vous, pliez-la et rentrez-la dans votre entrée ou votre garage fermé.</li>
+ <li><strong>Attachez toujours le cadre, jamais une roue amovible.</strong> Sur l’Agaru, passez l’antivol en U rigide autour du tube de potence inférieur ou du renfort de châssis, solidement accroché à un arceau en acier scellé dans le béton.</li>
+ <li><strong>Préférez les parkings vélos surveillés ou sécurisés.</strong> Les abris vélos de gare accessibles avec un pass de transport réduisent de plus de 80 % le risque d’effraction.</li>
+</ol>
+''',
+ cta=dict(titre='Roulez sans la peur du vol', texte='Découvrez comment fonctionne la couverture vol à 2,95 €/mois et le remplacement rapide en cas de pépin sur l’Agaru Ultra.',
+          boutons=['<a class="btn btn--primary" href="../comparateur.html#assurance">Comparer les garanties <span class="arr" aria-hidden="true">→</span></a>', lien_partenaire(ULTRA, 'Voir l’Agaru Ultra sur augment.eco')]),
+ faq=[
+  ('Que faire immédiatement après le vol de sa trottinette électrique ?', 'Verrouillez le moteur à distance depuis l’application mobile, remplissez une pré-plainte en ligne avec le numéro de série, puis déclarez le vol à votre assurance ou loueur sous 2 jours ouvrés.'),
+  ('Une assurance trottinette électrique couvre-t-elle toujours le vol ?', 'Non. L’assurance responsabilité civile obligatoire ne couvre que les dégâts causés aux tiers. Pour être indemnisé du véhicule, il faut souscrire une garantie vol spécifique ou une option tranquillité auprès de votre loueur.'),
+  ('Quel est le montant de la franchise vol chez Augment ?', 'Avec l’option vol à 2,95 €/mois, la franchise s’élève à 100 € pour une Agaru Smart et à 150 € pour une Agaru Ultra, sous réserve d’avoir déposé plainte et utilisé un antivol homologué.'),
+  ('Comment retrouver une trottinette électrique volée ?', 'Vérifiez les sites de petites annonces locales (Leboncoin, Facebook Marketplace) avec la marque et le modèle, transmettez les alertes à la police et surveillez les réseaux de revente sans jamais intervenir seul.'),
+ ],
+ sources=[('Démarche de pré-plainte en ligne du ministère de l’Intérieur', 'https://www.pre-plainte-en-ligne.gouv.fr/'),
+          ('Conditions générales et couverture vol : help.augment.eco/fr', 'https://help.augment.eco/fr/articles/6462725-que-faire-en-cas-de-vol'),
+          ('Guide de prévention du vol de deux-roues : FUB (Fédération française des usagers de la bicyclette)', 'https://www.fub.fr/antivols')],
+ lies=['louer-ou-acheter-trottinette-electrique', 'trottinette-electrique-assurance-reglementation', 'agaru-smart-ou-agaru-ultra-difference'],
+),
+# ---------------------------------------------------------------------------------------------
+dict(
+ slug='rouler-sous-la-pluie-trottinette-electrique',
+ categorie='Pratique',
+ titre_seo='Rouler sous la pluie en trottinette : étanchéité IPX5 et conseils',
+ description='Peut-on rouler sous la pluie en trottinette électrique ? Comprendre l’indice IPX5, éviter les glissades, freiner court et bien sécher votre engin.',
+ h1='Rouler sous la pluie en trottinette électrique&nbsp;: ce qui est permis, ce qui est risqué',
+ chapo='L’automne et l’hiver n’épargnent personne : tôt ou tard, vous allez croiser des averses sur votre trajet. Est-ce dangereux pour l’électronique ? Vos pneus tiennent-ils la route ? Voici les règles indispensables pour rouler en toute sécurité sans abîmer votre matériel.',
+ image=('art-regles-piste', 'Une piste cyclable mouillée bordée de pavés par temps de pluie automnale'),
+ anim=False,
+ lecture=6,
+ en_bref=[
+  'L’indice IPX5 (Agaru) résiste très bien aux jets d’eau et aux fortes averses, mais interdit formellement l’immersion dans les flaques profondes.',
+  'Sur sol mouillé, la distance de freinage est multipliée par deux : anticipez et utilisez le frein arrière avant le frein avant.',
+  'Les pneus gonflables 10 pouces absorbent l’eau ; les pneus pleins sans air sont de véritables patinoires sur bandes blanches.',
+  'En arrivant, essuyez le châssis avec un chiffon sec et ne branchez jamais le chargeur sur un connecteur humide.',
+ ],
+ corps='''
+<h2 id="indice-ipx5">Que signifie l’étanchéité IPX5&nbsp;?</h2>
+<p>Toutes les trottinettes électriques ne sont pas égales face à l’eau. Beaucoup de modèles d’entrée de gamme n’affichent qu’une certification IPX4 (résistance aux éclaboussures légères). L’Agaru d’Augment bénéficie d’un indice <strong>IPX5</strong> sur l’ensemble de sa structure.</p>
+<p>Concrètement :</p>
+<ul class="check">
+ <li><strong>Ce qui est couvert :</strong> rouler sous une pluie battante continue, les projections d’eau soulevées par la roue avant et le nettoyage au jet d’eau basse pression sans solvant.</li>
+ <li><strong>Ce qui est interdit :</strong> plonger la trottinette dans une flaque dont le niveau dépasse le bas du plateau, l’immersion totale ou l’utilisation d’un nettoyeur haute pression (Kärcher) qui forcerait les joints des roulements de roue.</li>
+ </ul>
+<p>La batterie de l’Agaru étant logée dans le plateau aluminium sous un joint hermétique, elle ne craint pas l’eau ruisselante du dessus. Mais traverser une flaque de 10 centimètres de profondeur reste le meilleur moyen d’endommager le contrôleur moteur.</p>
+
+<h2 id="adherence-freinage">Adhérence et freinage : adapter sa conduite</h2>
+<p>Sur route mouillée, le coefficient d’adhérence du bitume chute de plus de 40 %. À 25 km/h, votre distance d’arrêt passe d’environ 3,5 mètres sur sol sec à <strong>plus de 6 mètres</strong> sur sol détrempé.</p>
+<p>Deux pièges urbains provoquent 9 chutes sur 10 sous la pluie :</p>
+<ol>
+ <li><strong>Le marquage au sol et les plaques d’égout :</strong> les bandes blanches piétonnes, les résines vertes cyclables et les plaques en fonte deviennent de vraies patinoires au contact de l’eau. Traversez-les toujours en ligne droite, sans freiner ni tourner le guidon.</li>
+ <li><strong>Les feuilles mortes mouillées :</strong> elles créent un tapis glissant imperceptible qui bloque la direction au moindre virage appuyé.</li>
+</ol>
+<p>Côté freinage, le système de l’Agaru combine un <strong>frein à disque mécanique arrière</strong> et un <strong>frein moteur eABS avant</strong>. Sous la pluie, dosez d’abord la poignée pour engager le frein arrière et asseoir le véhicule, puis complétez doucement avec l’avant pour ne pas bloquer la roue directrice.</p>
+
+<figure class="art-fig">
+ <img src="../img/conseils/guide-frein-arriere.webp" srcset="../img/conseils/guide-frein-arriere-800.webp 800w, ../img/conseils/guide-frein-arriere.webp 1536w" sizes="(max-width: 760px) 92vw, 720px" width="1536" height="1024" alt="Gros plan sur le disque de frein mécanique arrière et le pneu 10 pouces d’une trottinette électrique" loading="lazy" decoding="async">
+ <figcaption>Le frein à disque mécanique arrière garantit un freinage progressif et puissant, même sous la pluie.</figcaption>
+</figure>
+
+<h2 id="pression-pneus">Pneus à air vs pneus pleins : la différence vitale</h2>
+<p>L’Agaru Smart et l’Agaru Ultra sont équipées de <strong>pneus de 10 × 2,5 pouces avec chambre à air</strong>. C’est un choix technique décisif pour l’hiver : la gomme souple et la déformation naturelle de l’air épousent les micro-aspérités de la route et évacuent l’eau grâce aux rainures.</p>
+<p>À l’inverse, les trottinettes à pneus pleins en gomme rigide (souvent vantées pour ne jamais crever) n’ont aucune adhérence sur chaussée humide : la surface de contact est minuscule et le pneu glisse au moindre freinage d’urgence.</p>
+<aside class="tip"><p class="tip__t">L’astuce pression pour l’hiver</p><p>Sur sol sec, la pression recommandée est de 3,5 bars (50 PSI). En période de pluies régulières ou sur chaussée grasse, baisser la pression à <strong>3,1 ou 3,2 bars</strong> élargit la bande de roulement de 15 % et améliore considérablement le grip sans risquer de pincer la chambre à air.</p></aside>
+
+<h2 id="entretien-retour">Que faire en arrivant chez soi&nbsp;?</h2>
+<ul class="dash">
+ <li><strong>Passez un coup de microfibre sec</strong> sur l’écran LED, les poignées et le plateau pour retirer l’eau résiduelle et le sel de déneigement en hiver.</li>
+ <li><strong>Vérifiez le cache en caoutchouc du port de charge</strong> situé sur le côté du plateau : il doit être parfaitement fermé et hermétique.</li>
+ <li><strong>Attendez au moins 30 minutes avant de brancher le chargeur</strong> si le véhicule était sous une forte pluie, pour laisser toute humidité de surface s’évaporer.</li>
+</ul>
+''',
+ cta=dict(titre='Des trottinettes conçues pour tous les temps', texte='Découvrez les pneus 10 pouces gonflables et l’étanchéité IPX5 de la gamme Agaru dans notre comparatif complet.',
+          boutons=['<a class="btn btn--primary" href="../comparateur.html#securite">Voir les critères de sécurité <span class="arr" aria-hidden="true">→</span></a>', lien_partenaire(ULTRA, 'Fiche technique sur augment.eco')]),
+ faq=[
+  ('Peut-on rouler sous une grosse pluie en trottinette électrique ?', 'Oui, si la trottinette est certifiée au moins IPX5 comme l’Augment Agaru. Elle résiste aux fortes projections d’eau, mais il ne faut jamais plonger le plateau dans des flaques profondes.'),
+  ('Pourquoi la trottinette glisse-t-elle sur les bandes blanches quand il pleut ?', 'La peinture routière et la résine des passages piétons perdent toute rugosité une fois mouillées. Il faut impérativement ralentir avant et traverser ces marquages en ligne droite sans freiner.'),
+  ('Faut-il nettoyer sa trottinette après avoir roulé sous la pluie ?', 'Il est conseillé de passer un chiffon doux pour sécher le châssis et retirer les projections de boue ou de sel de voirie qui pourraient gripper les roulements à long terme.'),
+  ('Peut-on recharger une trottinette mouillée ?', 'Attendez toujours que la prise et le plateau soient totalement secs avant d’insérer l’embout du chargeur 220V, afin d’éviter tout court-circuit.'),
+ ],
+ sources=[('Comprendre les indices de protection IP : Commission Électrotechnique Internationale (IEC 60529)', 'https://www.iec.ch/ip-ratings'),
+          ('Sécurité routière : conseils de conduite pour les engins de déplacement personnel motorisés (EDPM)', 'https://www.securite-routiere.gouv.fr/chacun-son-mode-de-deplacement/dpm-trottinette-electrique'),
+          ('Guide d’entretien et étanchéité : help.augment.eco/fr', 'https://help.augment.eco/fr/articles/6462720-etancheite-et-pluie')],
+ lies=['trottinette-electrique-assurance-reglementation', 'batterie-trottinette-electrique-duree-de-vie', 'agaru-smart-ou-agaru-ultra-difference'],
+),
+# ---------------------------------------------------------------------------------------------
+dict(
+ slug='trottinette-ou-scooter-electrique-choisir',
+ categorie='Comparatif',
+ titre_seo='Trottinette ou scooter électrique : lequel choisir en ville ?',
+ description='Trottinette 25 km/h ou cyclomoteur 45 km/h pliable ? Pistes cyclables, voies rapides, permis, rangement et budget : faites le bon choix pour votre quotidien.',
+ h1='Trottinette ou scooter électrique pliable&nbsp;: quel véhicule pour votre trajet&nbsp;?',
+ chapo='D’un côté, la légèreté de la trottinette électrique qui se faufile sur les pistes cyclables à 25&nbsp;km/h. De l’autre, la puissance d’un cyclomoteur à assise qui roule à 45&nbsp;km/h dans le flux de circulation tout en se pliant pour monter chez vous. Lequel correspond le mieux à votre routine urbaine ?',
+ image=('scooter-360-cour', 'Un scooter électrique pliable 360 et une trottinette électrique garés côte à côte dans une cour parisienne'),
+ anim=False,
+ lecture=7,
+ en_bref=[
+  'Pour les trajets de moins de 6 km en centre-ville, la trottinette est imbattable grâce au réseau cyclable.',
+  'Au-delà de 8 km ou sur des axes périurbains limités à 50 km/h, le scooter 45 km/h fait gagner un temps précieux.',
+  'La trottinette monte partout (20 kg) ; le scooter 360 (36 kg) se roule plus qu’il ne se porte et exige un ascenseur.',
+  'La trottinette se conduit sans permis dès 14 ans ; le cyclomoteur requiert le permis AM (ou permis B), casque moto et carte grise.',
+ ],
+ corps='''
+<h2 id="infrastructure">Pistes cyclables ou chaussée : où allez-vous rouler&nbsp;?</h2>
+<p>C’est la première question à vous poser avant même de regarder les fiches techniques. Les deux véhicules n’ont pas le même statut juridique ni les mêmes droits d’accès à la ville :</p>
+<ul class="check">
+ <li><strong>L’Agaru (trottinette 25 km/h)</strong> est un EDPM. Elle doit obligatoirement emprunter les <strong>pistes cyclables</strong> dès qu’elles existent. C’est un avantage considérable dans les métropoles saturées (Paris, Lyon, Bordeaux, Nantes) : vous roulez à l’écart des voitures, sans bouchons ni feux rouges interminables.</li>
+ <li><strong>L’E-scooter 360 (cyclomoteur 45 km/h)</strong> appartient à la catégorie <strong>L1e</strong>. Il est <strong>interdit sur les pistes cyclables</strong> et sur les trottoirs : vous circulez directement sur la chaussée avec les voitures, bus et motos. À 45 km/h, vous vous insérez sans encombre dans le flot urbain sans vous faire frôler.</li>
+</ul>
+
+<h2 id="distance">La distance quotidienne : le seuil des 8 kilomètres</h2>
+<p>Sur un trajet de 3 à 5 kilomètres (environ 12 à 15 minutes en trottinette), être debout ne pose aucun problème de confort. La trottinette se plie en 3 secondes et vous suit dans votre bureau ou votre café préféré.</p>
+<p>En revanche, dès que votre aller simple atteint <strong>8 à 15 kilomètres</strong>, ou comporte des montées prononcées et des départementales périurbaines, la position assise et la puissance font toute la différence :</p>
+<ul class="dash">
+ <li>Le moteur de <strong>2 140 W</strong> de l’E-scooter 360 gravit n’importe quelle côte à pleine vitesse sans ralentir.</li>
+ <li>La selle rembourrée et les <strong>larges pneus ballons de 10 pouces (120/90-R10)</strong> gomment les nids-de-poule et les pavés là où une trottinette debout transmet les vibrations aux jambes et aux bras.</li>
+ <li>Sur 12 kilomètres, rouler à 45 km/h permet de boucler le trajet en 18 minutes contre 35 minutes sur une trottinette bridée à 25 km/h.</li>
+</ul>
+
+<h2 id="tableau-comparatif">Le comparatif face à face</h2>
+<div class="art-table-wrap">
+<table class="art-table">
+ <caption>Comparatif Agaru Ultra vs Augment E-scooter 360 (données 2026)</caption>
+ <thead><tr><th scope="col">Critère</th><th scope="col">Agaru Ultra</th><th scope="col">E-scooter 360</th></tr></thead>
+ <tbody>
+  <tr><th scope="row">Catégorie légale</th><td>EDPM (trottinette)</td><td>Cyclomoteur L1e (scooter 50cc)</td></tr>
+  <tr><th scope="row">Vitesse maximale</th><td>25 km/h</td><td>45 km/h</td></tr>
+  <tr><th scope="row">Voies autorisées</th><td>Pistes cyclables, voies vertes</td><td>Chaussée uniquement (interdit sur pistes)</td></tr>
+  <tr><th scope="row">Permis requis</th><td>Aucun (dès 14 ans)</td><td>Permis AM ou Permis B (dispense avant 1988)</td></tr>
+  <tr><th scope="row">Plaque &amp; carte grise</th><td>Non</td><td>Oui (immatriculation obligatoire)</td></tr>
+  <tr><th scope="row">Équipement obligatoire</th><td>Gilet rétro la nuit (casque conseillé)</td><td>Casque homologué + gants homologués</td></tr>
+  <tr><th scope="row">Batterie &amp; autonomie</th><td>768 Wh fixe (55 à 70 km)</td><td>1 080 Wh amovible (53 km / 106 km double)</td></tr>
+  <tr><th scope="row">Poids total</th><td>20,7 kg</td><td>36 kg (avec batterie)</td></tr>
+  <tr><th scope="row">Rangement plié</th><td>Sous un bureau, coffre, train</td><td>Entrée, ascenseur (126 × 35 × 118 cm)</td></tr>
+  <tr><th scope="row">Prix à l’achat</th><td>549 €</td><td>1 990 €</td></tr>
+  <tr><th scope="row">Location mensuelle</th><td>Dès 12,95 €/mois (réparations incluses)</td><td>Dès 25,90 €/mois (garantie 2 ans)</td></tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="logistique-maison">La logistique chez soi : ascenseur, marches et recharge</h2>
+<p>C’est souvent le critère décisif qui départage les deux engins :</p>
+<p>Avec ses <strong>20,7 kg</strong>, l’Agaru Ultra peut être montée sur un ou deux étages sans ascenseur, même si cela demande un peu d’effort. Elle se glisse sans encombre dans un placard d’entrée ou sous un lit mezzanine.</p>
+<p>Avec ses <strong>36 kg</strong>, l’E-scooter 360 ne se porte pas dans des escaliers étroits au quotidien. En revanche, son pliage ultra-compact (sa roue arrière pivote sous la selle) lui permet de rentrer dans les ascenseurs parisiens les plus exigus. Et surtout : <strong>sa batterie de 5,2 kg est amovible</strong>. Vous pouvez laisser le châssis dans un local à vélos ou dans le coffre d’une voiture et ne monter que la batterie chez vous pour la recharger en quelques heures sur une prise secteur ordinaire.</p>
+''',
+ cta=dict(titre='Simulez votre véhicule idéal', texte='Comparez en direct les mensualités de location de l’Agaru Ultra et de l’E-scooter 360 selon votre durée d’engagement.',
+          boutons=['<a class="btn btn--primary" href="../comparateur.html">Voir le comparatif complet <span class="arr" aria-hidden="true">→</span></a>', '<a class="btn btn--secondary" href="../configurateur.html">Accéder au simulateur <span class="arr" aria-hidden="true">→</span></a>']),
+ faq=[
+  ('Peut-on rouler sur les pistes cyclables avec un scooter électrique 45 km/h ?', 'Non. Tout véhicule homologué dans la catégorie cyclomoteur L1e (capable d’atteindre 45 km/h) a l’obligation de circuler sur la chaussée et n’a pas le droit d’emprunter les pistes ou bandes cyclables.'),
+  ('Quel est le principal avantage de l’E-scooter 360 par rapport à un scooter classique ?', 'Son châssis pliable breveté et sa batterie amovible : vous pouvez le ranger directement dans votre appartement ou au bureau sans avoir besoin d’un garage fermé ni d’une borne de recharge dans la rue.'),
+  ('La trottinette électrique est-elle plus rapide qu’un scooter en centre-ville ?', 'Sur des distances courtes (moins de 5 km) aux heures de pointe, la trottinette est souvent plus rapide car elle utilise les couloirs cyclables continus et évite les embouteillages de voitures.'),
+  ('Peut-on transporter un passager sur un scooter électrique pliable ?', 'L’E-scooter 360 est un véhicule monoplace homologué pour une seule personne (charge utile maximale de 100 kg), tout comme les trottinettes électriques.'),
+ ],
+ sources=[('Réglementation des cyclomoteurs L1e : Service-Public.fr', 'https://www.service-public.fr/particuliers/vosdroits/F31825'),
+          ('Code de la route : circulation des engins de déplacement personnel motorisés (EDPM)', 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074228/LEGISCTA000039270503/'),
+          ('Fiches comparatives officielles : augment.eco/fr-fr', 'https://augment.eco/fr-fr/')],
+ lies=['scooter-electrique-pliable-45-km-h', 'louer-ou-acheter-trottinette-electrique', 'forfait-mobilites-durables-trottinette-electrique'],
+),
+# ---------------------------------------------------------------------------------------------
+dict(
+ slug='batterie-trottinette-electrique-duree-de-vie',
+ categorie='Technique',
+ titre_seo='Batterie trottinette électrique : durée de vie, froid et entretien',
+ description='Combien de temps dure la batterie d’une trottinette ? L’impact méconnu du froid hivernal, la règle 20-80 % et le coût réel d’un remplacement.',
+ h1='Batterie de trottinette électrique&nbsp;: longévité, pièges de l’hiver et bonnes pratiques',
+ chapo='C’est le cœur de votre engin et l’élément le plus cher à remplacer : la batterie représente près de la moitié de la valeur d’une trottinette électrique. Combien d’années peut-elle réellement tenir ? Pourquoi votre autonomie fond-elle en hiver ? Voici tout ce que vous devez savoir pour la préserver au maximum.',
+ image=('guide-frein-arriere', 'Détail du châssis en aluminium protégeant le bloc batterie intégré sous le plateau'),
+ anim=False,
+ lecture=6,
+ en_bref=[
+  'Une batterie Li-ion de qualité supporte entre 500 et 800 cycles complets, soit 15 000 à 25 000 kilomètres de trajet.',
+  'En dessous de 5 °C, les réactions chimiques ralentissent : vous perdez naturellement 20 à 30 % d’autonomie.',
+  'Ne chargez jamais une batterie encore glacée : laissez-la toujours revenir à température ambiante avant de brancher le câble.',
+  'Pour maximiser la longévité, maintenez la charge entre 20 % et 80 % au quotidien lors de vos trajets de semaine.',
+ ],
+ corps='''
+<h2 id="duree-vie-cycles">Combien de temps dure une batterie de trottinette&nbsp;?</h2>
+<p>Sur les modèles récents comme l’Agaru Smart (499 Wh) ou l’Agaru Ultra (768 Wh), le constructeur utilise des cellules lithium-ion cylindriques de type <strong>21700</strong> de haute densité énergétique. Ces accumulateurs sont donnés pour <strong>500 à 800 cycles de charge complets</strong> avant que leur capacité ne descende en dessous de 80 % de son niveau d’origine.</p>
+<p>Concrètement, sur une Agaru Ultra qui offre environ 50 à 60 kilomètres d’autonomie réelle par charge :</p>
+<ul class="check">
+ <li>500 cycles représentent environ <strong>25 000 kilomètres</strong> au compteur.</li>
+ <li>Pour un utilisateur urbain moyen parcourant 10 kilomètres par jour ouvré (environ 2 200 km par an), la batterie conserve d’excellentes performances pendant <strong>plus de 5 à 7 ans</strong>.</li>
+</ul>
+<p>Ce qui tue prématurément une batterie, ce ne sont pas les kilomètres parcourus, mais les erreurs d’usage : la décharge profonde prolongée et les écarts thermiques extrêmes.</p>
+
+<h2 id="hiver-froid">Pourquoi l’autonomie s’effondre en hiver&nbsp;?</h2>
+<p>Dès que le thermomètre passe sous la barre des 5 °C, vous constatez que votre jauge de batterie descend plus vite que d’habitude. Ce n’est pas une panne : c’est une propriété physique du lithium.</p>
+<p>Le froid augmente la résistance interne de l’électrolyte liquide au sein des cellules. Les ions lithium se déplacent moins vite, la tension chute plus vite sous l’effort du moteur et la batterie délivre moins d’énergie utile. Vous perdez couramment <strong>20 à 30 % d’autonomie réelle</strong> à 0 °C par rapport à un trajet effectué par 20 °C.</p>
+<aside class="tip"><p class="tip__t">La règle d’or de la recharge en hiver</p><p>Ne branchez <strong>JAMAIS</strong> votre trottinette en charge immédiatement après avoir roulé dans le froid si elle est restée dehors. Recharger des cellules lithium à une température inférieure à 0 °C provoque un phénomène irréversible de placage métallique (dépôt de lithium pur sur l’anode) qui détruit la capacité de la batterie et peut causer un court-circuit interne. Laissez-la toujours se réchauffer 1 heure à température ambiante dans votre logement avant de lancer la charge.</p></aside>
+
+<h2 id="regle-20-80">La règle des 20 % - 80 % pour doubler sa durée de vie</h2>
+<p>Les batteries lithium-ion n’ont plus d’effet mémoire (inutile de les vider complètement avant de recharger, c’est même déconseillé). En revanche, elles subissent une forte tension mécanique lorsqu’elles sont pleines à 100 % ou vides à 0 %.</p>
+<ul class="dash">
+ <li><strong>Au quotidien :</strong> si votre trajet ne demande que 15 ou 20 km, vous n’avez pas besoin d’atteindre 100 % à chaque fois. Débrancher vers 80 % ou 90 % divise par trois la dégradation chimique des cellules.</li>
+ <li><strong>Ne laissez pas la trottinette à plat :</strong> si la jauge passe sous 10 %, rechargez dès votre arrivée. Laisser une trottinette déchargée à 0 % pendant plusieurs semaines dans une cave fait tomber les cellules en sous-tension critique : le circuit de sécurité (BMS) bloque alors définitivement la batterie.</li>
+ <li><strong>Stockage prolongé :</strong> si vous n’utilisez pas votre trottinette pendant les vacances d’été ou d’hiver, stockez-la avec un niveau de charge d’environ <strong>50 à 60 %</strong>, dans un endroit tempéré et sec (entre 15 °C et 25 °C).</li>
+</ul>
+
+<h2 id="remplacement-prix">Combien coûte un changement de batterie&nbsp;?</h2>
+<p>Si vous possédez votre trottinette, le remplacement d’un pack complet de 768 Wh hors garantie coûte entre <strong>250 et 350 €</strong>, pièces et main-d’œuvre comprises. C’est souvent à ce moment-là que beaucoup d’acheteurs hésitent à jeter leur engin.</p>
+<p>C’est l’un des atouts centraux de la formule d’abonnement Augment : la batterie fait partie des <strong>composants couverts par le service de réparation</strong>. Si la capacité de votre Agaru Ultra chute de façon anormale ou tombe en panne, le remplacement du bloc ou de la trottinette est entièrement pris en charge sans surcoût.</p>
+''',
+ cta=dict(titre='Ne craignez plus la panne de batterie', texte='Avec le service tout compris d’Augment, l’usure de la batterie et les réparations sont incluses pendant toute la durée de votre location.',
+          boutons=['<a class="btn btn--primary" href="../comparateur.html#service">Découvrir le service Augment <span class="arr" aria-hidden="true">→</span></a>', lien_partenaire(ULTRA, 'Voir l’Agaru Ultra sur augment.eco')]),
+ faq=[
+  ('Peut-on laisser sa trottinette électrique branchée toute la nuit ?', 'Oui, les chargeurs modernes et le boîtier de gestion électronique (BMS) coupent automatiquement le courant une fois la charge complète atteinte. Il reste néanmoins conseillé de débrancher dès que le voyant passe au vert pour éviter les micros-cycles d’entretien.'),
+  ('Pourquoi la trottinette avance-t-elle moins vite quand la batterie est faible ?', 'La tension globale du pack diminue au fur et à mesure de la décharge. Le contrôleur réduit la puissance envoyée au moteur pour protéger les cellules contre la sous-tension.'),
+  ('Est-il possible d’augmenter la capacité de batterie de son Agaru Smart ?', 'Les châssis de l’Agaru Smart (499 Wh) et de l’Agaru Ultra (768 Wh) sont identiques, mais le pack batterie et le contrôleur sont calibrés en usine. Il n’est pas recommandé de modifier la batterie soi-même sous peine d’annuler les garanties et certifications.'),
+  ('Que faire de son ancienne batterie de trottinette ?', 'Les batteries lithium sont des déchets dangereux recyclables à plus de 70 %. Déposez-les gratuitement dans un point de collecte officiel Corepile ou Screlec, en déchetterie ou auprès de votre réparateur.'),
+ ],
+ sources=[('Filière de recyclage des accumulateurs et batteries : Corepile France', 'https://www.corepile.fr/'),
+          ('Batteries lithium-ion : conseils de sécurité et risques thermiques : INRS', 'https://www.inrs.fr/risques/incendie-explosion/batteries-lithium.html'),
+          ('Données techniques batteries Augment : augment.eco/fr-fr/agaru-ultra', 'https://augment.eco/fr-fr/agaru-ultra/')],
+ lies=['agaru-smart-ou-agaru-ultra-difference', 'rouler-sous-la-pluie-trottinette-electrique', 'louer-ou-acheter-trottinette-electrique'],
+),
+# ---------------------------------------------------------------------------------------------
+dict(
+ slug='agaru-smart-ou-agaru-ultra-difference',
+ categorie='Gamme',
+ titre_seo='Agaru Smart ou Agaru Ultra : quelles différences ? Le comparatif',
+ description='Même moteur 500W, même châssis, mais 150 € d’écart : batterie 499 Wh vs 768 Wh, autonomie réelle et formules de location. Quel modèle choisir ?',
+ h1='Agaru Smart ou Agaru Ultra&nbsp;: les 768&nbsp;Wh valent-ils l’écart de prix&nbsp;?',
+ chapo='Au premier coup d’œil, impossible de les distinguer : elles partagent exactement le même design noir mat, les mêmes roues de 10 pouces et le même moteur de 500 W. Pourtant, l’une coûte 399 € et l’autre 549 €, et seule l’Ultra est proposée en location. Voici le comparatif détaillé pour faire le bon choix.',
+ image=('guide-agaru-pneu', 'Détail de la roue avant et de la potence épurée de la gamme trottinette électrique Augment Agaru'),
+ anim=False,
+ lecture=5,
+ en_bref=[
+  'Les deux modèles partagent le même moteur (500 W nominal / 800 W crête, 26 Nm, pentes jusqu’à 23 %).',
+  'Même confort et sécurité : pneus gonflables 10 pouces, frein à disque arrière mécanique et eABS avant.',
+  'La seule vraie différence mécanique : la batterie (499 Wh sur la Smart vs 768 Wh sur l’Ultra).',
+  'L’Agaru Smart s’achète uniquement comptant (ou crédit PayPal) ; l’Agaru Ultra est la seule proposée en abonnement mensuel.',
+ ],
+ corps='''
+<h2 id="points-communs">Ce qui est rigoureusement identique</h2>
+<p>Augment a fait le choix d’une plateforme industrielle unique. Que vous choisissiez la Smart ou l’Ultra, vous bénéficiez exactement des mêmes caractéristiques de châssis et de sécurité :</p>
+<ul class="check">
+ <li><strong>Moteur et couple :</strong> moteur brushless logé dans la roue avant développant <strong>500 W nominaux et 800 W en puissance de crête</strong> avec un couple généreux de 26 Nm, capable de gravir des pentes jusqu’à 23 %.</li>
+ <li><strong>Freinage :</strong> étrier à disque mécanique sur la roue arrière combiné à un frein moteur régénératif électronique (eABS) à l’avant pour un arrêt sécurisant en toute circonstance.</li>
+ <li><strong>Roues et confort :</strong> pneus de 10 × 2,5 pouces avec chambre à air pour absorber les déformations de la chaussée.</li>
+ <li><strong>Équipement urbain :</strong> écran LED central, phare avant, feu stop arrière et clignotants intégrés aux extrémités du guidon.</li>
+ <li><strong>Étanchéité :</strong> certification IPX5 pour rouler sous la pluie sans inquiétude.</li>
+</ul>
+
+<h2 id="differences-cles">Ce qui change : capacité, autonomie et poids</h2>
+<p>L’écart se joue entièrement sous le tapis en silicone du plateau, à l’intérieur du boîtier aluminium étanche :</p>
+<div class="art-table-wrap">
+<table class="art-table">
+ <caption>Différences techniques directes Agaru Smart vs Agaru Ultra</caption>
+ <thead><tr><th scope="col">Caractéristique</th><th scope="col">Agaru Smart</th><th scope="col">Agaru Ultra</th></tr></thead>
+ <tbody>
+  <tr><th scope="row">Capacité batterie</th><td>499 Wh (36 V / 13,8 Ah)</td><td><strong>768 Wh</strong> (36 V / 21,3 Ah)</td></tr>
+  <tr><th scope="row">Autonomie constructeur</th><td>Jusqu’à 50 km</td><td><strong>Jusqu’à 70 km</strong></td></tr>
+  <tr><th scope="row">Autonomie réelle constatée</th><td>30 à 40 km (selon poids et dénivelé)</td><td><strong>50 à 60 km</strong> (grand rayon d’action)</td></tr>
+  <tr><th scope="row">Poids du véhicule</th><td>20,0 kg</td><td>20,7 kg (+700 g pour les cellules en plus)</td></tr>
+  <tr><th scope="row">Temps de charge 0-100 %</th><td>Environ 5 h</td><td>Environ 7 h 30</td></tr>
+  <tr><th scope="row">Prix d’achat comptant</th><td><strong>399 €</strong></td><td>549 € (+150 €)</td></tr>
+  <tr><th scope="row">Disponibilité en abonnement</th><td>Non disponible</td><td><strong>Dès 12,95 €/mois</strong> (réparations incluses)</td></tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="pour-qui-smart">Pourquoi choisir l’Agaru Smart à 399&nbsp;€&nbsp;?</h2>
+<p>L’Agaru Smart est l’un des meilleurs rapports qualité/prix du marché pour un achat direct :</p>
+<ul class="dash">
+ <li>Vous parcourez <strong>moins de 10 à 15 km par jour</strong> (trajet domicile-travail classique de 5 à 7 km aller-retour).</li>
+ <li>Vous pouvez recharger votre trottinette tous les deux ou trois jours sans stress.</li>
+ <li>Vous voulez acheter votre engin au comptant sans mensualité ni engagement : à 399 €, elle est moins chère que la plupart des trottinettes chinoises de puissance équivalente tout en offrant des pneus 10" et un frein à disque.</li>
+</ul>
+
+<h2 id="pour-qui-ultra">Pourquoi investir dans l’Agaru Ultra à 549&nbsp;€ (ou en location)&nbsp;?</h2>
+<p>Les 269 Wh supplémentaires (+54 % de batterie) apportent un confort d’usage radical au quotidien :</p>
+<ul class="check">
+ <li><strong>Moins de recharges :</strong> avec 55 km réels, un utilisateur urbain moyen ne la branche qu’une seule fois par semaine.</li>
+ <li><strong>Maintien de la puissance :</strong> une batterie de 768 Wh maintient une tension élevée plus longtemps. Dans les côtes à 15 %, l’Ultra conserve ses 25 km/h même lorsque la jauge passe sous 50 %, là où une batterie plus petite commence à brider sa puissance.</li>
+ <li><strong>L’accès à l’abonnement Augment :</strong> c’est le modèle vedette de la formule tout compris. Dès 12,95 €/mois, vous bénéficiez de l’assistance, des pièces d’usure et du remplacement gratuit en cas de panne, ce qui n’existe pas sur la Smart.</li>
+</ul>
+''',
+ cta=dict(titre='Quel modèle correspond à votre budget&nbsp;?', texte='Simulez votre achat ou votre location et calculez vos économies mensuelles sur l’Agaru Ultra dans notre outil interactif.',
+          boutons=['<a class="btn btn--primary" href="../configurateur.html">Configurer mon Agaru <span class="arr" aria-hidden="true">→</span></a>', '<a class="btn btn--secondary" href="../comparateur.html#gamme">Comparer les 14 critères <span class="arr" aria-hidden="true">→</span></a>']),
+ faq=[
+  ('L’Agaru Ultra est-elle plus rapide que l’Agaru Smart ?', 'Non. Les deux modèles sont légalement bridés à 25 km/h conformément au Code de la route pour les engins de déplacement personnel motorisés. En revanche, l’Ultra maintient sa vitesse maximale plus facilement dans les montées lorsque la batterie faiblit.'),
+  ('Peut-on louer l’Agaru Smart ?', 'Non, sur le marché français, Augment ne propose la formule d’abonnement avec réparations incluses que sur l’Agaru Ultra et l’E-scooter 360. L’Agaru Smart est réservée à l’achat comptant ou au paiement échelonné.'),
+  ('Les pièces détachées sont-elles interchangeables entre la Smart et l’Ultra ?', 'Oui, à l’exception du pack batterie interne, toutes les pièces (pneus, chambres à air, leviers, plaquettes de frein, écran, potence et garde-boue) sont strictement identiques.'),
+  ('L’Agaru Ultra est-elle beaucoup plus lourde ?', 'La différence n’est que de 700 grammes (20,7 kg contre 20,0 kg), ce qui correspond uniquement au poids des cellules lithium supplémentaires à l’intérieur du plateau.'),
+ ],
+ sources=[('Fiche produit Agaru Smart : augment.eco/fr-fr/agaru-smart', 'https://augment.eco/fr-fr/agaru-smart/'),
+          ('Fiche produit Agaru Ultra : augment.eco/fr-fr/agaru-ultra', 'https://augment.eco/fr-fr/agaru-ultra/'),
+          ('Relevé des tarifs et grilles de financement : configurateur Augment officiel', 'https://augment.eco/fr-fr/')],
+ lies=['louer-ou-acheter-trottinette-electrique', 'batterie-trottinette-electrique-duree-de-vie', 'trottinette-ou-scooter-electrique-choisir'],
+),
+# ---------------------------------------------------------------------------------------------
+dict(
+ slug='prendre-le-train-avec-sa-trottinette-electrique',
+ categorie='Pratique',
+ titre_seo='Prendre le train avec sa trottinette électrique : règles SNCF et TER',
+ description='TGV, TER, Ouigo, Transilien ou métro : règles officielles, dimensions maximales admises, rangement à bord et recharge interdite. Le guide complet.',
+ h1='Prendre le train avec sa trottinette électrique&nbsp;: le guide des règles SNCF et TER',
+ chapo='Combiner le train et la trottinette électrique est la solution parfaite pour les trajets domicile-travail interurbains. Mais attention aux mauvaises surprises sur le quai : les contrôleurs appliquent désormais des consignes strictes sur le pliage, le gabarit et l’emplacement à bord. Voici le point complet pour voyager sans stress ni amende.',
+ image=('ecologie-trottinette-tram', 'Une trottinette électrique pliée posée au sol à côté d’un quai de gare en attendant l’embarquement'),
+ anim=False,
+ lecture=5,
+ en_bref=[
+  'À bord des TGV InOui, TER et Ouigo, votre trottinette voyage gratuitement si elle est pliée et mesure moins de 130 × 90 cm.',
+  'Elle doit obligatoirement être pliée dès l’accès aux quais et pendant toute la durée du trajet.',
+  'Rangez-la dans les racks à bagages bas situés à l’entrée des voitures, jamais dans le couloir central.',
+  'Il est formellement interdit de recharger sa trottinette sur les prises 220V à bord des trains.',
+ ],
+ corps='''
+<h2 id="regles-sncf">Les règles officielles à la SNCF (TGV, Ouigo et TER)</h2>
+<p>La SNCF assimile la trottinette électrique pliée à un <strong>bagage à main ordinaire</strong>. À ce titre, son transport est entièrement gratuit et ne nécessite aucun billet supplémentaire ni réservation de place vélo.</p>
+<p>Vous devez toutefois respecter trois critères impératifs :</p>
+<ol>
+ <li><strong>Le pliage obligatoire :</strong> vous devez plier la potence avant de franchir les portiques d’accès ou de descendre sur le quai. Rouler sur le quai ou dans les couloirs de gare est passible d’une amende forfaitaire de 150 €.</li>
+ <li><strong>Les dimensions maximales :</strong> le bagage ne doit pas dépasser <strong>130 × 90 cm</strong> une fois replié. L’Agaru d’Augment affiche 118 × 48 cm repliée : elle rentre largement dans les clous réglementaires.</li>
+ <li><strong>L’étiquetage visible :</strong> comme pour n’importe quelle valise, une étiquette avec votre nom, prénom et numéro de téléphone doit être attachée au guidon ou au cadre.</li>
+</ol>
+
+<h2 id="ou-la-ranger">Où la ranger dans la rame&nbsp;?</h2>
+<p>C’est le point de friction le plus fréquent avec les chefs de bord. La règle de sécurité ferroviaire est intransigeante : <strong>aucun bagage ne doit entraver les voies de circulation</strong> ou l’accès aux issues de secours.</p>
+<ul class="check">
+ <li><strong>L’emplacement idéal :</strong> les racks à bagages horizontaux situés à l’entrée des voitures. Placez la trottinette sur l’étagère du bas, plateau vers le fond et guidon vers l’avant pour éviter qu’elle ne glisse au freinage.</li>
+ <li><strong>L’espace entre deux sièges dos à dos :</strong> dans beaucoup de TGV et de rames TER, l’espace triangulaire formé par deux dossiers dos à dos accueille parfaitement une trottinette pliée posée sur la tranche.</li>
+ <li><strong>Ce qui est strictement interdit :</strong> laisser la trottinette dans le couloir central entre les sièges, la poser sur la plateforme d’entrée devant les portes d’évacuation ou la monter sur les porte-bagages suspendus au-dessus de la tête des voyageurs (risque mortel en cas de freinage d’urgence).</li>
+</ul>
+
+<h2 id="metro-rer-transilien">Qu’en est-il dans le métro, le RER et le tramway&nbsp;?</h2>
+<p>En Île-de-France (réseau RATP et Île-de-France Mobilités) ainsi que dans les réseaux de transport urbain des grandes métropoles (TBM à Bordeaux, TCL à Lyon, RTM à Marseille) :</p>
+<ul class="dash">
+ <li>La trottinette pliée tenue à la main est acceptée <strong>à toute heure</strong> sans supplément.</li>
+ <li>La trottinette dépliée est formellement interdite à bord des bus, tramways et rames de métro.</li>
+ <li>Aux heures de pointe (7h30-9h30 et 16h30-19h00), tenez la trottinette verticalement posée sur sa roue avant entre vos jambes pour limiter l’encombrement au sol et ne pas salir les passagers voisins.</li>
+</ul>
+
+<h2 id="recharge-train">Peut-on recharger sa trottinette dans le train&nbsp;?</h2>
+<p>La réponse est un <strong>NON catégorique</strong>. Les prises électriques 220V mises à disposition des voyageurs en 1<sup>re</sup> ou 2<sup>nde</sup> classe dans les TGV sont calibrées pour des appareils à faible puissance (ordinateurs portables, smartphones, rasoirs, puissance maximale autorisée de 100 à 150 W).</p>
+<p>Le chargeur d’une trottinette électrique demande entre 120 W et 250 W avec un appel de courant important à l’allumage. Brancher votre chargeur de trottinette déclenche les disjoncteurs différentiels de la rame et expose à une verbalisation immédiate par les agents du train.</p>
+<aside class="tip"><p class="tip__t">Le conseil multimodal Roulelibre</p><p>Avec ses 20,7 kg, porter une Agaru Ultra dans les escaliers des gares sans escalator devient vite fatigant. L’astuce : laissez le crochet de potence engagé dans le garde-boue arrière, tenez la potence d’une main et faites rouler l’engin sur sa seule roue avant comme un chariot à roulettes. Vous ne portez ainsi qu’un tiers du poids réel.</p></aside>
+''',
+ cta=dict(titre='Facilitez vos trajets du quotidien', texte='Découvrez comment la trottinette électrique pliable remplace avantageusement la voiture en complément des transports en commun.',
+          boutons=['<a class="btn btn--primary" href="forfait-mobilites-durables-trottinette-electrique.html">Voir le forfait mobilités durables <span class="arr" aria-hidden="true">→</span></a>', '<a class="btn btn--secondary" href="../comparateur.html">Voir le comparatif complet <span class="arr" aria-hidden="true">→</span></a>']),
+ faq=[
+  ('Faut-il payer un billet supplémentaire pour une trottinette dans le TGV ?', 'Non. Contrairement aux vélos non démontés qui nécessitent un billet spécifique à 10 €, une trottinette électrique pliée voyage gratuitement en tant que bagage à main ordinaire.'),
+  ('Une housse de transport est-elle obligatoire dans le train ?', 'Elle n’est pas obligatoire à bord des trains SNCF ordinaires tant que la trottinette est pliée et propre. Elle reste toutefois vivement recommandée lors des fortes affluences pour éviter les remarques et protéger le cadre.'),
+  ('Peut-on emporter un scooter électrique pliable comme l’E-scooter 360 dans le train ?', 'L’E-scooter 360 plié mesure 126,5 cm de long et pèse 36 kg. Il entre tout juste dans le gabarit bagage de 130 cm, mais son poids important le rend très difficile à manipuler sur les quais. En pratique, la SNCF tolère les cyclomoteurs pliants dans les rames TER peu bondées avec espace vélos, mais peut refuser l’accès en TGV si le chef de bord estime que le poids nuit à la sécurité.'),
+  ('Que risque-t-on si l’on roule en trottinette dans une gare ?', 'Circuler sur un engin à moteur dans l’enceinte d’une gare ou sur les quais est passible d’une amende de 150 € pour mise en danger de la sécurité des voyageurs.'),
+ ],
+ sources=[('Règles relatives aux bagages à bord des trains TGV et TER : SNCF Voyageurs', 'https://www.sncf-voyageurs.com/fr/voyagez-avec-nous/en-france/tgv-inoui/services-a-bord/bagages/'),
+          ('Règlement général des transports d’Île-de-France Mobilités / RATP', 'https://www.ratp.fr/regles-d-usage-et-de-securite'),
+          ('Dimensions et pliage de l’Agaru : augment.eco/fr-fr/agaru-ultra', 'https://augment.eco/fr-fr/agaru-ultra/')],
+ lies=['forfait-mobilites-durables-trottinette-electrique', 'louer-ou-acheter-trottinette-electrique', 'trottinette-ou-scooter-electrique-choisir'],
+),
+
 ]
