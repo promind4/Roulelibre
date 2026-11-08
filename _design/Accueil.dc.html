@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide Augment Eco — Comparatif indépendant Agaru Smart, Agaru Ultra, E-scooter 360</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#F6F5F0;color:#141517;font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#141517;text-decoration:none}
+a:hover{color:#1B3B2B}
+button{font-family:inherit;color:inherit}
+</style>
+</helmet>
+
+<div style="position:relative;z-index:40;background:#141517;color:#F6F5F0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 40px;min-height:36px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase">
+    <span>Site comparatif indépendant • Non affilié éditorialement à Augment • Liens partenaires rémunérés</span>
+    <div style="position:relative;margin-left:auto">
+      <button onClick="{{ toggleCountry }}" style="display:flex;align-items:center;gap:8px;height:36px;padding:0 0 0 12px;background:transparent;border:0;color:#F6F5F0;font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer">
+        <span style="color:#B9BBB4">Marché</span><span style="font-weight:600">FR — France</span><span>{{ countryCaret }}</span>
+      </button>
+      <sc-if value="{{ countryOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;right:0;top:36px;width:280px;background:#FFFFFF;color:#141517;border:1px solid #DFDDD6;box-shadow:0 12px 32px rgba(20,21,23,.12)">
+          <div style="padding:12px 16px;border-bottom:1px solid #DFDDD6;color:#55575B">Marchés Augment</div>
+          <sc-for list="{{ countries }}" as="c" hint-placeholder-count="8">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid #EEECE6">
+              <span style="font-weight:600">{{ c.code }} <span style="font-weight:400;text-transform:none;letter-spacing:0;font-family:'Archivo',sans-serif;font-size:13px">{{ c.name }}</span></span>
+              <span style="color:#55575B">{{ c.status }}</span>
+            </div>
+          </sc-for>
+          <div style="padding:12px 16px;color:#55575B;text-transform:none;letter-spacing:0;line-height:1.5">Contenus et prix relevés pour le marché français.</div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</div>
+
+<header style="position:{{ headerPosition }};top:0;z-index:30;background:#F6F5F0;border-bottom:1px solid #DFDDD6">
+  <div style="max-width:1440px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:68px">
+    <a href="Accueil.dc.html" style="display:flex;flex-direction:column;justify-content:center;gap:3px">
+      <span style="font-size:21px;font-weight:800;font-stretch:80%;letter-spacing:-.01em;text-transform:uppercase;line-height:1">Guide Augment Eco</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#55575B">Comparatif indépendant</span>
+    </a>
+    <a href="https://www.awin1.com/awclick.php?mid=131358&amp;id=3099440" target="_blank" rel="sponsored noopener" style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 20px;white-space:nowrap;background:#1B3B2B;color:#FFFFFF;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#142D21;color:#FFFFFF">Configurer sur Augment.eco <span>→</span></a>
+  </div>
+  <div style="border-top:1px solid #DFDDD6">
+    <nav style="max-width:1440px;margin:0 auto;padding:0 40px;display:flex;align-items:stretch;gap:32px;min-height:46px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:thin">
+      <a href="Accueil.dc.html#gamme" style="display:flex;align-items:center;font-size:14px;font-weight:600;border-bottom:2px solid #1B3B2B">01. La Gamme (Agaru &amp; 360)</a>
+      <a href="Configurateur.dc.html" style="display:flex;align-items:center;font-size:14px;font-weight:500;border-bottom:2px solid transparent" style-hover="border-bottom-color:#141517">02. Simuler son Forfait</a>
+      <a href="Accueil.dc.html#service" style="display:flex;align-items:center;font-size:14px;font-weight:500;border-bottom:2px solid transparent" style-hover="border-bottom-color:#141517">03. Le Service Tout Couvert</a>
+      <a href="Comparateur.dc.html#guides" style="display:flex;align-items:center;font-size:14px;font-weight:500;border-bottom:2px solid transparent" style-hover="border-bottom-color:#141517">04. Guides &amp; Réglementation</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section data-screen-label="Hero" style="border-bottom:1px solid #DFDDD6">
+    <div style="max-width:1440px;margin:0 auto;display:flex;flex-wrap:wrap">
+      <div style="flex:1 1 560px;padding:72px 40px 56px;display:flex;flex-direction:column;gap:28px;border-right:1px solid #DFDDD6">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#1B3B2B;font-weight:500">Ingénierie autrichienne depuis 2015 • Livraison en 3-4 jours ouvrés</div>
+        <h1 style="margin:0;font-size:clamp(40px,4.4vw,64px);line-height:.98;font-weight:800;font-stretch:78%;letter-spacing:-.015em;text-transform:uppercase;text-wrap:balance;max-width:780px">La référence européenne du leasing <span style="white-space:nowrap">d'e-trottinettes</span> et du scooter pliable 360.</h1>
+        <p style="margin:0;font-size:19px;line-height:1.5;max-width:600px;text-wrap:pretty">Trois modèles en stock en France : l'<strong style="font-weight:600">Agaru Smart</strong> à 399 €, l'<strong style="font-weight:600">Agaru Ultra</strong> jusqu'à 70 km dès 16,95 €/mois*, et l'<strong style="font-weight:600;white-space:nowrap">E-scooter 360</strong>, homologué catégorie L1e à 45 km/h, dès 25,90 €/mois*.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="Comparateur.dc.html" style="display:inline-flex;align-items:center;gap:12px;height:54px;padding:0 26px;background:#1B3B2B;color:#FFFFFF;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#142D21;color:#FFFFFF">Comparer les 3 modèles <span>→</span></a>
+          <a href="Configurateur.dc.html" style="display:inline-flex;align-items:center;gap:12px;height:54px;padding:0 26px;border:1px solid #141517;color:#141517;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#141517;color:#F6F5F0">Simuler mon forfait</a>
+        </div>
+        <p style="margin:auto 0 0;padding-top:20px;border-top:1px solid #DFDDD6;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.6;color:#55575B;max-width:640px">* Abonnement 36 mois : acompte de 399 € (Agaru Ultra) ou de 1 490 € (E-scooter 360). Prix relevés le 07/11/2026 sur augment.eco. Susceptibles de modification — seul le prix affiché sur le site du marchand fait foi.</p>
+      </div>
+      <div style="flex:1 1 480px;display:flex;flex-direction:column;justify-content:flex-end;min-height:600px;padding-top:40px;overflow:hidden">
+        <div style="display:flex;align-items:flex-end;padding:0 24px;position:relative;z-index:1">
+          <img src="assets/agaru-profil-deplie.png" alt="Agaru Ultra, profil déplié" style="width:50%;height:auto;display:block;position:relative;z-index:2;margin-bottom:-6px">
+          <img src="assets/360-vue-3-4.png" alt="E-scooter 360, vue trois-quarts dépliée" style="width:64%;height:auto;display:block;margin-left:-14%;margin-bottom:-9%">
+        </div>
+        <div style="height:22px;background:#E8E6DF;border-top:1px solid #D4D1C7"></div>
+        <div style="background:#DCD9D0;border-top:1px solid #CFCBC0;display:grid;grid-template-columns:1fr 1fr">
+          <div style="padding:16px 24px;border-right:1px solid #CFCBC0;display:flex;flex-direction:column;gap:4px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#3F4145">02 — E-trottinette EDPM</span>
+            <span style="font-size:17px;font-weight:700;font-stretch:85%;text-transform:uppercase">Agaru Ultra · 70 km</span>
+          </div>
+          <div style="padding:16px 24px;display:flex;flex-direction:column;gap:4px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#3F4145">03 — Scooter pliable L1e</span>
+            <span style="font-size:17px;font-weight:700;font-stretch:85%;text-transform:uppercase">E-scooter 360 · 45 km/h</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gamme" data-screen-label="La gamme" style="border-bottom:1px solid #DFDDD6;scroll-margin-top:130px">
+    <div style="max-width:1440px;margin:0 auto;padding:72px 40px 40px;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#55575B">01 — La gamme</span>
+        <h2 style="margin:0;font-size:clamp(32px,3.2vw,46px);line-height:1;font-weight:800;font-stretch:78%;text-transform:uppercase;letter-spacing:-.01em">Trois véhicules commercialisés en France.</h2>
+      </div>
+      <p style="margin:0;max-width:440px;font-size:16px;line-height:1.55;color:#3F4145;text-wrap:pretty">Agaru Smart et Agaru Ultra sont mécaniquement identiques : seules la batterie et le poids changent. L'E-scooter 360 est un scooter à assise de catégorie L1e.</p>
+    </div>
+    <div style="max-width:1440px;margin:0 auto;padding:0 40px 72px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1px;background:#DFDDD6;border:1px solid #DFDDD6">
+
+        <article style="background:#FFFFFF;display:flex;flex-direction:column">
+          <div style="padding:24px 28px 0;display:flex;justify-content:space-between;align-items:center">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.06em">01</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;border:1px solid #DFDDD6;padding:5px 8px">E-trottinette EDPM</span>
+          </div>
+          <div style="padding:14px 28px 0;display:flex;flex-direction:column;gap:4px">
+            <h3 style="margin:0;font-size:32px;line-height:1;font-weight:800;font-stretch:78%;text-transform:uppercase">Agaru Smart</h3>
+            <span style="font-size:17px;color:#3F4145">Le choix malin</span>
+          </div>
+          <div style="height:280px;padding:20px 28px 12px;display:flex;align-items:flex-end;justify-content:center">
+            <img src="assets/agaru-profil-deplie.png" alt="Agaru Smart, profil déplié" style="max-height:100%;max-width:100%;display:block">
+          </div>
+          <div style="margin:0 28px;border-top:1px solid #141517;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)">
+            <span style="padding:11px 0;border-bottom:1px solid #EEECE6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Vitesse max</span><span style="padding:10px 0;border-bottom:1px solid #EEECE6;font-size:15px;font-weight:500">25 km/h</span>
+            <span style="padding:11px 0;border-bottom:1px solid #EEECE6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Autonomie max</span><span style="padding:10px 0;border-bottom:1px solid #EEECE6;font-size:15px;font-weight:500">50 km</span>
+            <span style="padding:11px 0;border-bottom:1px solid #EEECE6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Batterie</span><span style="padding:10px 0;border-bottom:1px solid #EEECE6;font-size:15px;font-weight:500">499 Wh · fixe</span>
+            <span style="padding:11px 0;border-bottom:1px solid #EEECE6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Moteur</span><span style="padding:10px 0;border-bottom:1px solid #EEECE6;font-size:15px;font-weight:500">500 W · 800 W crête</span>
+            <span style="padding:11px 0;border-bottom:1px solid #EEECE6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Couple</span><span style="padding:10px 0;border-bottom:1px solid #EEECE6;font-size:15px;font-weight:500">26 Nm</span>
+            <span style="padding:11px 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Poids</span><span style="padding:10px 0;font-size:15px;font-weight:500">20 kg</span>
+          </div>
+          <div style="margin:auto 28px 0;padding-top:24px;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #DFDDD6">
+            <div style="padding:16px 16px 16px 0;border-right:1px solid #DFDDD6;display:flex;flex-direction:column;gap:4px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Achat comptant</span>
+              <span style="font-size:34px;font-weight:700;font-stretch:85%;line-height:1.05">399 €</span>
+            </div>
+            <div style="padding:16px 0 16px 16px;display:flex;flex-direction:column;gap:4px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Financement PayPal</span>
+              <span style="font-size:22px;font-weight:600;font-stretch:85%;line-height:1.2">19,33 €/mois</span>
+              <span style="font-size:13px;color:#55575B">24 mois · TAEG 15,99 %</span>
+            </div>
+          </div>
+          <div style="padding:8px 28px 28px;display:flex;flex-direction:column;gap:10px">
+            <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:8px">
+              <a href="Configurateur.dc.html?model=smart" style="display:flex;align-items:center;justify-content:center;height:48px;border:1px solid #141517;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#141517;color:#F6F5F0">Voir la fiche</a>
+              <a href="https://www.awin1.com/awclick.php?mid=131358&amp;id=3099440" target="_blank" rel="sponsored noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;height:48px;background:#1B3B2B;color:#FFFFFF;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#142D21;color:#FFFFFF">Voir sur Augment.eco <span>→</span></a>
+            </div>
+            <p style="margin:4px 0 0;font-family:'IBM Plex Mono',monospace;font-size:10px;line-height:1.55;color:#55575B">Prix relevés le 07/11/2026 sur augment.eco. Susceptibles de modification — seul le prix affiché sur le site du marchand fait foi.</p>
+          </div>
+        </article>
+
+        <article style="background:#FFFFFF;display:flex;flex-direction:column">
+          <div style="padding:24px 28px 0;display:flex;justify-content:space-between;align-items:center">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.06em">02</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;border:1px solid #DFDDD6;padding:5px 8px">E-trottinette EDPM</span>
+          </div>
+          <div style="padding:14px 28px 0;display:flex;flex-direction:column;gap:4px">
+            <h3 style="margin:0;font-size:32px;line-height:1;font-weight:800;font-stretch:78%;text-transform:uppercase">Agaru Ultra</h3>
+            <span style="font-size:17px;color:#3F4145">La meilleure autonomie</span>
+          </div>
+          <div style="height:280px;padding:20px 28px 12px;display:flex;align-items:flex-end;justify-content:center">
+            <img src="assets/agaru-profil-deplie.png" alt="Agaru Ultra, profil déplié" style="max-height:100%;max-width:100%;display:block">
+          </div>
+          <div style="margin:0 28px;border-top:1px solid #141517;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)">
+            <span style="padding:11px 0;border-bottom:1px solid #EEECE6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Vitesse max</span><span style="padding:10px 0;border-bottom:1px solid #EEECE6;font-size:15px;font-weight:500">25 km/h</span>
+            <span style="padding:11px 0;border-bottom:1px solid #EEECE6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Autonomie max</span><span style="padding:10px 0;border-bottom:1px solid #EEECE6;font-size:15px;font-weight:600;color:#1B3B2B">70 km</span>
+            <span style="padding:11px 0;border-bottom:1px solid #EEECE6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Batterie</span><span style="padding:10px 0;border-bottom:1px solid #EEECE6;font-size:15px;font-weight:600;color:#1B3B2B">768 Wh · fixe</span>
+            <span style="padding:11px 0;border-bottom:1px solid #EEECE6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Moteur</span><span style="padding:10px 0;border-bottom:1px solid #EEECE6;font-size:15px;font-weight:500">500 W · 800 W crête</span>
+            <span style="padding:11px 0;border-bottom:1px solid #EEECE6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Couple</span><span style="padding:10px 0;border-bottom:1px solid #EEECE6;font-size:15px;font-weight:500">26 Nm</span>
+            <span style="padding:11px 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Poids</span><span style="padding:10px 0;font-size:15px;font-weight:600;color:#1B3B2B">20,7 kg</span>
+          </div>
+          <div style="margin:auto 28px 0;padding-top:24px;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #DFDDD6">
+            <div style="padding:16px 16px 16px 0;border-right:1px solid #DFDDD6;display:flex;flex-direction:column;gap:4px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Achat comptant</span>
+              <span style="font-size:34px;font-weight:700;font-stretch:85%;line-height:1.05">549 €</span>
+            </div>
+            <div style="padding:16px 0 16px 16px;display:flex;flex-direction:column;gap:4px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Abonnement</span>
+              <span style="font-size:20px;font-weight:600;font-stretch:82%;line-height:1.2">16,95 à 44,95 €/mois</span>
+              <span style="font-size:13px;color:#55575B">12, 24 ou 36 mois · acompte 59 € à 399 €</span>
+            </div>
+          </div>
+          <div style="padding:8px 28px 28px;display:flex;flex-direction:column;gap:10px">
+            <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:8px">
+              <a href="Configurateur.dc.html?model=ultra" style="display:flex;align-items:center;justify-content:center;height:48px;border:1px solid #141517;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#141517;color:#F6F5F0">Voir la fiche</a>
+              <a href="https://www.awin1.com/awclick.php?mid=131358&amp;id=3099440" target="_blank" rel="sponsored noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;height:48px;background:#1B3B2B;color:#FFFFFF;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#142D21;color:#FFFFFF">Voir sur Augment.eco <span>→</span></a>
+            </div>
+            <p style="margin:4px 0 0;font-family:'IBM Plex Mono',monospace;font-size:10px;line-height:1.55;color:#55575B">Prix relevés le 07/11/2026 sur augment.eco. Susceptibles de modification — seul le prix affiché sur le site du marchand fait foi.</p>
+          </div>
+        </article>
+
+        <article style="background:#FFFFFF;display:flex;flex-direction:column">
+          <div style="padding:24px 28px 0;display:flex;justify-content:space-between;align-items:center">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.06em">03</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:#141517;color:#F6F5F0;padding:6px 8px">Scooter à assise · L1e</span>
+          </div>
+          <div style="padding:14px 28px 0;display:flex;flex-direction:column;gap:4px">
+            <h3 style="margin:0;font-size:32px;line-height:1;font-weight:800;font-stretch:78%;text-transform:uppercase">E-scooter 360</h3>
+            <span style="font-size:17px;color:#3F4145">Léger. Puissant. Rapide.</span>
+          </div>
+          <div style="height:280px;padding:20px 28px 0;display:flex;align-items:flex-end;justify-content:center;overflow:hidden">
+            <img src="assets/360-vue-3-4.png" alt="E-scooter 360, vue trois-quarts" style="max-height:112%;max-width:100%;display:block;margin-bottom:-6%">
+          </div>
+          <div style="margin:12px 28px 0;border-top:1px solid #141517;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)">
+            <span style="padding:11px 0;border-bottom:1px solid #EEECE6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Vitesse max</span><span style="padding:10px 0;border-bottom:1px solid #EEECE6;font-size:15px;font-weight:500">45 km/h</span>
+            <span style="padding:11px 0;border-bottom:1px solid #EEECE6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Autonomie max</span><span style="padding:10px 0;border-bottom:1px solid #EEECE6;font-size:15px;font-weight:500">53 km · 106 km (2 batt.)</span>
+            <span style="padding:11px 0;border-bottom:1px solid #EEECE6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Batterie</span><span style="padding:10px 0;border-bottom:1px solid #EEECE6;font-size:15px;font-weight:500">1 080 Wh · amovible</span>
+            <span style="padding:11px 0;border-bottom:1px solid #EEECE6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Moteur</span><span style="padding:10px 0;border-bottom:1px solid #EEECE6;font-size:15px;font-weight:500">2 140 W</span>
+            <span style="padding:11px 0;border-bottom:1px solid #EEECE6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Couple</span><span style="padding:10px 0;border-bottom:1px solid #EEECE6;font-size:15px;font-weight:500">105 Nm</span>
+            <span style="padding:11px 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Poids</span><span style="padding:10px 0;font-size:15px;font-weight:500">36 kg · 31 kg à vide</span>
+          </div>
+          <div style="margin:auto 28px 0;padding-top:24px;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #DFDDD6">
+            <div style="padding:16px 16px 16px 0;border-right:1px solid #DFDDD6;display:flex;flex-direction:column;gap:4px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Achat comptant</span>
+              <span style="font-size:34px;font-weight:700;font-stretch:85%;line-height:1.05">1 890 €</span>
+            </div>
+            <div style="padding:16px 0 16px 16px;display:flex;flex-direction:column;gap:4px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Abonnement</span>
+              <span style="font-size:20px;font-weight:600;font-stretch:82%;line-height:1.2">25,90 à 159,90 €/mois</span>
+              <span style="font-size:13px;color:#55575B">12, 24 ou 36 mois · acompte 290 € à 1 490 €</span>
+            </div>
+          </div>
+          <div style="padding:8px 28px 28px;display:flex;flex-direction:column;gap:10px">
+            <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:8px">
+              <a href="Configurateur.dc.html?model=360" style="display:flex;align-items:center;justify-content:center;height:48px;border:1px solid #141517;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#141517;color:#F6F5F0">Voir la fiche</a>
+              <a href="https://www.awin1.com/awclick.php?mid=131358&amp;id=3099440" target="_blank" rel="sponsored noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;height:48px;background:#1B3B2B;color:#FFFFFF;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#142D21;color:#FFFFFF">Voir sur Augment.eco <span>→</span></a>
+            </div>
+            <p style="margin:4px 0 0;font-family:'IBM Plex Mono',monospace;font-size:10px;line-height:1.55;color:#55575B">Prix relevés le 07/11/2026 sur augment.eco. Susceptibles de modification — seul le prix affiché sur le site du marchand fait foi.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="service" data-screen-label="Le service" style="border-bottom:1px solid #DFDDD6;scroll-margin-top:130px">
+    <div style="max-width:1440px;margin:0 auto;padding:72px 40px 40px;display:flex;flex-direction:column;gap:14px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#55575B">03 — Le service</span>
+      <h2 style="margin:0;font-size:clamp(32px,3.2vw,46px);line-height:1;font-weight:800;font-stretch:78%;text-transform:uppercase;letter-spacing:-.01em">Le service sans stress.</h2>
+    </div>
+    <div style="max-width:1440px;margin:0 auto;padding:0 40px 72px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:24px;align-items:stretch">
+
+        <div style="background:#FFFFFF;border:1px solid #DFDDD6;display:flex;flex-direction:column">
+          <div style="padding:28px 32px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#1B3B2B;font-weight:600">Agaru Smart &amp; Agaru Ultra</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#55575B">Abonnement et achat</span>
+          </div>
+          <h3 style="margin:16px 32px 0;font-size:30px;line-height:1.05;font-weight:700;font-stretch:82%;text-wrap:balance">Réparations et remplacements gratuits. Tout est couvert.</h3>
+          <div style="margin:24px 32px 0;border-top:1px solid #141517">
+            <div style="display:grid;grid-template-columns:40px 1fr;padding:12px 0;border-bottom:1px solid #EEECE6;font-size:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#55575B;padding-top:2px">01</span><span>Trottinettes de rechange et pièces détachées.</span></div>
+            <div style="display:grid;grid-template-columns:40px 1fr;padding:12px 0;border-bottom:1px solid #EEECE6;font-size:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#55575B;padding-top:2px">02</span><span>Usure naturelle.</span></div>
+            <div style="display:grid;grid-template-columns:40px 1fr;padding:12px 0;border-bottom:1px solid #EEECE6;font-size:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#55575B;padding-top:2px">03</span><span>Accidents et pannes.</span></div>
+            <div style="display:grid;grid-template-columns:40px 1fr;padding:12px 0;border-bottom:1px solid #EEECE6;font-size:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#55575B;padding-top:2px">04</span><span>Batterie, freins et pneus inclus.</span></div>
+          </div>
+          <p style="margin:20px 32px 0;font-size:15px;line-height:1.55;color:#3F4145;text-wrap:pretty">Inclus dans l'abonnement et proposé en option à l'achat. Selon Augment : « Si votre trottinette tombe en panne, vous recevrez une trottinette de remplacement afin de pouvoir continuer à rouler. »</p>
+          <div style="margin:28px 32px 32px;background:#F6F5F0;border:1px solid #DFDDD6">
+            <div style="padding:20px 22px;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;border-bottom:1px solid #DFDDD6;flex-wrap:wrap">
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#55575B">Option</span>
+                <span style="font-size:20px;font-weight:700;font-stretch:85%">Couverture contre le vol</span>
+                <span style="font-size:14px;color:#3F4145">Vol, vandalisme et perte. Choisie par 71 % des clients selon Augment.</span>
+              </div>
+              <span style="font-size:26px;font-weight:700;font-stretch:85%;white-space:nowrap">2,95 €<span style="font-size:15px;font-weight:500">/mois</span></span>
+            </div>
+            <div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;font-size:14px">
+              <span style="padding:10px 22px;border-bottom:1px solid #DFDDD6;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:#55575B"></span>
+              <span style="padding:10px 12px;border-bottom:1px solid #DFDDD6;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Sans batterie</span>
+              <span style="padding:10px 12px;border-bottom:1px solid #DFDDD6;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Avec batterie</span>
+              <span style="padding:10px 22px;border-bottom:1px solid #DFDDD6">Franchise avec couverture</span><span style="padding:10px 12px;border-bottom:1px solid #DFDDD6;font-weight:600">100 €</span><span style="padding:10px 12px;border-bottom:1px solid #DFDDD6;font-weight:600">150 €</span>
+              <span style="padding:10px 22px">Remplacement sans couverture</span><span style="padding:10px 12px">250 €</span><span style="padding:10px 12px">450 €</span>
+            </div>
+            <p style="margin:0;padding:12px 22px 16px;border-top:1px solid #DFDDD6;font-size:13px;line-height:1.5;color:#3F4145">Remplacement par une e-trottinette reconditionnée sous 3 à 5 jours ouvrés.</p>
+          </div>
+        </div>
+
+        <div style="border:1px solid #141517;display:flex;flex-direction:column">
+          <div style="padding:28px 32px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600">Spécificité — E-scooter 360</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#55575B">Règles distinctes</span>
+          </div>
+          <h3 style="margin:16px 32px 0;font-size:30px;line-height:1.05;font-weight:700;font-stretch:82%;text-wrap:balance">Garantie constructeur 2 ans, 5 ans sur le cadre aluminium.</h3>
+          <blockquote style="margin:24px 32px 0;padding:20px 0;border-top:1px solid #141517;border-bottom:1px solid #DFDDD6;font-size:18px;line-height:1.5;text-wrap:pretty">« Un service de pièces détachées pour les pièces d'usure est disponible pour le 360, mais le service de réparation tout compris des trottinettes n'est pas inclus. »<span style="display:block;margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Source : augment.eco, page d'accueil FR</span></blockquote>
+          <p style="margin:20px 32px 0;font-size:15px;line-height:1.55;color:#3F4145;text-wrap:pretty">Les franchises et conditions de la couverture vol des trottinettes ne s'appliquent pas automatiquement au 360 : une éventuelle protection doit être confirmée séparément auprès d'Augment.</p>
+          <div style="margin:auto 32px 32px;padding-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#DFDDD6">
+            <div style="background:#F6F5F0;padding:16px 18px 16px 0;display:flex;flex-direction:column;gap:4px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Pièces d'usure</span>
+              <span style="font-size:16px;font-weight:600">Service disponible</span>
+            </div>
+            <div style="background:#F6F5F0;padding:16px 0 16px 18px;display:flex;flex-direction:column;gap:4px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Réparation tout compris</span>
+              <span style="font-size:16px;font-weight:600">Non incluse</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="souscrire" data-screen-label="Souscrire" style="border-bottom:1px solid #DFDDD6">
+    <div style="max-width:1440px;margin:0 auto;padding:72px 40px 40px;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#55575B">04 — Parcours officiel</span>
+        <h2 style="margin:0;font-size:clamp(32px,3.2vw,46px);line-height:1;font-weight:800;font-stretch:78%;text-transform:uppercase;letter-spacing:-.01em">Comment s'abonner — En moins de 5 minutes.</h2>
+      </div>
+      <p style="margin:0;max-width:400px;font-size:15px;line-height:1.55;color:#3F4145">L'abonnement concerne l'Agaru Ultra et l'E-scooter 360. L'Agaru Smart est proposé à l'achat dans le tunnel de commande français.</p>
+    </div>
+    <div style="max-width:1440px;margin:0 auto;padding:0 40px 72px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border-top:1px solid #141517;border-left:1px solid #DFDDD6">
+        <div style="padding:28px 28px 36px;border-right:1px solid #DFDDD6;border-bottom:1px solid #DFDDD6;display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500;color:#1B3B2B">01</span>
+          <span style="font-size:21px;font-weight:700;font-stretch:85%;line-height:1.15">Sélectionnez votre produit</span>
+          <span style="font-size:15px;line-height:1.5;color:#3F4145">Agaru Smart, Agaru Ultra ou <span style="white-space:nowrap">E-scooter 360</span>.</span>
+        </div>
+        <div style="padding:28px 28px 36px;border-right:1px solid #DFDDD6;border-bottom:1px solid #DFDDD6;display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500;color:#1B3B2B">02</span>
+          <span style="font-size:21px;font-weight:700;font-stretch:85%;line-height:1.15">Créez votre forfait</span>
+          <span style="font-size:15px;line-height:1.5;color:#3F4145">Durée minimale de 12, 24 ou 36 mois, puis montant de l'acompte.</span>
+        </div>
+        <div style="padding:28px 28px 36px;border-right:1px solid #DFDDD6;border-bottom:1px solid #DFDDD6;display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500;color:#1B3B2B">03</span>
+          <span style="font-size:21px;font-weight:700;font-stretch:85%;line-height:1.15">Ajoutez des options et une protection</span>
+          <span style="font-size:15px;line-height:1.5;color:#3F4145">Clignotants Agaru gratuits, casque Alpina Soho à 39 €, couverture contre le vol.</span>
+        </div>
+        <div style="padding:28px 28px 36px;border-right:1px solid #DFDDD6;border-bottom:1px solid #DFDDD6;display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500;color:#1B3B2B">04</span>
+          <span style="font-size:21px;font-weight:700;font-stretch:85%;line-height:1.15">Payez en toute sécurité</span>
+          <span style="font-size:15px;line-height:1.5;color:#3F4145">Modèles en stock, livraison en 3-4 jours ouvrés.</span>
+        </div>
+      </div>
+      <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+        <a href="https://www.awin1.com/awclick.php?mid=131358&amp;id=3099440" target="_blank" rel="sponsored noopener" style="display:inline-flex;align-items:center;gap:12px;height:54px;padding:0 26px;background:#1B3B2B;color:#FFFFFF;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#142D21;color:#FFFFFF">Commencer sur Augment.eco <span>→</span></a>
+        <a href="Configurateur.dc.html" style="display:inline-flex;align-items:center;gap:12px;height:54px;padding:0 26px;border:1px solid #141517;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#141517;color:#F6F5F0">Simuler d'abord mon forfait</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="background:#141517;color:#F6F5F0">
+  <div style="border-bottom:1px solid #2C2E31">
+    <div style="max-width:1440px;margin:0 auto;padding:16px 40px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#F6F5F0">Site comparatif indépendant. Non affilié éditorialement à Augment. Liens partenaires rémunérés.</div>
+  </div>
+  <div style="max-width:1440px;margin:0 auto;padding:48px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:21px;font-weight:800;font-stretch:80%;text-transform:uppercase;line-height:1">Guide Augment Eco</span>
+      <span style="font-size:14px;line-height:1.55;color:#C9CAC4;max-width:300px">Comparatif et guide éditorial indépendant consacré aux véhicules Augment commercialisés en France.</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9C9E98;margin-bottom:4px">Le site</span>
+      <a href="Accueil.dc.html#gamme" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">La gamme</a>
+      <a href="Configurateur.dc.html" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Simuler son forfait</a>
+      <a href="Comparateur.dc.html" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Comparateur détaillé</a>
+      <a href="Comparateur.dc.html#guides" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Guides &amp; réglementation</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9C9E98;margin-bottom:4px">Informations légales</span>
+      <a href="#" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Mentions légales</a>
+      <a href="#" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Politique de confidentialité</a>
+      <button onClick="{{ reopenCookies }}" style="background:none;border:0;padding:0;text-align:left;font-size:14px;color:#F6F5F0;cursor:pointer" style-hover="text-decoration:underline">Gestion des cookies</button>
+      <a href="#affiliation" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Déclaration d'affiliation</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#C9CAC4">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9C9E98;margin-bottom:4px">Sources</span>
+      <span>augment.eco (version FR-FR)</span>
+      <span>help.augment.eco/fr</span>
+      <span>Relevé du 07/11/2026</span>
+    </div>
+  </div>
+  <div id="affiliation" style="border-top:1px solid #2C2E31">
+    <div style="max-width:1440px;margin:0 auto;padding:24px 40px 32px;display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:1.6;color:#B9BBB4">
+      <p style="margin:0;max-width:960px">Déclaration d'affiliation : ce site perçoit une commission via le programme d'affiliation AWIN lorsqu'un achat ou un abonnement est réalisé après un clic sur un lien partenaire. Cette rémunération ne modifie pas le prix payé.</p>
+      <p style="margin:0;max-width:960px">Prix relevés le 07/11/2026 sur augment.eco. Susceptibles de modification — seul le prix affiché sur le site du marchand fait foi. Augment, Agaru et 360 sont des marques de leur propriétaire respectif.</p>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ showCookies }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-label="Gestion des cookies" style="position:fixed;left:24px;bottom:24px;z-index:50;width:min(440px,calc(100vw - 48px));background:#FFFFFF;border:1px solid #141517;box-shadow:0 16px 40px rgba(20,21,23,.16)">
+    <div style="padding:20px 22px 0;display:flex;flex-direction:column;gap:8px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#55575B">Cookies</span>
+      <p style="margin:0;font-size:14px;line-height:1.55">Avec votre accord, nous utilisons des cookies de mesure d'audience et de suivi d'affiliation (AWIN). Vous pouvez refuser aussi simplement qu'accepter et modifier votre choix à tout moment depuis le pied de page.</p>
+    </div>
+    <div style="padding:16px 22px 20px;display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <button onClick="{{ refuseCookies }}" style="height:44px;border:1px solid #141517;background:#141517;color:#FFFFFF;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer">Tout refuser</button>
+      <button onClick="{{ acceptCookies }}" style="height:44px;border:1px solid #141517;background:#141517;color:#FFFFFF;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer">Tout accepter</button>
+      <button onClick="{{ refuseCookies }}" style="grid-column:1 / -1;height:36px;border:0;background:transparent;font-size:13px;text-decoration:underline;cursor:pointer">Personnaliser mes choix</button>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showCookieBanner&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Conformité&quot;},&quot;stickyHeader&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Navigation&quot;}}">
+class Component extends DCLogic {
+  state = { countryOpen: false, cookie: 'pending' };
+  componentDidMount() {
+    try { const v = localStorage.getItem('ae-cookie-choice'); if (v) this.setState({ cookie: v }); } catch (e) {}
+  }
+  setCookie(v) { try { localStorage.setItem('ae-cookie-choice', v); } catch (e) {} this.setState({ cookie: v }); }
+  renderVals() {
+    const showBanner = this.props.showCookieBanner ?? true;
+    return {
+      headerPosition: (this.props.stickyHeader ?? true) ? 'sticky' : 'relative',
+      countryOpen: this.state.countryOpen,
+      countryCaret: this.state.countryOpen ? '▴' : '▾',
+      toggleCountry: () => this.setState(s => ({ countryOpen: !s.countryOpen })),
+      countries: [
+        { code: 'FR', name: 'France', status: 'Édition actuelle' },
+        { code: 'FI', name: 'Finlande', status: 'À venir' },
+        { code: 'SE', name: 'Suède', status: 'À venir' },
+        { code: 'AT', name: 'Autriche', status: 'À venir' },
+        { code: 'BE', name: 'Belgique', status: 'À venir' },
+        { code: 'CH', name: 'Suisse', status: 'À venir' },
+        { code: 'ES', name: 'Espagne', status: 'À venir' },
+        { code: 'IT', name: 'Italie', status: 'À venir' }
+      ],
+      showCookies: showBanner && this.state.cookie === 'pending',
+      acceptCookies: () => this.setCookie('accepted'),
+      refuseCookies: () => this.setCookie('refused'),
+      reopenCookies: () => this.setState({ cookie: 'pending' })
+    };
+  }
+}
+</script>
+</body>
+</html>

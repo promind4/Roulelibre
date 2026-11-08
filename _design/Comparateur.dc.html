@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comparateur Agaru Smart, Agaru Ultra, E-scooter 360 &amp; guides — Guide Augment Eco</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#F6F5F0;color:#141517;font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#141517;text-decoration:none}
+a:hover{color:#1B3B2B}
+button{font-family:inherit;color:inherit}
+</style>
+</helmet>
+
+<div style="position:relative;z-index:40;background:#141517;color:#F6F5F0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 40px;min-height:36px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase">
+    <span>Site comparatif indépendant • Non affilié éditorialement à Augment • Liens partenaires rémunérés</span>
+    <div style="position:relative;margin-left:auto">
+      <button onClick="{{ toggleCountry }}" style="display:flex;align-items:center;gap:8px;height:36px;padding:0 0 0 12px;background:transparent;border:0;color:#F6F5F0;font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer">
+        <span style="color:#B9BBB4">Marché</span><span style="font-weight:600">FR — France</span><span>{{ countryCaret }}</span>
+      </button>
+      <sc-if value="{{ countryOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;right:0;top:36px;width:280px;background:#FFFFFF;color:#141517;border:1px solid #DFDDD6;box-shadow:0 12px 32px rgba(20,21,23,.12)">
+          <div style="padding:12px 16px;border-bottom:1px solid #DFDDD6;color:#55575B">Marchés Augment</div>
+          <sc-for list="{{ countries }}" as="c" hint-placeholder-count="8">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid #EEECE6">
+              <span style="font-weight:600">{{ c.code }} <span style="font-weight:400;text-transform:none;letter-spacing:0;font-family:'Archivo',sans-serif;font-size:13px">{{ c.name }}</span></span>
+              <span style="color:#55575B">{{ c.status }}</span>
+            </div>
+          </sc-for>
+          <div style="padding:12px 16px;color:#55575B;text-transform:none;letter-spacing:0;line-height:1.5">Contenus et prix relevés pour le marché français.</div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</div>
+
+<header style="position:{{ headerPosition }};top:0;z-index:30;background:#F6F5F0;border-bottom:1px solid #DFDDD6">
+  <div style="max-width:1440px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:68px">
+    <a href="Accueil.dc.html" style="display:flex;flex-direction:column;justify-content:center;gap:3px">
+      <span style="font-size:21px;font-weight:800;font-stretch:80%;letter-spacing:-.01em;text-transform:uppercase;line-height:1">Guide Augment Eco</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#55575B">Comparatif indépendant</span>
+    </a>
+    <a href="https://www.awin1.com/awclick.php?mid=131358&amp;id=3099440" target="_blank" rel="sponsored noopener" style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 20px;white-space:nowrap;background:#1B3B2B;color:#FFFFFF;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#142D21;color:#FFFFFF">Configurer sur Augment.eco <span>→</span></a>
+  </div>
+  <div style="border-top:1px solid #DFDDD6">
+    <nav style="max-width:1440px;margin:0 auto;padding:0 40px;display:flex;align-items:stretch;gap:32px;min-height:46px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:thin">
+      <a href="Accueil.dc.html#gamme" style="display:flex;align-items:center;font-size:14px;font-weight:500;border-bottom:2px solid transparent" style-hover="border-bottom-color:#141517">01. La Gamme (Agaru &amp; 360)</a>
+      <a href="Configurateur.dc.html" style="display:flex;align-items:center;font-size:14px;font-weight:500;border-bottom:2px solid transparent" style-hover="border-bottom-color:#141517">02. Simuler son Forfait</a>
+      <a href="Accueil.dc.html#service" style="display:flex;align-items:center;font-size:14px;font-weight:500;border-bottom:2px solid transparent" style-hover="border-bottom-color:#141517">03. Le Service Tout Couvert</a>
+      <a href="Comparateur.dc.html#guides" style="display:flex;align-items:center;font-size:14px;font-weight:600;border-bottom:2px solid #1B3B2B">04. Guides &amp; Réglementation</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="comparatif" data-screen-label="Tableau comparatif" style="border-bottom:1px solid #DFDDD6">
+    <div style="max-width:1440px;margin:0 auto;padding:56px 40px 32px;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#55575B">Comparateur — 14 critères vérifiés</span>
+        <h1 style="margin:0;font-size:clamp(36px,3.8vw,56px);line-height:.98;font-weight:800;font-stretch:78%;text-transform:uppercase;letter-spacing:-.015em;text-wrap:balance;max-width:900px">Agaru Smart, Agaru Ultra, <span style="white-space:nowrap">E-scooter 360</span> : le tableau complet.</h1>
+      </div>
+      <button onClick="{{ toggleHighlight }}" role="switch" aria-checked="{{ highlightAria }}" style="display:flex;align-items:center;gap:12px;height:48px;padding:0 18px 0 14px;background:#FFFFFF;border:1px solid #141517;cursor:pointer;font-size:13px;font-weight:600">
+        <span style="width:34px;height:18px;border:1.5px solid #141517;display:flex;align-items:center;padding:2px;justify-content:{{ switchJustify }};background:{{ switchBg }}"><span style="width:12px;height:12px;background:{{ switchKnob }}"></span></span>
+        Mettre en évidence les écarts Smart / Ultra
+      </button>
+    </div>
+
+    <div style="max-width:1440px;margin:0 auto;padding:0 40px 24px;overflow-x:auto">
+      <div style="min-width:880px;border:1px solid #DFDDD6;background:#FFFFFF">
+        <div style="display:grid;grid-template-columns:220px repeat(3,minmax(0,1fr));border-bottom:1px solid #141517">
+          <div style="padding:20px;display:flex;align-items:flex-end;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#55575B;border-right:1px solid #DFDDD6">Critère</div>
+          <div style="padding:20px 20px 18px;border-right:1px solid #DFDDD6;display:flex;flex-direction:column;gap:10px">
+            <img src="assets/agaru-profil-deplie.png" alt="Agaru Smart" style="height:110px;width:auto;align-self:flex-start;object-fit:contain">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;color:#1B3B2B">01</span>
+            <span style="font-size:24px;font-weight:800;font-stretch:78%;text-transform:uppercase;line-height:1">Agaru Smart</span>
+            <span style="font-size:14px;color:#3F4145">Le choix malin</span>
+            <div style="display:flex;gap:6px;margin-top:4px;flex-wrap:wrap">
+              <a href="Configurateur.dc.html?model=smart" style="display:inline-flex;align-items:center;height:34px;padding:0 12px;border:1px solid #141517;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#141517;color:#F6F5F0">Fiche</a>
+              <a href="https://www.awin1.com/awclick.php?mid=131358&amp;id=3099440" target="_blank" rel="sponsored noopener" style="display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 12px;background:#1B3B2B;color:#FFFFFF;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#142D21;color:#FFFFFF">Augment.eco →</a>
+            </div>
+          </div>
+          <div style="padding:20px 20px 18px;border-right:1px solid #DFDDD6;display:flex;flex-direction:column;gap:10px">
+            <img src="assets/agaru-profil-deplie.png" alt="Agaru Ultra" style="height:110px;width:auto;align-self:flex-start;object-fit:contain">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;color:#1B3B2B">02</span>
+            <span style="font-size:24px;font-weight:800;font-stretch:78%;text-transform:uppercase;line-height:1">Agaru Ultra</span>
+            <span style="font-size:14px;color:#3F4145">La meilleure autonomie</span>
+            <div style="display:flex;gap:6px;margin-top:4px;flex-wrap:wrap">
+              <a href="Configurateur.dc.html?model=ultra" style="display:inline-flex;align-items:center;height:34px;padding:0 12px;border:1px solid #141517;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#141517;color:#F6F5F0">Fiche</a>
+              <a href="https://www.awin1.com/awclick.php?mid=131358&amp;id=3099440" target="_blank" rel="sponsored noopener" style="display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 12px;background:#1B3B2B;color:#FFFFFF;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#142D21;color:#FFFFFF">Augment.eco →</a>
+            </div>
+          </div>
+          <div style="padding:20px 20px 18px;display:flex;flex-direction:column;gap:10px">
+            <img src="assets/360-vue-3-4.png" alt="E-scooter 360" style="height:110px;width:auto;align-self:flex-start;object-fit:contain">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;color:#1B3B2B">03</span>
+            <span style="font-size:24px;font-weight:800;font-stretch:78%;text-transform:uppercase;line-height:1">E-scooter 360</span>
+            <span style="font-size:14px;color:#3F4145">Léger. Puissant. Rapide.</span>
+            <div style="display:flex;gap:6px;margin-top:4px;flex-wrap:wrap">
+              <a href="Configurateur.dc.html?model=360" style="display:inline-flex;align-items:center;height:34px;padding:0 12px;border:1px solid #141517;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#141517;color:#F6F5F0">Fiche</a>
+              <a href="https://www.awin1.com/awclick.php?mid=131358&amp;id=3099440" target="_blank" rel="sponsored noopener" style="display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 12px;background:#1B3B2B;color:#FFFFFF;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#142D21;color:#FFFFFF">Augment.eco →</a>
+            </div>
+          </div>
+        </div>
+
+        <sc-for list="{{ rows }}" as="r" hint-placeholder-count="14">
+          <div style="display:grid;grid-template-columns:220px repeat(3,minmax(0,1fr));border-bottom:1px solid #EEECE6;background:{{ r.bg }};transition:background .2s ease">
+            <div style="padding:14px 20px;border-right:1px solid #DFDDD6;display:flex;gap:12px;align-items:baseline">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#55575B">{{ r.n }}</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;font-weight:500">{{ r.label }}</span>
+            </div>
+            <sc-if value="{{ r.merged }}" hint-placeholder-val="{{ false }}">
+              <div style="grid-column:span 2;padding:13px 20px;border-right:1px solid #DFDDD6;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap">
+                <span style="font-size:15px;font-weight:500">{{ r.ab }}</span>
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:{{ r.sameColor }}">{{ r.sameLabel }}</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{ r.split }}" hint-placeholder-val="{{ true }}">
+              <div style="padding:13px 20px;border-right:1px solid #DFDDD6;font-size:15px;font-weight:{{ r.diffWeight }};color:{{ r.diffColor }}">{{ r.a }}</div>
+              <div style="padding:13px 20px;border-right:1px solid #DFDDD6;font-size:15px;font-weight:{{ r.diffWeight }};color:{{ r.diffColor }}">{{ r.b }}</div>
+            </sc-if>
+            <div style="padding:13px 20px;font-size:15px;font-weight:500">{{ r.c }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="max-width:1440px;margin:0 auto;padding:0 40px 56px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <p style="margin:0;max-width:720px;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.6;color:#55575B">Prix relevés le 07/11/2026 sur augment.eco. Susceptibles de modification — seul le prix affiché sur le site du marchand fait foi. Financement PayPal : TAEG 15,99 %. Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</p>
+      <a href="Configurateur.dc.html" style="display:inline-flex;align-items:center;gap:12px;height:48px;padding:0 22px;border:1px solid #141517;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#141517;color:#F6F5F0">Simuler mon forfait</a>
+    </div>
+  </section>
+
+  <section id="entreprises" data-screen-label="Entreprises et avis" style="border-bottom:1px solid #DFDDD6">
+    <div style="max-width:1440px;margin:0 auto;padding:64px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:24px">
+
+      <div style="background:#141517;color:#F6F5F0;display:flex;flex-direction:column">
+        <div style="padding:32px 36px 0;display:flex;flex-direction:column;gap:16px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#B9BBB4">Offre entreprises &amp; mobilité salariés</span>
+          <h2 style="margin:0;font-size:clamp(30px,2.8vw,40px);line-height:1;font-weight:800;font-stretch:78%;text-transform:uppercase">Moderniser votre entreprise ?</h2>
+          <p style="margin:0;font-size:18px;line-height:1.5;color:#E4E4DF;text-wrap:pretty">« Que vous ayez besoin de déplacer vos équipes ou offrir la micromobilité à vos clients, nous avons une gamme d'offres pour vous. »<span style="display:block;margin-top:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#B9BBB4">Augment</span></p>
+          <a href="https://www.awin1.com/awclick.php?mid=131358&amp;id=3099440" target="_blank" rel="sponsored noopener" style="align-self:flex-start;display:inline-flex;align-items:center;gap:12px;height:50px;padding:0 22px;background:#F6F5F0;color:#141517;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#FFFFFF;color:#141517">Contacter Augment <span>→</span></a>
+        </div>
+        <div style="margin:32px 36px 0;border-top:1px solid #3A3C40;padding-top:20px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#B9BBB4">Cadre réglementaire — points à vérifier</div>
+        <div style="margin:0 36px 36px">
+          <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid #2C2E31">
+            <span style="font-size:14px;font-weight:600">Prise en charge employeur</span>
+            <span style="font-size:14px;line-height:1.55;color:#D6D6D0">Forfait mobilités durables : plafond, cumul et éligibilité de la location longue durée d'un EDPM à vérifier sur urssaf.fr et service-public.fr avant toute décision.</span>
+          </div>
+          <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid #2C2E31">
+            <span style="font-size:14px;font-weight:600">Assurance EDPM</span>
+            <span style="font-size:14px;line-height:1.55;color:#D6D6D0">Selon le centre d'aide Augment, la couverture vol « ne remplace ni l'entretien, ni la garantie, ni l'assurance obligatoire de responsabilité civile ».</span>
+          </div>
+          <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding:16px 0">
+            <span style="font-size:14px;font-weight:600">E-scooter 360 · L1e</span>
+            <span style="font-size:14px;line-height:1.55;color:#D6D6D0">Augment indique « Catégorie véhicule L1e ». Immatriculation, assurance, permis, équipements et éligibilité aux dispositifs employeur se vérifient séparément sur service-public.fr.</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#FFFFFF;border:1px solid #DFDDD6;display:flex;flex-direction:column">
+        <div style="padding:32px 36px 0;display:flex;flex-direction:column;gap:16px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#55575B">Synthèse des avis clients — Source : Trustpilot</span>
+          <h2 style="margin:0;font-size:clamp(30px,2.8vw,40px);line-height:1;font-weight:800;font-stretch:78%;text-transform:uppercase">Ce que retiennent les clients.</h2>
+        </div>
+        <div style="margin:28px 36px 0;border-top:1px solid #141517">
+          <div style="display:grid;grid-template-columns:40px 170px minmax(0,1fr);gap:12px;padding:16px 0;border-bottom:1px solid #EEECE6;align-items:baseline">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#55575B">01</span><span style="font-size:15px;font-weight:700">Rapport qualité-prix</span><span style="font-size:14px;line-height:1.55;color:#3F4145">Le prix est jugé cohérent avec l'équipement et le service fournis.</span>
+          </div>
+          <div style="display:grid;grid-template-columns:40px 170px minmax(0,1fr);gap:12px;padding:16px 0;border-bottom:1px solid #EEECE6;align-items:baseline">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#55575B">02</span><span style="font-size:15px;font-weight:700">Maintenance</span><span style="font-size:14px;line-height:1.55;color:#3F4145">La prise en charge complète de l'entretien revient comme un motif de choix.</span>
+          </div>
+          <div style="display:grid;grid-template-columns:40px 170px minmax(0,1fr);gap:12px;padding:16px 0;border-bottom:1px solid #EEECE6;align-items:baseline">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#55575B">03</span><span style="font-size:15px;font-weight:700">Livraison</span><span style="font-size:14px;line-height:1.55;color:#3F4145">Réception rapide, en ligne avec le délai annoncé de 3-4 jours ouvrés.</span>
+          </div>
+          <div style="display:grid;grid-template-columns:40px 170px minmax(0,1fr);gap:12px;padding:16px 0;border-bottom:1px solid #EEECE6;align-items:baseline">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#55575B">04</span><span style="font-size:15px;font-weight:700">Pliage</span><span style="font-size:14px;line-height:1.55;color:#3F4145">Pliage simple au quotidien.</span>
+          </div>
+          <div style="display:grid;grid-template-columns:40px 170px minmax(0,1fr);gap:12px;padding:16px 0;border-bottom:1px solid #EEECE6;align-items:baseline">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#55575B">05</span><span style="font-size:15px;font-weight:700">Application &amp; support</span><span style="font-size:14px;line-height:1.55;color:#3F4145">L'application mobile et la disponibilité du support sont appréciées.</span>
+          </div>
+        </div>
+        <p style="margin:auto 36px 32px;padding-top:24px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.6;color:#55575B">Synthèse éditoriale reformulée à partir des avis Trustpilot affichés sur la page d'accueil d'augment.eco au 07/11/2026. Non exhaustive. Aucune note chiffrée n'est reprise.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="guides" data-screen-label="Guides" style="border-bottom:1px solid #DFDDD6;scroll-margin-top:130px">
+    <div style="max-width:1440px;margin:0 auto;padding:64px 40px 32px;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#55575B">Guides pratiques</span>
+        <h2 style="margin:0;font-size:clamp(32px,3.2vw,46px);line-height:1;font-weight:800;font-stretch:78%;text-transform:uppercase">Guides &amp; réglementation.</h2>
+      </div>
+    </div>
+    <div style="max-width:1440px;margin:0 auto;padding:0 40px 64px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:#DFDDD6;border:1px solid #DFDDD6">
+        <a href="#" style="background:#FFFFFF;display:flex;flex-direction:column" style-hover="background:#FBFAF7">
+          <div style="height:180px;display:flex;align-items:center;justify-content:center;padding:20px;border-bottom:1px solid #EEECE6"><img src="assets/agaru-plateau-frein.png" alt="" style="max-height:100%;max-width:100%;object-fit:contain"></div>
+          <div style="padding:22px 24px 26px;display:flex;flex-direction:column;gap:12px;flex:1">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#1B3B2B;font-weight:600">Guide 01</span>
+            <span style="font-size:19px;font-weight:700;font-stretch:88%;line-height:1.2;text-wrap:pretty">Agaru Smart vs Agaru Ultra : les 768 Wh valent-ils l'écart de prix ?</span>
+            <span style="font-size:14px;line-height:1.55;color:#3F4145">Même moteur, mêmes freins, même étanchéité. Seuls la batterie (499 / 768 Wh) et le poids (20 / 20,7 kg) changent, pour 150 € d'écart à l'achat.</span>
+            <span style="margin-top:auto;padding-top:8px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Lire le guide →</span>
+          </div>
+        </a>
+        <a href="#" style="background:#FFFFFF;display:flex;flex-direction:column" style-hover="background:#FBFAF7">
+          <div style="height:180px;display:flex;align-items:center;justify-content:center;padding:20px;border-bottom:1px solid #EEECE6"><img src="assets/360-profil-plie.png" alt="" style="max-height:100%;max-width:100%;object-fit:contain"></div>
+          <div style="padding:22px 24px 26px;display:flex;flex-direction:column;gap:12px;flex:1">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#1B3B2B;font-weight:600">Guide 02</span>
+            <span style="font-size:19px;font-weight:700;font-stretch:88%;line-height:1.2;text-wrap:pretty">Augment 360 (Catégorie L1e) : assurance, immatriculation et rangement en appartement</span>
+            <span style="font-size:14px;line-height:1.55;color:#3F4145">Plié en 1265 × 350 × 1180 mm. Ce qu'Augment indique, et ce qu'il faut vérifier auprès des sources officielles.</span>
+            <span style="margin-top:auto;padding-top:8px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Lire le guide →</span>
+          </div>
+        </a>
+        <a href="#" style="background:#FFFFFF;display:flex;flex-direction:column" style-hover="background:#FBFAF7">
+          <div style="height:180px;display:flex;align-items:center;justify-content:center;padding:20px;border-bottom:1px solid #EEECE6"><img src="assets/augment-app.png" alt="" style="max-height:100%;max-width:100%;object-fit:contain"></div>
+          <div style="padding:22px 24px 26px;display:flex;flex-direction:column;gap:12px;flex:1">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#1B3B2B;font-weight:600">Guide 03</span>
+            <span style="font-size:19px;font-weight:700;font-stretch:88%;line-height:1.2;text-wrap:pretty">Comment fonctionne concrètement la garantie 'Tout est couvert' et la couverture vol à 2,95 €/mois ?</span>
+            <span style="font-size:14px;line-height:1.55;color:#3F4145">Ce que couvre le service des Agaru, les franchises de 100 € et 150 €, et pourquoi le 360 suit d'autres règles.</span>
+            <span style="margin-top:auto;padding-top:8px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Lire le guide →</span>
+          </div>
+        </a>
+        <a href="#" style="background:#FFFFFF;display:flex;flex-direction:column" style-hover="background:#FBFAF7">
+          <div style="height:180px;display:flex;align-items:center;justify-content:center;padding:20px;border-bottom:1px solid #EEECE6"><img src="assets/agaru-cockpit.png" alt="" style="max-height:100%;max-width:100%;object-fit:contain"></div>
+          <div style="padding:22px 24px 26px;display:flex;flex-direction:column;gap:12px;flex:1">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#1B3B2B;font-weight:600">Guide 04</span>
+            <span style="font-size:19px;font-weight:700;font-stretch:88%;line-height:1.2;text-wrap:pretty">Entretien, pression des pneus à froid et bonnes pratiques de charge de la batterie Li-ion</span>
+            <span style="font-size:14px;line-height:1.55;color:#3F4145">Pression contrôlée à froid, nettoyage sans haute pression, port de charge maintenu au sec, batterie vérifiée une fois par mois en stockage.</span>
+            <span style="margin-top:auto;padding-top:8px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Lire le guide →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" data-screen-label="FAQ" style="border-bottom:1px solid #DFDDD6">
+    <div style="max-width:1440px;margin:0 auto;padding:64px 40px 72px;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
+      <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:16px;max-width:420px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#55575B">FAQ technique</span>
+        <h2 style="margin:0;font-size:clamp(32px,3.2vw,46px);line-height:1;font-weight:800;font-stretch:78%;text-transform:uppercase">Questions fréquentes.</h2>
+        <p style="margin:0;font-size:15px;line-height:1.55;color:#3F4145">Réponses tirées du centre d'aide help.augment.eco/fr et des manuels Agaru Smart &amp; Ultra.</p>
+      </div>
+      <div style="flex:2 1 560px;min-width:0;border-top:1px solid #141517">
+        <sc-for list="{{ faq }}" as="f" hint-placeholder-count="6">
+          <div style="border-bottom:1px solid #DFDDD6;background:{{ f.bg }}">
+            <button onClick="{{ f.toggle }}" aria-expanded="{{ f.expanded }}" style="width:100%;display:grid;grid-template-columns:44px minmax(0,1fr) 32px;align-items:center;gap:8px;padding:20px 16px 20px 0;background:transparent;border:0;text-align:left;cursor:pointer">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#55575B;padding-left:4px">{{ f.n }}</span>
+              <span style="font-size:18px;font-weight:600;line-height:1.3">{{ f.q }}</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:400;text-align:right">{{ f.sign }}</span>
+            </button>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:0 48px 24px 52px;display:flex;flex-direction:column;gap:14px">
+                <p style="margin:0;font-size:15.5px;line-height:1.6;color:#2E3034;max-width:720px;text-wrap:pretty">{{ f.a }}</p>
+                <sc-if value="{{ f.hasTable }}" hint-placeholder-val="{{ false }}">
+                  <div style="max-width:560px;border-top:1px solid #141517;background:#FFFFFF">
+                    <sc-for list="{{ f.table }}" as="t" hint-placeholder-count="7">
+                      <div style="display:grid;grid-template-columns:140px minmax(0,1fr);border-bottom:1px solid #EEECE6">
+                        <span style="padding:9px 14px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;border-right:1px solid #EEECE6">{{ t.k }}</span>
+                        <span style="padding:9px 14px;font-size:14px">{{ t.v }}</span>
+                      </div>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+        <p style="margin:16px 0 0;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#55575B">Source : help.augment.eco/fr — relevé du 07/11/2026.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="background:#141517;color:#F6F5F0">
+  <div style="border-bottom:1px solid #2C2E31">
+    <div style="max-width:1440px;margin:0 auto;padding:16px 40px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase">Site comparatif indépendant. Non affilié éditorialement à Augment. Liens partenaires rémunérés.</div>
+  </div>
+  <div style="max-width:1440px;margin:0 auto;padding:48px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:21px;font-weight:800;font-stretch:80%;text-transform:uppercase;line-height:1">Guide Augment Eco</span>
+      <span style="font-size:14px;line-height:1.55;color:#C9CAC4;max-width:300px">Comparatif et guide éditorial indépendant consacré aux véhicules Augment commercialisés en France.</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9C9E98;margin-bottom:4px">Le site</span>
+      <a href="Accueil.dc.html#gamme" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">La gamme</a>
+      <a href="Configurateur.dc.html" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Simuler son forfait</a>
+      <a href="Comparateur.dc.html" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Comparateur détaillé</a>
+      <a href="Comparateur.dc.html#guides" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Guides &amp; réglementation</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9C9E98;margin-bottom:4px">Informations légales</span>
+      <a href="#" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Mentions légales</a>
+      <a href="#" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Politique de confidentialité</a>
+      <button onClick="{{ reopenCookies }}" style="background:none;border:0;padding:0;text-align:left;font-size:14px;color:#F6F5F0;cursor:pointer" style-hover="text-decoration:underline">Gestion des cookies (CNIL)</button>
+      <a href="#affiliation" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Déclaration d'affiliation AWIN</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#C9CAC4">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9C9E98;margin-bottom:4px">Sources</span>
+      <span>augment.eco (version FR-FR)</span>
+      <span>help.augment.eco/fr</span>
+      <span>Relevé du 07/11/2026</span>
+    </div>
+  </div>
+  <div id="affiliation" style="border-top:1px solid #2C2E31">
+    <div style="max-width:1440px;margin:0 auto;padding:24px 40px 32px;display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:1.6;color:#B9BBB4">
+      <p style="margin:0;max-width:960px">Déclaration d'affiliation : ce site perçoit une commission via le programme d'affiliation AWIN lorsqu'un achat ou un abonnement est réalisé après un clic sur un lien partenaire. Cette rémunération ne modifie pas le prix payé.</p>
+      <p style="margin:0;max-width:960px">Prix relevés le 07/11/2026 sur augment.eco. Susceptibles de modification — seul le prix affiché sur le site du marchand fait foi. Augment, Agaru et 360 sont des marques de leur propriétaire respectif.</p>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ showCookies }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-label="Gestion des cookies" style="position:fixed;left:24px;bottom:24px;z-index:50;width:min(440px,calc(100vw - 48px));background:#FFFFFF;border:1px solid #141517;box-shadow:0 16px 40px rgba(20,21,23,.16)">
+    <div style="padding:20px 22px 0;display:flex;flex-direction:column;gap:8px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#55575B">Cookies</span>
+      <p style="margin:0;font-size:14px;line-height:1.55">Avec votre accord, nous utilisons des cookies de mesure d'audience et de suivi d'affiliation (AWIN). Vous pouvez refuser aussi simplement qu'accepter et modifier votre choix à tout moment depuis le pied de page.</p>
+    </div>
+    <div style="padding:16px 22px 20px;display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <button onClick="{{ refuseCookies }}" style="height:44px;border:1px solid #141517;background:#141517;color:#FFFFFF;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer">Tout refuser</button>
+      <button onClick="{{ acceptCookies }}" style="height:44px;border:1px solid #141517;background:#141517;color:#FFFFFF;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer">Tout accepter</button>
+      <button onClick="{{ refuseCookies }}" style="grid-column:1 / -1;height:36px;border:0;background:transparent;font-size:13px;text-decoration:underline;cursor:pointer">Personnaliser mes choix</button>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showCookieBanner&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Conformité&quot;},&quot;stickyHeader&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Navigation&quot;}}">
+const ROWS = [
+  { label: 'Catégorie', ab: 'EDPM (e-trottinette)', c: 'L1e (scooter à assise)' },
+  { label: 'Vitesse max', ab: '25 km/h', c: '45 km/h' },
+  { label: 'Autonomie max', a: '50 km', b: '70 km', c: '53 km · 106 km (2 batteries)' },
+  { label: 'Batterie', a: '499 Wh fixe', b: '768 Wh fixe', c: '1 080 Wh amovible' },
+  { label: 'Moteur', ab: '500 W (800 W crête)', c: '2 140 W' },
+  { label: 'Couple', ab: '26 Nm', c: '105 Nm' },
+  { label: 'Pente max', ab: '23 %', c: 'Non communiquée' },
+  { label: 'Poids', a: '20 kg', b: '20,7 kg', c: '36 kg (31 kg à vide)' },
+  { label: 'Pneus', ab: '10 × 2,5" à air', c: '120/90-R10, 18.5" tubeless' },
+  { label: 'Freinage', ab: 'Disque mécanique AR + eABS AV', c: 'Disques hydrauliques' },
+  { label: 'Étanchéité', ab: 'IPX5', c: 'IPX4' },
+  { label: 'Service inclus', ab: 'Réparations & remplacements tout compris', c: 'Garantie 2 ans / 5 ans cadre alu' },
+  { label: 'Prix achat', a: '399 €', b: '549 €', c: '1 890 €' },
+  { label: 'Mensualités', a: 'Financement 19,33 €/mois (24 mois)', b: 'Abonnement 16,95 à 44,95 €/mois · Financement dès 26,59 €/mois', c: 'Abonnement 25,90 à 159,90 €/mois · Financement 91,54 €/mois (24 mois)' }
+];
+
+const FAQ = [
+  { q: 'À quoi sert le bouton multifonction des Agaru ?', a: 'Le bouton de fonction pilote l\u2019allumage, les modes de conduite et les compteurs de l\u2019écran LED.', table: [
+    ['Appui long', 'Allumage / extinction'], ['1 appui', 'Mode : marche (1) → normal (2) → sport (3)'], ['2 appuis', 'Distance totale (ODO)'],
+    ['3 appuis', 'Distance du trajet'], ['4 appuis', 'Bascule km ⇄ miles'], ['5 appuis', 'Définition du mot de passe'], ['6 appuis', 'Régulateur de vitesse (selon version pays et firmware)']
+  ] },
+  { q: 'Comment plier le guidon de l\u2019Agaru ?', a: 'Tournez de 90° la butée du crochet de guidon, actionnez le levier de pliage, puis engagez le crochet avant dans le garde-boue arrière.' },
+  { q: 'Quelles franchises en cas de vol ?', a: 'Avec la couverture contre le vol (2,95 €/mois) : 100 € sans batterie, 150 € avec batterie, et remplacement par une e-trottinette reconditionnée sous 3 à 5 jours ouvrés. Sans couverture : 250 € sans batterie, 450 € avec batterie. Ces conditions concernent les trottinettes debout et ne s\u2019appliquent pas automatiquement au 360.' },
+  { q: 'Quel est le délai de livraison ?', a: 'Augment annonce une livraison en 3-4 jours ouvrés pour les modèles en stock.' },
+  { q: 'La batterie de l\u2019Agaru se retire-t-elle pour la recharge ?', a: 'Non. Elle est intégrée au plateau et se recharge par le port protégé d\u2019un capuchon caoutchouc, trottinette éteinte. Seul l\u2019E-scooter 360 dispose de batteries amovibles (5,2 kg chacune).' },
+  { q: 'Où se trouve le frein à disque sur les Agaru ?', a: 'À l\u2019arrière : frein à disque mécanique. L\u2019avant est freiné électroniquement par l\u2019eABS. Le centre d\u2019aide précise qu\u2019une ancienne illustration indiquant un disque à l\u2019avant est erronée.' }
+];
+
+class Component extends DCLogic {
+  state = { highlight: true, open: 0, countryOpen: false, cookie: 'pending' };
+  componentDidMount() {
+    try { const v = localStorage.getItem('ae-cookie-choice'); if (v) this.setState({ cookie: v }); } catch (e) {}
+  }
+  setCookie(v) { try { localStorage.setItem('ae-cookie-choice', v); } catch (e) {} this.setState({ cookie: v }); }
+  renderVals() {
+    const st = this.state;
+    const hl = st.highlight;
+    const rows = ROWS.map((r, i) => {
+      const merged = r.ab != null;
+      return {
+        n: String(i + 1).padStart(2, '0'), label: r.label, merged, split: !merged,
+        ab: r.ab || '', a: r.a || '', b: r.b || '', c: r.c,
+        bg: !merged && hl ? '#E8EEE9' : '#FFFFFF',
+        diffWeight: !merged && hl ? '700' : '500', diffColor: !merged && hl ? '#1B3B2B' : '#141517',
+        sameLabel: hl ? 'Identique Smart / Ultra' : '', sameColor: '#55575B'
+      };
+    });
+    const showBanner = this.props.showCookieBanner ?? true;
+    return {
+      headerPosition: (this.props.stickyHeader ?? true) ? 'sticky' : 'relative',
+      countryOpen: st.countryOpen, countryCaret: st.countryOpen ? '▴' : '▾',
+      toggleCountry: () => this.setState(s => ({ countryOpen: !s.countryOpen })),
+      countries: [['FR', 'France', 'Édition actuelle'], ['FI', 'Finlande'], ['SE', 'Suède'], ['AT', 'Autriche'], ['BE', 'Belgique'], ['CH', 'Suisse'], ['ES', 'Espagne'], ['IT', 'Italie']].map(([code, name, status]) => ({ code, name, status: status || 'À venir' })),
+      showCookies: showBanner && st.cookie === 'pending',
+      acceptCookies: () => this.setCookie('accepted'), refuseCookies: () => this.setCookie('refused'), reopenCookies: () => this.setState({ cookie: 'pending' }),
+      rows,
+      toggleHighlight: () => this.setState(s => ({ highlight: !s.highlight })),
+      highlightAria: hl ? 'true' : 'false',
+      switchJustify: hl ? 'flex-end' : 'flex-start', switchBg: hl ? '#1B3B2B' : '#FFFFFF', switchKnob: hl ? '#FFFFFF' : '#141517',
+      faq: FAQ.map((f, i) => {
+        const open = st.open === i;
+        return {
+          n: String(i + 1).padStart(2, '0'), q: f.q, a: f.a, open, expanded: open ? 'true' : 'false', sign: open ? '−' : '+',
+          bg: open ? '#FFFFFF' : 'transparent',
+          hasTable: !!f.table, table: (f.table || []).map(([k, v]) => ({ k, v })),
+          toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i }))
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

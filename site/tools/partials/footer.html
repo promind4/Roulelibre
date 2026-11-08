@@ -1,0 +1,69 @@
+<!-- ============================================================
+     PIED DE PAGE + BANDEAU COOKIES COMMUNS — à copier tel quel dans
+     chaque page, juste avant </body>, suivi des scripts :
+       <script src="js/main.js?v=20261108s" defer></script>
+       (+ script propre à la page éventuel, en defer)
+     ============================================================ -->
+<footer class="footer">
+  <div class="wrap footer__top">
+    <div>
+      <a class="brand" href="index.html">
+        <svg class="brand__mark" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+          <rect width="36" height="36" rx="10" fill="#121412"/>
+          <path d="M9.5 24a9.5 9.5 0 1 1 17 0" fill="none" stroke="#FF5A1F" stroke-width="3" stroke-linecap="round"/>
+          <path class="needle" d="M18 19.8 24.2 13.4" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+          <circle class="hub" cx="18" cy="19.8" r="2.4" fill="#FFFFFF"/>
+        </svg>
+        <span class="brand__txt"><b>Roulelibre</b><small>Mobilité électrique</small></span>
+      </a>
+      <p class="footer__about">Site éditorial consacré aux trottinettes et scooters électriques Augment vendus en France : comparatif, simulateur de location et conseils.</p>
+    </div>
+    <div>
+      <h4>Le site</h4>
+      <ul>
+        <li><a href="index.html#gamme">La gamme</a></li>
+        <li><a href="configurateur.html">Simuler sa location</a></li>
+        <li><a href="index.html#service">Service tout couvert</a></li>
+        <li><a href="comparateur.html">Comparatif détaillé</a></li>
+        <li><a href="videos.html">Nos vidéos</a></li>
+        <li><a href="conseils/index.html">Guides &amp; conseils</a></li>
+        <li><a href="conseils/trottinette-electrique-assurance-reglementation.html">Assurance et réglementation</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Informations légales</h4>
+      <ul>
+        <li><a href="a-propos.html">Qui sommes-nous</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+        <li><button class="linklike" type="button" data-cookie-open>Gestion des cookies</button></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Sources</h4>
+      <ul>
+        <li>augment.eco (version FR)</li>
+        <li>help.augment.eco/fr</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer__legal">
+    <p>© 2026 Roulelibre. Augment, Agaru et 360 sont des marques de leur propriétaire respectif.</p>
+  </div>
+</footer>
+
+<div class="cookie" role="dialog" aria-labelledby="cookie-title" data-cookie hidden>
+  <h2 id="cookie-title">Vos choix de cookies</h2>
+  <p>Avec votre accord, nous mesurons l’audience du site et le suivi des liens partenaires (AWIN). Refuser est aussi simple qu’accepter, et vous pouvez changer d’avis à tout moment depuis le pied de page.</p>
+  <div class="cookie__prefs" data-cookie-prefs hidden>
+    <label class="switch-row"><span>Nécessaires<small>Mémorisation de vos choix. Toujours actifs.</small></span><input class="toggle" type="checkbox" checked disabled></label>
+    <label class="switch-row"><span>Mesure d’audience<small>Statistiques de fréquentation.</small></span><input class="toggle" type="checkbox" data-cookie-opt="audience"></label>
+    <label class="switch-row"><span>Suivi d’affiliation<small>Attribution des commandes via AWIN.</small></span><input class="toggle" type="checkbox" data-cookie-opt="affiliation"></label>
+    <button class="btn btn--ghost btn--sm btn--block" type="button" data-cookie-save>Enregistrer mes choix</button>
+  </div>
+  <div class="cookie__actions">
+    <button class="btn btn--ink btn--sm" type="button" data-cookie-refuse>Tout refuser</button>
+    <button class="btn btn--ink btn--sm" type="button" data-cookie-accept>Tout accepter</button>
+  </div>
+  <button class="cookie__more" type="button" data-cookie-customize aria-expanded="false">Personnaliser mes choix</button>
+</div>

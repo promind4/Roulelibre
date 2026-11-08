@@ -1,0 +1,19 @@
+# Roulelibre
+
+> Site éditorial français consacré aux véhicules électriques Augment vendus en France : trottinettes Agaru Smart et Agaru Ultra, scooter pliable E-scooter 360. Location (abonnement) et achat, prix relevés sur augment.eco. Liens partenaires vers augment.eco (programme d'affiliation AWIN).
+
+## Pages
+
+- [Accueil](https://roulelibre.fr/) : la gamme, la location expliquée, avis clients, FAQ
+- [Comparatif](https://roulelibre.fr/comparateur) : les 3 modèles critère par critère, guides pratiques, FAQ technique
+- [Simulateur de location](https://roulelibre.fr/configurateur) : prix mensuel selon la durée, l'acompte et les options
+- [Vidéos](https://roulelibre.fr/videos) : tests et avis vidéo
+
+## Prix (France, relevés sur augment.eco)
+
+- Agaru Smart : 399 € à l'achat, ou 19,33 €/mois sur 24 mois (PayPal, TAEG 15,99 %). Location non proposée en France.
+- Agaru Ultra : 549 € à l'achat. Location : 12, 24 ou 36 mois, acompte de 59 à 399 €, de 12,95 à 44,95 €/mois. Réparations comprises dans l'abonnement.
+- E-scooter 360 : 1 990 € à l'achat. Location : 12, 24 ou 36 mois, acompte de 290 à 1 490 €, de 25,90 à 159,90 €/mois.
+- Retour possible dans les 14 premiers jours de l'abonnement ; option d'achat à tout moment.
+
+Source officielle et prix faisant foi : https://augment.eco/fr-fr/

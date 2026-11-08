@@ -1,0 +1,28 @@
+# Secrets et données privées
+_prive/
+*.key
+*token*
+*secret*
+.env*
+
+# Sauvegardes temporaires et archives
+_sauvegarde_avant_nettoyage/
+*.zip
+*.tar.gz
+*.bak
+*.tmp
+*.log
+
+# Outils locaux et caches éditeurs
+.claude/
+.vscode/
+.idea/
+Thumbs.db
+[Dd]esktop.ini
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

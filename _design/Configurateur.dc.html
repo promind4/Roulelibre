@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiche produit &amp; configurateur — Guide Augment Eco</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#F6F5F0;color:#141517;font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#141517;text-decoration:none}
+a:hover{color:#1B3B2B}
+button{font-family:inherit;color:inherit}
+</style>
+</helmet>
+
+<div style="position:relative;z-index:40;background:#141517;color:#F6F5F0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 40px;min-height:36px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase">
+    <span>Site comparatif indépendant • Non affilié éditorialement à Augment • Liens partenaires rémunérés</span>
+    <div style="position:relative;margin-left:auto">
+      <button onClick="{{ toggleCountry }}" style="display:flex;align-items:center;gap:8px;height:36px;padding:0 0 0 12px;background:transparent;border:0;color:#F6F5F0;font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer">
+        <span style="color:#B9BBB4">Marché</span><span style="font-weight:600">FR — France</span><span>{{ countryCaret }}</span>
+      </button>
+      <sc-if value="{{ countryOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;right:0;top:36px;width:280px;background:#FFFFFF;color:#141517;border:1px solid #DFDDD6;box-shadow:0 12px 32px rgba(20,21,23,.12)">
+          <div style="padding:12px 16px;border-bottom:1px solid #DFDDD6;color:#55575B">Marchés Augment</div>
+          <sc-for list="{{ countries }}" as="c" hint-placeholder-count="8">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid #EEECE6">
+              <span style="font-weight:600">{{ c.code }} <span style="font-weight:400;text-transform:none;letter-spacing:0;font-family:'Archivo',sans-serif;font-size:13px">{{ c.name }}</span></span>
+              <span style="color:#55575B">{{ c.status }}</span>
+            </div>
+          </sc-for>
+          <div style="padding:12px 16px;color:#55575B;text-transform:none;letter-spacing:0;line-height:1.5">Contenus et prix relevés pour le marché français.</div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</div>
+
+<header style="position:{{ headerPosition }};top:0;z-index:30;background:#F6F5F0;border-bottom:1px solid #DFDDD6">
+  <div style="max-width:1440px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:68px">
+    <a href="Accueil.dc.html" style="display:flex;flex-direction:column;justify-content:center;gap:3px">
+      <span style="font-size:21px;font-weight:800;font-stretch:80%;letter-spacing:-.01em;text-transform:uppercase;line-height:1">Guide Augment Eco</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#55575B">Comparatif indépendant</span>
+    </a>
+    <a href="https://www.awin1.com/awclick.php?mid=131358&amp;id=3099440" target="_blank" rel="sponsored noopener" style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 20px;white-space:nowrap;background:#1B3B2B;color:#FFFFFF;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#142D21;color:#FFFFFF">Configurer sur Augment.eco <span>→</span></a>
+  </div>
+  <div style="border-top:1px solid #DFDDD6">
+    <nav style="max-width:1440px;margin:0 auto;padding:0 40px;display:flex;align-items:stretch;gap:32px;min-height:46px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:thin">
+      <a href="Accueil.dc.html#gamme" style="display:flex;align-items:center;font-size:14px;font-weight:500;border-bottom:2px solid transparent" style-hover="border-bottom-color:#141517">01. La Gamme (Agaru &amp; 360)</a>
+      <a href="Configurateur.dc.html" style="display:flex;align-items:center;font-size:14px;font-weight:600;border-bottom:2px solid #1B3B2B">02. Simuler son Forfait</a>
+      <a href="Accueil.dc.html#service" style="display:flex;align-items:center;font-size:14px;font-weight:500;border-bottom:2px solid transparent" style-hover="border-bottom-color:#141517">03. Le Service Tout Couvert</a>
+      <a href="Comparateur.dc.html#guides" style="display:flex;align-items:center;font-size:14px;font-weight:500;border-bottom:2px solid transparent" style-hover="border-bottom-color:#141517">04. Guides &amp; Réglementation</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section data-screen-label="Titre fiche" style="border-bottom:1px solid #DFDDD6">
+    <div style="max-width:1440px;margin:0 auto;padding:28px 40px 24px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#55575B">
+          <a href="Accueil.dc.html" style="color:#55575B" style-hover="color:#141517">Accueil</a><span>/</span><span>02. Simuler son forfait</span><span>/</span><span style="color:#141517">{{ m.name }}</span>
+        </div>
+        <h1 style="margin:0;font-size:clamp(34px,3.4vw,48px);line-height:1;font-weight:800;font-stretch:78%;text-transform:uppercase;letter-spacing:-.01em">Fiche produit &amp; configurateur technique</h1>
+      </div>
+      <a href="Comparateur.dc.html" style="display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 18px;border:1px solid #141517;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase" style-hover="background:#141517;color:#F6F5F0">Comparer les 3 modèles</a>
+    </div>
+  </section>
+
+  <section data-screen-label="Configurateur" style="border-bottom:1px solid #DFDDD6">
+    <div style="max-width:1440px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:stretch">
+
+      <aside style="flex:1 1 280px;max-width:100%;border-right:1px solid #DFDDD6;display:flex;flex-direction:column">
+        <div style="padding:20px 24px;border-bottom:1px solid #DFDDD6;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#55575B">Modèles officiels — France</div>
+        <sc-for list="{{ models }}" as="md" hint-placeholder-count="3">
+          <button onClick="{{ md.select }}" aria-pressed="{{ md.selected }}" style="display:flex;flex-direction:column;gap:14px;width:100%;padding:20px 24px;background:{{ md.bg }};border:0;border-bottom:1px solid #DFDDD6;box-shadow:{{ md.ring }};text-align:left;cursor:pointer;position:relative" style-hover="background:#FFFFFF">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.06em;color:#1B3B2B">{{ md.idx }}. {{ md.cls }}</span>
+                <span style="font-size:22px;font-weight:800;font-stretch:80%;text-transform:uppercase;line-height:1.05">{{ md.name }}</span>
+                <span style="font-size:14px;color:#3F4145">{{ md.tagline }}</span>
+              </div>
+              <sc-if value="{{ md.isAgaru }}" hint-placeholder-val="{{ true }}"><img src="assets/agaru-profil-deplie.png" alt="" style="width:64px;height:56px;object-fit:contain;flex:none"></sc-if><sc-if value="{{ md.is360 }}" hint-placeholder-val="{{ false }}"><img src="assets/360-vue-3-4.png" alt="" style="width:64px;height:56px;object-fit:contain;flex:none"></sc-if>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #DFDDD6;border-left:1px solid #DFDDD6">
+              <sc-for list="{{ md.grid }}" as="g" hint-placeholder-count="4">
+                <div style="padding:8px 10px;border-right:1px solid #DFDDD6;border-bottom:1px solid #DFDDD6;display:flex;flex-direction:column;gap:2px;font-family:'IBM Plex Mono',monospace">
+                  <span style="font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:#55575B">{{ g.k }}</span>
+                  <span style="font-size:12px;font-weight:600">{{ g.v }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </button>
+        </sc-for>
+        <div style="padding:20px 24px;font-size:13px;line-height:1.55;color:#3F4145">Agaru Smart et Agaru Ultra partagent le même moteur, les mêmes freins, les mêmes pneus et la même étanchéité. Seuls la batterie et le poids diffèrent.</div>
+      </aside>
+
+      <div style="flex:3 1 520px;min-width:0;border-right:1px solid #DFDDD6;display:flex;flex-direction:column">
+        <div style="padding:20px 32px;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;border-bottom:1px solid #DFDDD6">
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <span style="font-size:34px;font-weight:800;font-stretch:78%;text-transform:uppercase;line-height:1">{{ m.name }}</span>
+            <span style="font-size:17px;color:#3F4145">{{ m.tagline }}</span>
+          </div>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px;background:{{ m.badgeBg }};color:{{ m.badgeColor }};border:1px solid #141517">{{ m.badge }}</span>
+        </div>
+
+        <div style="position:relative;flex:1 1 auto;min-height:560px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden">
+          <sc-if value="{{ isMain }}" hint-placeholder-val="{{ true }}">
+            <div style="position:relative;z-index:2;width:{{ view.width }};max-width:640px;margin:32px auto 0;aspect-ratio:{{ view.ratio }};transform:translateY({{ view.drop }})">
+              <sc-if value="{{ vf.agaruA }}" hint-placeholder-val="{{ true }}"><img src="assets/agaru-profil-deplie.png" alt="Agaru, profil déplié" style="position:absolute;inset:0;width:100%;height:100%;display:block"></sc-if><sc-if value="{{ vf.s360A }}" hint-placeholder-val="{{ false }}"><img src="assets/360-vue-3-4.png" alt="E-scooter 360, vue trois-quarts dépliée" style="position:absolute;inset:0;width:100%;height:100%;display:block"></sc-if>
+              <sc-for list="{{ callouts }}" as="c" hint-placeholder-count="4">
+                <button onMouseEnter="{{ c.enter }}" onMouseLeave="{{ c.leave }}" onFocus="{{ c.enter }}" onBlur="{{ c.leave }}" aria-label="{{ c.title }}" style="position:absolute;left:{{ c.left }};top:{{ c.top }};transform:translate(-50%,-50%) scale({{ c.scale }});width:28px;height:28px;padding:0;border:2px solid #FFFFFF;background:{{ c.bg }};color:#FFFFFF;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(20,21,23,.25);transition:transform .15s ease, background .15s ease">{{ c.n }}</button>
+              </sc-for>
+            </div>
+            <div style="position:relative;z-index:1;height:30px;background:#E6E3DB;border-top:1px solid #D6D2C8"></div>
+            <div style="position:relative;z-index:3;background:#D9D5CB;border-top:1px solid #C9C4B8;padding:12px 32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#2E3034">
+              <span>{{ m.plinthLeft }}</span><span>{{ m.plinthRight }}</span>
+            </div>
+          </sc-if>
+          <sc-if value="{{ isDetail }}" hint-placeholder-val="{{ false }}">
+            <div style="flex:1 1 auto;display:flex;align-items:center;justify-content:center;padding:32px 40px 16px;background:#FFFFFF">
+              <sc-if value="{{ vf.agaruB }}" hint-placeholder-val="{{ false }}"><img src="assets/agaru-profil-plie.png" alt="Agaru, profil plié" style="max-width:100%;max-height:460px;object-fit:contain;display:block"></sc-if><sc-if value="{{ vf.agaruC }}" hint-placeholder-val="{{ false }}"><img src="assets/agaru-cockpit.png" alt="Agaru, cockpit et écran LED" style="max-width:100%;max-height:460px;object-fit:contain;display:block"></sc-if><sc-if value="{{ vf.agaruD }}" hint-placeholder-val="{{ false }}"><img src="assets/agaru-plateau-frein.png" alt="Agaru, plateau et frein à disque arrière" style="max-width:100%;max-height:460px;object-fit:contain;display:block"></sc-if><sc-if value="{{ vf.s360B }}" hint-placeholder-val="{{ false }}"><img src="assets/360-profil-plie.png" alt="E-scooter 360, profil plié" style="max-width:100%;max-height:460px;object-fit:contain;display:block"></sc-if><sc-if value="{{ vf.s360C }}" hint-placeholder-val="{{ false }}"><img src="assets/360-selle-batteries.png" alt="E-scooter 360, selle ouverte et batteries" style="max-width:100%;max-height:460px;object-fit:contain;display:block"></sc-if><sc-if value="{{ vf.s360D }}" hint-placeholder-val="{{ false }}"><img src="assets/360-roue-arriere.png" alt="E-scooter 360, roue arrière et charnière orange" style="max-width:100%;max-height:460px;object-fit:contain;display:block"></sc-if>
+            </div>
+            <div style="padding:14px 32px;border-top:1px solid #DFDDD6;background:#FFFFFF;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#1B3B2B;font-weight:600">Vue {{ view.letter }}</span>
+              <span style="font-size:14px;line-height:1.5;color:#3F4145">{{ view.caption }}</span>
+            </div>
+          </sc-if>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #DFDDD6">
+          <sc-for list="{{ views }}" as="v" hint-placeholder-count="4">
+            <button onClick="{{ v.select }}" style="display:flex;flex-direction:column;gap:3px;align-items:flex-start;padding:12px 16px;background:{{ v.bg }};border:0;border-right:1px solid #DFDDD6;border-top:2px solid {{ v.bar }};margin-top:-1px;text-align:left;cursor:pointer" style-hover="background:#FFFFFF">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#55575B">Vue {{ v.letter }}</span>
+              <span style="font-size:13px;font-weight:600">{{ v.label }}</span>
+            </button>
+          </sc-for>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border-top:1px solid #DFDDD6;background:#FFFFFF">
+          <sc-for list="{{ legend }}" as="l" hint-placeholder-count="4">
+            <div onMouseEnter="{{ l.enter }}" onMouseLeave="{{ l.leave }}" style="display:grid;grid-template-columns:28px 1fr;gap:14px;padding:18px 24px;border-right:1px solid #EEECE6;border-bottom:1px solid #EEECE6;background:{{ l.bg }};transition:background .15s ease">
+              <span style="width:28px;height:28px;display:flex;align-items:center;justify-content:center;background:{{ l.markBg }};color:#FFFFFF;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600">{{ l.n }}</span>
+              <span style="display:flex;flex-direction:column;gap:5px">
+                <span style="font-size:15px;font-weight:700">{{ l.title }}</span>
+                <span style="font-size:13.5px;line-height:1.5;color:#3F4145;text-wrap:pretty">{{ l.text }}</span>
+              </span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <aside style="flex:1 1 360px;max-width:100%;background:#FFFFFF;display:flex;flex-direction:column">
+        <div style="padding:20px 28px;border-bottom:1px solid #DFDDD6;display:flex;justify-content:space-between;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase">
+          <span style="color:#55575B">Simulateur</span><span style="color:#1B3B2B;font-weight:600">{{ m.name }}</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid #DFDDD6">
+          <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+            <button onClick="{{ t.select }}" disabled="{{ t.disabled }}" style="display:flex;flex-direction:column;gap:3px;align-items:flex-start;justify-content:center;min-height:64px;padding:10px 14px;background:{{ t.bg }};color:{{ t.color }};border:0;border-right:1px solid #DFDDD6;text-align:left;cursor:{{ t.cursor }}">
+              <span style="font-size:13px;font-weight:600;line-height:1.2">{{ t.label }}</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.04em;text-transform:uppercase;opacity:.8">{{ t.sub }}</span>
+            </button>
+          </sc-for>
+        </div>
+        <sc-if value="{{ isSmart }}" hint-placeholder-val="{{ false }}">
+          <p style="margin:0;padding:12px 28px;background:#F6F5F0;border-bottom:1px solid #DFDDD6;font-size:12.5px;line-height:1.5;color:#3F4145">Abonnement non ouvert pour l'Agaru Smart dans le tunnel FR au 07/11/2026. Accroche affichée sur augment.eco : « 23,95 €/mois, avec 23 € d'apport. »</p>
+        </sc-if>
+
+        <div style="padding:24px 28px 8px;display:flex;flex-direction:column;gap:4px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#55575B">{{ price.label }}</span>
+          <div style="display:flex;align-items:baseline;gap:8px">
+            <span style="font-size:52px;font-weight:700;font-stretch:80%;line-height:1;letter-spacing:-.01em">{{ price.big }}</span>
+            <span style="font-size:18px;font-weight:500">{{ price.unit }}</span>
+          </div>
+          <span style="font-size:13px;line-height:1.5;color:#55575B">{{ price.sub }}</span>
+        </div>
+
+        <sc-if value="{{ isSub }}" hint-placeholder-val="{{ true }}">
+          <div style="padding:16px 28px 4px;display:flex;flex-direction:column;gap:22px">
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;justify-content:space-between;font-size:14px"><span style="font-weight:600">Durée minimale</span><span style="font-family:'IBM Plex Mono',monospace;font-weight:600">{{ dur.value }}</span></div>
+              <div style="position:relative;height:20px">
+                <div style="position:absolute;left:9px;right:9px;top:9px;height:2px;background:#DFDDD6"></div>
+                <div style="position:absolute;left:9px;top:9px;height:2px;width:{{ dur.fill }};background:#1B3B2B"></div>
+                <div style="position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center">
+                  <sc-for list="{{ dur.stops }}" as="s" hint-placeholder-count="3">
+                    <button onClick="{{ s.select }}" aria-label="{{ s.label }}" style="width:18px;height:18px;padding:0;border:0;background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer">
+                      <span style="width:{{ s.size }};height:{{ s.size }};background:{{ s.bg }};border:2px solid {{ s.border }}"></span>
+                    </button>
+                  </sc-for>
+                </div>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#55575B">
+                <sc-for list="{{ dur.stops }}" as="s" hint-placeholder-count="3"><span style="color:{{ s.labelColor }}">{{ s.label }}</span></sc-for>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;justify-content:space-between;font-size:14px"><span style="font-weight:600">Acompte</span><span style="font-family:'IBM Plex Mono',monospace;font-weight:600">{{ ac.value }}</span></div>
+              <div style="position:relative;height:20px">
+                <div style="position:absolute;left:9px;right:9px;top:9px;height:2px;background:#DFDDD6"></div>
+                <div style="position:absolute;left:9px;top:9px;height:2px;width:{{ ac.fill }};background:#1B3B2B"></div>
+                <div style="position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center">
+                  <sc-for list="{{ ac.stops }}" as="s" hint-placeholder-count="2">
+                    <button onClick="{{ s.select }}" disabled="{{ s.disabled }}" aria-label="{{ s.label }}" style="width:18px;height:18px;padding:0;border:0;background:transparent;display:flex;align-items:center;justify-content:center;cursor:{{ s.cursor }}">
+                      <span style="width:{{ s.size }};height:{{ s.size }};background:{{ s.bg }};border:2px solid {{ s.border }}"></span>
+                    </button>
+                  </sc-for>
+                </div>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#55575B">
+                <sc-for list="{{ ac.stops }}" as="s" hint-placeholder-count="2"><span style="color:{{ s.labelColor }}">{{ s.label }}</span></sc-for>
+              </div>
+              <sc-if value="{{ ac.hasNote }}" hint-placeholder-val="{{ false }}">
+                <p style="margin:0;font-size:12px;line-height:1.5;color:#55575B">Acompte maximal : palier relevé sur 36 mois uniquement. Les autres combinaisons se simulent sur augment.eco.</p>
+              </sc-if>
+            </div>
+          </div>
+        </sc-if>
+
+        <div style="padding:20px 28px 0">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#55575B;padding-bottom:8px;border-bottom:1px solid #141517">Options officielles</div>
+          <sc-for list="{{ options }}" as="o" hint-placeholder-count="3">
+            <button onClick="{{ o.toggle }}" role="checkbox" aria-checked="{{ o.checked }}" style="display:grid;grid-template-columns:18px minmax(0,1fr) auto;gap:12px;align-items:start;width:100%;padding:13px 0;border:0;border-bottom:1px solid #EEECE6;background:transparent;text-align:left;cursor:pointer">
+              <span style="width:18px;height:18px;border:1.5px solid #141517;display:flex;align-items:center;justify-content:center;margin-top:1px;background:#FFFFFF"><span style="width:10px;height:10px;background:{{ o.fill }}"></span></span>
+              <span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:14.5px;font-weight:600">{{ o.label }}</span><span style="font-size:12.5px;line-height:1.45;color:#55575B">{{ o.sub }}</span></span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;white-space:nowrap">{{ o.price }}</span>
+            </button>
+          </sc-for>
+          <sc-if value="{{ is360 }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:0;padding:12px 0;border-bottom:1px solid #EEECE6;font-size:12.5px;line-height:1.5;color:#55575B">Couverture contre le vol des trottinettes : non applicable automatiquement au 360. Une éventuelle protection se confirme séparément auprès d'Augment.</p>
+          </sc-if>
+        </div>
+
+        <div style="margin:20px 28px 0;background:#F6F5F0;border:1px solid #DFDDD6">
+          <sc-for list="{{ recap }}" as="r" hint-placeholder-count="4">
+            <div style="display:flex;justify-content:space-between;gap:12px;padding:10px 16px;border-bottom:1px solid #DFDDD6;font-size:{{ r.size }};font-weight:{{ r.weight }}">
+              <span>{{ r.label }}</span><span style="font-family:'IBM Plex Mono',monospace;white-space:nowrap">{{ r.value }}</span>
+            </div>
+          </sc-for>
+          <div style="padding:10px 16px;font-size:12px;line-height:1.5;color:#3F4145">{{ m.service }}</div>
+        </div>
+
+        <sc-if value="{{ isFin }}" hint-placeholder-val="{{ false }}">
+          <p style="margin:14px 28px 0;font-size:12px;line-height:1.5;color:#3F4145"><strong style="font-weight:600">Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</strong> Financement opéré par PayPal. D'autres durées de remboursement peuvent être proposées lors du paiement.</p>
+        </sc-if>
+
+        <div style="padding:20px 28px 28px;margin-top:auto;display:flex;flex-direction:column;gap:12px">
+          <a href="https://www.awin1.com/awclick.php?mid=131358&amp;id=3099440" target="_blank" rel="sponsored noopener" style="display:flex;align-items:center;justify-content:center;gap:12px;height:56px;padding:0 20px;background:#1B3B2B;color:#FFFFFF;font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-align:center" style-hover="background:#142D21;color:#FFFFFF">Configurer cette offre sur Augment.eco <span>→</span></a>
+          <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:10px;line-height:1.55;color:#55575B">Prix relevés le 07/11/2026 sur augment.eco. Susceptibles de modification — seul le prix affiché sur le site du marchand fait foi. Lien partenaire rémunéré.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section data-screen-label="Fiche technique" style="border-bottom:1px solid #DFDDD6">
+    <div style="max-width:1440px;margin:0 auto;padding:64px 40px 72px;display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:48px">
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#55575B">Fiche technique vérifiée</span>
+          <h2 style="margin:0;font-size:clamp(30px,3vw,42px);line-height:1;font-weight:800;font-stretch:78%;text-transform:uppercase">{{ m.name }}</h2>
+        </div>
+        <div style="border-top:1px solid #141517;background:#FFFFFF">
+          <sc-for list="{{ specs }}" as="s" hint-placeholder-count="12">
+            <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);border-bottom:1px solid #EEECE6">
+              <span style="padding:12px 16px;background:#FBFAF7;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#55575B;border-right:1px solid #EEECE6">{{ s.k }}</span>
+              <span style="padding:11px 16px;font-size:15px;font-weight:500">{{ s.v }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;line-height:1.55;color:#55575B">Source : augment.eco, panneau « Voir les spécifications », et centre d'aide help.augment.eco/fr — relevé du 07/11/2026.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#55575B">Équipements — formulations officielles</span>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ equip }}" as="e" hint-placeholder-count="8">
+              <span style="padding:8px 12px;border:1px solid #DFDDD6;background:#FFFFFF;font-size:14px">{{ e }}</span>
+            </sc-for>
+          </div>
+        </div>
+        <blockquote style="margin:0;padding:24px 0;border-top:1px solid #141517;border-bottom:1px solid #DFDDD6;font-size:22px;line-height:1.4;font-weight:500;font-stretch:90%;text-wrap:pretty">{{ m.quote }}<span style="display:block;margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:400;letter-spacing:.05em;text-transform:uppercase;color:#55575B">Argumentaire Augment</span></blockquote>
+        <div style="background:#141517;color:#F6F5F0;display:grid;grid-template-columns:minmax(0,1fr) 160px;align-items:center">
+          <div style="padding:24px 28px;display:flex;flex-direction:column;gap:10px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#B9BBB4">Application mobile Augment</span>
+            <span style="font-size:15px;line-height:1.55">{{ m.app }}</span>
+          </div>
+          <div style="width:160px;height:180px"><sc-if value="{{ isAgaruModel }}" hint-placeholder-val="{{ true }}"><img src="assets/augment-app.png" alt="Application mobile Augment" style="width:160px;height:180px;object-fit:cover;object-position:center top;display:block"></sc-if><sc-if value="{{ is360 }}" hint-placeholder-val="{{ false }}"><img src="assets/360-app.png" alt="Application mobile Augment, E-scooter 360" style="width:160px;height:180px;object-fit:cover;object-position:center top;display:block"></sc-if></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="background:#141517;color:#F6F5F0">
+  <div style="border-bottom:1px solid #2C2E31">
+    <div style="max-width:1440px;margin:0 auto;padding:16px 40px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase">Site comparatif indépendant. Non affilié éditorialement à Augment. Liens partenaires rémunérés.</div>
+  </div>
+  <div style="max-width:1440px;margin:0 auto;padding:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:21px;font-weight:800;font-stretch:80%;text-transform:uppercase;line-height:1">Guide Augment Eco</span>
+      <span style="font-size:14px;line-height:1.55;color:#C9CAC4;max-width:300px">Comparatif et guide éditorial indépendant consacré aux véhicules Augment commercialisés en France.</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9C9E98;margin-bottom:4px">Le site</span>
+      <a href="Accueil.dc.html#gamme" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">La gamme</a>
+      <a href="Configurateur.dc.html" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Simuler son forfait</a>
+      <a href="Comparateur.dc.html" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Comparateur détaillé</a>
+      <a href="Comparateur.dc.html#guides" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Guides &amp; réglementation</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9C9E98;margin-bottom:4px">Informations légales</span>
+      <a href="#" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Mentions légales</a>
+      <a href="#" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Politique de confidentialité</a>
+      <button onClick="{{ reopenCookies }}" style="background:none;border:0;padding:0;text-align:left;font-size:14px;color:#F6F5F0;cursor:pointer" style-hover="text-decoration:underline">Gestion des cookies</button>
+      <a href="Accueil.dc.html#affiliation" style="color:#F6F5F0" style-hover="color:#FFFFFF;text-decoration:underline">Déclaration d'affiliation</a>
+    </div>
+  </div>
+  <div style="border-top:1px solid #2C2E31">
+    <div style="max-width:1440px;margin:0 auto;padding:24px 40px 32px;display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:1.6;color:#B9BBB4">
+      <p style="margin:0;max-width:960px">Déclaration d'affiliation : ce site perçoit une commission via le programme d'affiliation AWIN lorsqu'un achat ou un abonnement est réalisé après un clic sur un lien partenaire. Cette rémunération ne modifie pas le prix payé.</p>
+      <p style="margin:0;max-width:960px">Prix relevés le 07/11/2026 sur augment.eco. Susceptibles de modification — seul le prix affiché sur le site du marchand fait foi. Augment, Agaru et 360 sont des marques de leur propriétaire respectif.</p>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ showCookies }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-label="Gestion des cookies" style="position:fixed;left:24px;bottom:24px;z-index:50;width:min(440px,calc(100vw - 48px));background:#FFFFFF;border:1px solid #141517;box-shadow:0 16px 40px rgba(20,21,23,.16)">
+    <div style="padding:20px 22px 0;display:flex;flex-direction:column;gap:8px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#55575B">Cookies</span>
+      <p style="margin:0;font-size:14px;line-height:1.55">Avec votre accord, nous utilisons des cookies de mesure d'audience et de suivi d'affiliation (AWIN). Vous pouvez refuser aussi simplement qu'accepter et modifier votre choix à tout moment depuis le pied de page.</p>
+    </div>
+    <div style="padding:16px 22px 20px;display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <button onClick="{{ refuseCookies }}" style="height:44px;border:1px solid #141517;background:#141517;color:#FFFFFF;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer">Tout refuser</button>
+      <button onClick="{{ acceptCookies }}" style="height:44px;border:1px solid #141517;background:#141517;color:#FFFFFF;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer">Tout accepter</button>
+      <button onClick="{{ refuseCookies }}" style="grid-column:1 / -1;height:36px;border:0;background:transparent;font-size:13px;text-decoration:underline;cursor:pointer">Personnaliser mes choix</button>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showCookieBanner&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Conformité&quot;},&quot;stickyHeader&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Navigation&quot;}}">
+const EUR = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+
+const AGARU_VIEWS = [
+  { letter: 'A', label: 'Profil déplié', src: 'assets/agaru-profil-deplie.png', main: true, ratio: '1920 / 1828', width: '74%', drop: '1%' },
+  { letter: 'B', label: 'Profil plié', src: 'assets/agaru-profil-plie.png', caption: 'Trottinette repliée : potence rabattue, crochet avant engagé dans le garde-boue arrière.' },
+  { letter: 'C', label: 'Cockpit LED', src: 'assets/agaru-cockpit.png', caption: 'Guidon élargi, écran LED (vitesse, mode, niveau de batterie), bouton de fonction et commandes de clignotants gauche / droite.' },
+  { letter: 'D', label: 'Détail frein arrière', src: 'assets/agaru-plateau-frein.png', caption: 'Plateau avec batterie fixe intégrée, feu stop arrière et étrier de frein à disque mécanique arrière sur pneu 10 × 2,5 pouces.' }
+];
+const S360_VIEWS = [
+  { letter: 'A', label: 'Vue 3/4 dépliée', src: 'assets/360-vue-3-4.png', main: true, ratio: '1920 / 1493', width: '90%', drop: '11.5%' },
+  { letter: 'B', label: 'Profil plié', src: 'assets/360-profil-plie.png', caption: 'Position repliée compacte : 1265 × 350 × 1180 mm. Rangement en ascenseur, local à vélos, cave, bureau ou appartement.' },
+  { letter: 'C', label: 'Selle ouverte', src: 'assets/360-selle-batteries.png', caption: 'Selle ouverte : logement pour 2 batteries amovibles Li-ion 21700 de 1 080 Wh, avec poignées d\u2019extraction.' },
+  { letter: 'D', label: 'Roue arrière', src: 'assets/360-roue-arriere.png', caption: 'Pneu 120/90-R10, frein à disque hydraulique arrière, support de plaque et molette orange de déverrouillage du pliage.' }
+];
+
+const AGARU_SPECS = (km, cap, kg) => [
+  ['Catégorie', 'EDPM (e-trottinette)'], ['Vitesse max', '25 km/h'], ['Moteur', '500 W'], ['Puissance maximale', '800 W'],
+  ['Couple', '26 Nm'], ['Montée en pente', '23 %'], ['Autonomie max', km], ['Batterie', 'Fixe, intégrée au plateau'],
+  ['Capacité', cap], ['Type de batterie', 'Li-ion'], ['Pneus', '10" — pneus à air 10 × 2,5 pouces'], ['Poids', kg],
+  ['Freins', 'Disque mécanique à l\u2019arrière + eABS à l\u2019avant'], ['Étanchéité', 'IPX5']
+];
+
+const MODELS = {
+  smart: {
+    key: 'smart', idx: '01', name: 'Agaru Smart', tagline: 'Le choix malin', cls: 'EDPM 25 km/h', agaru: true,
+    badge: 'E-trottinette EDPM · 25 km/h', thumb: 'assets/agaru-profil-deplie.png',
+    grid: [['Poids', '20,0 kg'], ['Autonomie', '50 km'], ['Batterie', '499 Wh fixe'], ['Moteur', '500W / 800W']],
+    purchase: 399, sub: null,
+    fin: () => ({ monthly: 19.33, total: 463.78, months: '24 mois' }),
+    battery: '499 Wh', batteryOther: '768 Wh sur l\u2019Ultra',
+    specs: AGARU_SPECS('50 km', '10,4 Ah / 499 Wh', '20 kg'),
+    equip: ['Clignotants', 'Un guidon plus large', 'Application mobile', 'Antivol digital', 'Batterie 10.4Ah / 499Wh intégrée dans le plateau', 'Charge rapide', 'Moteur surpuissant', 'Pliage rapide', 'Étanchéité IPX5', 'Pneus à air 10 x 2,5 pouces', 'Double système de freinage'],
+    quote: '« Agaru Smart, c\u2019est la mobilité sans stress et sans faille. Une e-trottinette solide, fiable et prête à affronter le quotidien. »',
+    plinthLeft: '01 — Agaru Smart · 20 kg', plinthRight: 'EDPM · 25 km/h · IPX5'
+  },
+  ultra: {
+    key: 'ultra', idx: '02', name: 'Agaru Ultra', tagline: 'La meilleure autonomie', cls: 'EDPM 25 km/h', agaru: true,
+    badge: 'E-trottinette EDPM · 25 km/h', thumb: 'assets/agaru-profil-deplie.png',
+    grid: [['Poids', '20,7 kg'], ['Autonomie', '70 km'], ['Batterie', '768 Wh fixe'], ['Moteur', '500W / 800W']],
+    purchase: 549,
+    sub: { min: 59, max: 399, prices: { '12-min': 44.95, '24-min': 32.95, '36-min': 29.95, '36-max': 16.95 }, saving: 128 },
+    fin: vol => vol ? { monthly: 30.02, total: 720.46, months: '24 mois', withVol: true } : { monthly: 26.59, from: true },
+    battery: '768 Wh', batteryOther: '499 Wh sur le Smart',
+    specs: AGARU_SPECS('70 km', '16 Ah / 768 Wh', '20,7 kg'),
+    equip: ['Visibilité renforcée', 'Clignotants intégrés aux poignées', 'Un guidon plus large', 'Application mobile', 'Antivol digital', 'Batterie 16Ah / 768Wh intégrée dans le plateau', 'Moteur surpuissant', 'Pliage rapide', 'Étanchéité IPX5', 'Pneus à air 10 x 2,5 pouces', 'Double système de freinage'],
+    quote: '« L\u2019Agaru Ultra est la seule trottinette en leasing privé offrant une autonomie allant jusqu\u2019à 70 km. »',
+    plinthLeft: '02 — Agaru Ultra · 20,7 kg', plinthRight: 'EDPM · 25 km/h · IPX5'
+  },
+  '360': {
+    key: '360', idx: '03', name: 'E-scooter 360', tagline: 'Léger. Puissant. Rapide.', cls: 'L1e 45 km/h', agaru: false,
+    badge: 'Scooter à assise · Catégorie L1e', thumb: 'assets/360-vue-3-4.png',
+    grid: [['Poids', '36 kg (31 kg vide)'], ['Autonomie', '53 / 106 km'], ['Batterie', '1080 Wh amovible'], ['Moteur', '2140 W (105 Nm)']],
+    purchase: 1890,
+    sub: { min: 290, max: 1490, prices: { '12-min': 159.90, '24-min': 89.90, '36-min': 64.90, '36-max': 25.90 }, saving: 204 },
+    fin: () => ({ monthly: 91.54, total: 2196.99, months: '24 mois' }),
+    specs: [
+      ['Catégorie', 'L1e (cyclomoteur)'], ['Vitesse max', '45 km/h'], ['Moteur', '2 140 W'], ['Couple', '105 Nm'],
+      ['Montée en pente', 'Non communiquée'], ['Autonomie max', '53 km (1 batterie) / 106 km (2 batteries)'],
+      ['Batterie', 'Amovible, 5,2 kg par batterie'], ['Capacité', '1 080 Wh'], ['Type de batterie', 'Li-ion 21700'],
+      ['Pneus', '120/90-R10, 18.5", tubeless, compatibles pneus hiver'], ['Poids', '36 kg avec batterie, 31 kg à vide'],
+      ['Freins', 'Freins à disque hydrauliques'], ['Étanchéité', 'IPX4'], ['Dimensions déplié', '1555 × 609 × 1010 mm'],
+      ['Dimensions plié', '1265 × 350 × 1180 mm'], ['Garantie', '2 ans, 5 ans sur le cadre aluminium']
+    ],
+    equip: ['Commandes et verrouillage via l\u2019app', 'Badge NFC', 'Selle à ouverture par bouton', 'Fini le parking : rangement en intérieur', 'Roulez par tous les temps : IPX4', 'Pneus larges 120/90-R10'],
+    quote: '« Démarrage par contact du badge NFC sur l\u2019écran. La selle s\u2019ouvre via un bouton pour un accès direct à la batterie et à l\u2019espace de stockage. »',
+    plinthLeft: '03 — E-scooter 360 · Déplié 1555 × 609 × 1010 mm', plinthRight: 'L1e · 45 km/h · IPX4'
+  }
+};
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    let model = 'ultra';
+    try { const q = new URLSearchParams(window.location.search).get('model'); if (q && MODELS[q]) model = q; } catch (e) {}
+    this.state = {
+      model, mode: model === 'smart' ? 'buy' : 'sub', view: 0, hover: null,
+      dur: 36, ac: 'min', vol: true, signals: false, helmet: false, battery: false,
+      countryOpen: false, cookie: 'pending'
+    };
+  }
+  componentDidMount() {
+    try { const v = localStorage.getItem('ae-cookie-choice'); if (v) this.setState({ cookie: v }); } catch (e) {}
+  }
+  setCookie(v) { try { localStorage.setItem('ae-cookie-choice', v); } catch (e) {} this.setState({ cookie: v }); }
+  selectModel(key) {
+    this.setState(s => ({ model: key, mode: key === 'smart' && s.mode === 'sub' ? 'buy' : s.mode, view: 0, hover: null, battery: key === '360' ? s.battery : false }));
+    try { const u = new URL(window.location.href); u.searchParams.set('model', key); window.history.replaceState(null, '', u.toString()); } catch (e) {}
+  }
+
+  renderVals() {
+    const st = this.state;
+    const M = MODELS[st.model];
+    const views = M.agaru ? AGARU_VIEWS : S360_VIEWS;
+    const view = views[st.view];
+    const hoverOn = n => () => this.setState({ hover: n });
+    const hoverOff = () => this.setState({ hover: null });
+
+    const calloutData = M.agaru ? [
+      { n: '01', left: '31%', top: '9%', title: 'Guidon élargi & écran LED', text: 'Clignotants intégrés aux poignées (option gratuite), bouton multifonction et verrouillage via l\u2019application mobile.' },
+      { n: '02', left: '52%', top: '84%', title: 'Plateau central', text: `Batterie Li-ion fixe intégrée au plateau : ${M.battery} (${M.batteryOther}). Étanchéité IPX5.` },
+      { n: '03', left: '17.5%', top: '88%', title: 'Roue avant', text: 'Moteur 500 W (800 W crête), couple 26 Nm, pentes jusqu\u2019à 23 %. Freinage électronique eABS à l\u2019avant.' },
+      { n: '04', left: '81%', top: '86%', title: 'Roue arrière', text: 'Pneus à air 10 × 2,5 pouces. Frein à disque mécanique à l\u2019arrière.' }
+    ] : [
+      { n: '01', left: '66%', top: '35%', title: 'Selle à ouverture par bouton & écran NFC', text: 'Démarrage sans clé par badge NFC. Logement pour 1 ou 2 batteries amovibles de 1 080 Wh (5,2 kg l\u2019unité), jusqu\u2019à 106 km.' },
+      { n: '02', left: '65%', top: '70%', title: 'Charnière centrale à molette orange', text: 'Pliage compact (1265 × 350 × 1180 mm) pour un rangement en appartement, ascenseur ou bureau. Cadre aluminium garanti 5 ans.' },
+      { n: '03', left: '78%', top: '64%', title: 'Roue arrière', text: 'Moteur 2 140 W à fort couple (105 Nm), 45 km/h, catégorie L1e. Blocage antivol de la roue arrière via l\u2019application.' },
+      { n: '04', left: '27%', top: '72%', title: 'Trains roulants', text: 'Pneus larges tubeless 120/90-R10 (18.5"), compatibles pneus hiver. Freins à disque hydrauliques.' }
+    ];
+    const callouts = calloutData.map(c => ({ ...c, enter: hoverOn(c.n), leave: hoverOff, bg: st.hover === c.n ? '#141517' : '#1B3B2B', scale: st.hover === c.n ? '1.2' : '1' }));
+    const legend = calloutData.map(c => ({ ...c, enter: hoverOn(c.n), leave: hoverOff, bg: st.hover === c.n ? '#F1F0EA' : '#FFFFFF', markBg: st.hover === c.n ? '#141517' : '#1B3B2B' }));
+
+    const models = ['smart', 'ultra', '360'].map(k => MODELS[k]).map(md => {
+      const sel = md.key === st.model;
+      return {
+        isAgaru: !!md.agaru, is360: !md.agaru, idx: md.idx, name: md.name, tagline: md.tagline, cls: md.cls, thumb: md.thumb, selected: sel ? 'true' : 'false',
+        grid: md.grid.map(([k, v]) => ({ k, v })),
+        bg: sel ? '#FFFFFF' : 'transparent', ring: sel ? 'inset 0 0 0 2px #1B3B2B' : 'none',
+        select: () => this.selectModel(md.key)
+      };
+    });
+
+    const tabsDef = [
+      { key: 'sub', label: 'Abonnement (LOA)', sub: M.sub ? '12 · 24 · 36 mois' : 'Non ouvert', disabled: !M.sub },
+      { key: 'buy', label: 'Achat Comptant', sub: EUR(M.purchase).replace(',00', '') },
+      { key: 'fin', label: 'Financement PayPal 24 mois', sub: 'TAEG 15,99 %' }
+    ];
+    const tabs = tabsDef.map(t => {
+      const on = st.mode === t.key;
+      return { ...t, bg: on ? '#141517' : '#FFFFFF', color: t.disabled ? '#9C9E98' : (on ? '#FFFFFF' : '#141517'), cursor: t.disabled ? 'not-allowed' : 'pointer', select: () => { if (!t.disabled) this.setState({ mode: t.key }); } };
+    });
+
+    const mode = st.mode;
+    let price = { label: '', big: '', unit: '', sub: '' };
+    let recap = [];
+    const row = (label, value, strong) => ({ label, value, size: strong ? '15px' : '13.5px', weight: strong ? '700' : '400' });
+    const oneTime = (st.helmet ? 39 : 0) + (M.key === '360' && st.battery ? 690 : 0);
+    const oneTimeRows = () => {
+      const r = [];
+      if (M.agaru && st.signals) r.push(row('Clignotants Agaru', '0,00 €'));
+      if (st.helmet) r.push(row('Casque Alpina Soho', '+ 39,00 €'));
+      if (M.key === '360' && st.battery) r.push(row('2e batterie 1 080 Wh', '+ 690,00 €'));
+      return r;
+    };
+
+    let dur = null, ac = null;
+    if (mode === 'sub' && M.sub) {
+      const key = `${st.dur}-${st.ac}`;
+      const base = M.sub.prices[key];
+      const saving = key === '36-max' ? M.sub.saving : 0;
+      const durs = [12, 24, 36];
+      const di = durs.indexOf(st.dur);
+      dur = {
+        value: `${st.dur} mois`, fill: `calc((100% - 18px) * ${di / 2})`,
+        stops: durs.map((d, i) => ({
+          label: `${d} mois`, size: d === st.dur ? '16px' : '12px', bg: i <= di ? '#1B3B2B' : '#FFFFFF', border: i <= di ? '#1B3B2B' : '#9C9E98',
+          labelColor: d === st.dur ? '#141517' : '#55575B',
+          select: () => this.setState(s => ({ dur: d, ac: d !== 36 ? 'min' : s.ac }))
+        }))
+      };
+      const maxOk = st.dur === 36;
+      ac = {
+        value: EUR(st.ac === 'max' ? M.sub.max : M.sub.min), fill: `calc((100% - 18px) * ${st.ac === 'max' ? 1 : 0})`, hasNote: !maxOk,
+        stops: [
+          { label: `Min. ${EUR(M.sub.min).replace(',00', '')}`, disabled: false, cursor: 'pointer', size: st.ac === 'min' ? '16px' : '12px', bg: '#1B3B2B', border: '#1B3B2B', labelColor: st.ac === 'min' ? '#141517' : '#55575B', select: () => this.setState({ ac: 'min' }) },
+          { label: `Max. ${EUR(M.sub.max).replace(',00', '')}`, disabled: !maxOk, cursor: maxOk ? 'pointer' : 'not-allowed', size: st.ac === 'max' ? '16px' : '12px', bg: st.ac === 'max' ? '#1B3B2B' : (maxOk ? '#FFFFFF' : '#EEECE6'), border: st.ac === 'max' ? '#1B3B2B' : (maxOk ? '#9C9E98' : '#C9C6BD'), labelColor: st.ac === 'max' ? '#141517' : (maxOk ? '#55575B' : '#9C9E98'), select: () => { if (maxOk) this.setState({ ac: 'max' }); } }
+        ]
+      };
+      price = { label: 'Prix mensuel de base', big: EUR(base), unit: '/ mois', sub: `Durée minimale ${st.dur} mois · acompte ${EUR(st.ac === 'max' ? M.sub.max : M.sub.min)}` };
+      const volOn = M.agaru && st.vol;
+      recap.push(row('Prix mensuel de base', EUR(base)));
+      if (volOn) recap.push(row('Couverture contre le vol', '+ 2,95 €'));
+      recap.push(row('Total mensuel', EUR(base + (volOn ? 2.95 : 0)), true));
+      recap.push(row('Acompte', EUR(st.ac === 'max' ? M.sub.max : M.sub.min)));
+      recap = recap.concat(oneTimeRows());
+      recap.push(row(`Économie totale sur ${st.dur} mois`, EUR(saving)));
+    } else if (mode === 'buy') {
+      price = { label: 'Achat comptant', big: EUR(M.purchase).replace(',00', ''), unit: 'TTC', sub: M.agaru ? 'Service de réparation tout compris disponible en option à l\u2019achat.' : 'Garantie 2 ans, 5 ans sur le cadre aluminium.' };
+      recap.push(row('Prix d\u2019achat', EUR(M.purchase)));
+      recap = recap.concat(oneTimeRows());
+      recap.push(row('Total à la commande', EUR(M.purchase + oneTime), true));
+      if (M.agaru && st.vol) recap.push(row('Couverture contre le vol', '2,95 € / mois'));
+    } else {
+      const f = M.fin(st.vol);
+      price = {
+        label: f.from ? 'Financement PayPal — à partir de' : 'Financement PayPal',
+        big: EUR(f.monthly), unit: '/ mois',
+        sub: f.from ? 'TAEG 15,99 %. Durée et montant total précisés lors du paiement.' : `${f.months} · TAEG 15,99 % · montant total dû ${EUR(f.total)}${f.withVol ? ' · couverture vol incluse' : ''}`
+      };
+      recap.push(row('Mensualité', (f.from ? 'dès ' : '') + EUR(f.monthly)));
+      recap.push(row('Durée', f.months || 'Selon l\u2019offre PayPal'));
+      recap.push(row('TAEG fixe', '15,99 %'));
+      recap.push(row('Montant total dû', f.total ? EUR(f.total) : 'Affiché au paiement', true));
+      if (f.withVol) recap.push(row('Dont couverture contre le vol', 'Incluse'));
+      else if (M.agaru && st.vol) recap.push(row('Couverture contre le vol', '2,95 € / mois'));
+      recap = recap.concat(oneTimeRows());
+    }
+
+    const opt = (key, label, sub, priceTxt) => ({
+      label, sub, price: priceTxt, checked: st[key] ? 'true' : 'false', fill: st[key] ? '#1B3B2B' : 'transparent',
+      toggle: () => this.setState(s => ({ [key]: !s[key] }))
+    });
+    const options = [];
+    if (M.agaru) {
+      options.push(opt('vol', 'Couverture contre le vol', 'Vol, vandalisme et perte. Choisie par 71 % des clients. Franchise 100 € / 150 €.', '+2,95 €/mois'));
+      options.push(opt('signals', 'Clignotants Agaru', 'Extra proposé au tunnel de commande.', '0,00 € — Gratuit'));
+    }
+    options.push(opt('helmet', 'Casque Alpina Soho', mode === 'sub' ? 'Il est à vous à la fin du contrat.' : 'Extra proposé au tunnel de commande.', '+39,00 €'));
+    if (M.key === '360') options.push(opt('battery', '2e batterie 1 080 Wh', '+50 km : porte l\u2019autonomie à 106 km.', '+690,00 €'));
+
+    const showBanner = this.props.showCookieBanner ?? true;
+    return {
+      headerPosition: (this.props.stickyHeader ?? true) ? 'sticky' : 'relative',
+      countryOpen: st.countryOpen, countryCaret: st.countryOpen ? '▴' : '▾',
+      toggleCountry: () => this.setState(s => ({ countryOpen: !s.countryOpen })),
+      countries: [['FR', 'France', 'Édition actuelle'], ['FI', 'Finlande'], ['SE', 'Suède'], ['AT', 'Autriche'], ['BE', 'Belgique'], ['CH', 'Suisse'], ['ES', 'Espagne'], ['IT', 'Italie']].map(([code, name, status]) => ({ code, name, status: status || 'À venir' })),
+      showCookies: showBanner && st.cookie === 'pending',
+      acceptCookies: () => this.setCookie('accepted'), refuseCookies: () => this.setCookie('refused'), reopenCookies: () => this.setState({ cookie: 'pending' }),
+
+      hydrated: true,
+      isAgaruModel: !!M.agaru,
+      vf: (() => { const k = (M.agaru ? 'agaru' : 's360') + view.letter; const o = {}; ['agaruA','agaruB','agaruC','agaruD','s360A','s360B','s360C','s360D'].forEach(x => o[x] = x === k); return o; })(),
+      m: {
+        name: M.name, tagline: M.tagline, badge: M.badge, quote: M.quote, plinthLeft: M.plinthLeft, plinthRight: M.plinthRight,
+        badgeBg: M.agaru ? 'transparent' : '#141517', badgeColor: M.agaru ? '#141517' : '#F6F5F0',
+        service: M.agaru ? 'Service Agaru : réparations et remplacements gratuits, inclus en abonnement et disponible en option à l\u2019achat.' : 'E-scooter 360 : pièces d\u2019usure disponibles, réparation tout compris non incluse. Garantie 2 ans, 5 ans sur le cadre aluminium.',
+        app: M.agaru ? 'Statistiques de trajet, état de la batterie, éclairage et antivol digital depuis le smartphone.' : 'Modes de conduite, paramètres et protection antivol : une fois activée, le 360 réagit au moindre mouvement en verrouillant la roue arrière.',
+        appImg: M.agaru ? 'assets/augment-app.png' : 'assets/360-app.png'
+      },
+      models,
+      isSmart: M.key === 'smart', is360: M.key === '360',
+      views: views.map((v, i) => ({ letter: v.letter, label: v.label, bg: i === st.view ? '#FFFFFF' : 'transparent', bar: i === st.view ? '#1B3B2B' : 'transparent', select: () => this.setState({ view: i, hover: null }) })),
+      view: { ...view, alt: `${M.name} — ${view.label}` },
+      isMain: !!view.main, isDetail: !view.main,
+      callouts, legend,
+      tabs, isSub: mode === 'sub' && !!M.sub, isBuy: mode === 'buy', isFin: mode === 'fin',
+      dur: dur || { stops: [] }, ac: ac || { stops: [] },
+      price, recap, options,
+      specs: M.specs.map(([k, v]) => ({ k, v })),
+      equip: M.equip
+    };
+  }
+}
+</script>
+</body>
+</html>

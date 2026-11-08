@@ -1,0 +1,135 @@
+{
+ "agaru-smart": {
+  "achat": 39900,
+  "options": [
+   "PURCHASE"
+  ],
+  "stock": "in-stock",
+  "livraison": null,
+  "financement": {
+   "mois": 24,
+   "mensualite": 1933,
+   "total": 46378,
+   "taeg": 0.1599
+  },
+  "grille": null,
+  "services": {
+   "Theft-coverage": 295
+  },
+  "accessoires": {
+   "Agaru-Turning-Signals-Charge-ONE_TIME-0": [
+    0,
+    0
+   ],
+   "Helmet-S-size-Charge-ONE_TIME-3900": [
+    3900,
+    162
+   ],
+   "Helmet-M-size-Charge-ONE_TIME-3900": [
+    3900,
+    165
+   ]
+  }
+ },
+ "agaru-ultra": {
+  "achat": 54900,
+  "options": [
+   "PURCHASE",
+   "SUBSCRIPTION"
+  ],
+  "stock": "in-stock",
+  "livraison": null,
+  "financement": {
+   "mois": 24,
+   "mensualite": 2659,
+   "total": 63819,
+   "taeg": 0.1599
+  },
+  "grille": {
+   "12": {
+    "5900": 4495,
+    "11900": 3895,
+    "18900": 3295,
+    "24900": 2695,
+    "39900": 1295
+   },
+   "24": {
+    "5900": 3295,
+    "11900": 2995,
+    "18900": 2595,
+    "24900": 2295,
+    "39900": 1495
+   },
+   "36": {
+    "5900": 2995,
+    "11900": 2695,
+    "18900": 2395,
+    "24900": 2195,
+    "39900": 1695
+   }
+  },
+  "services": {
+   "Theft-coverage": 295,
+   "E-Scooter-All-Inclusive-Maintenance": 0
+  },
+  "accessoires": {
+   "Agaru-Turning-Signals-Charge-ONE_TIME-0": [
+    0,
+    0
+   ],
+   "Helmet-S-size-Charge-ONE_TIME-3900": [
+    3900,
+    162
+   ],
+   "Helmet-M-size-Charge-ONE_TIME-3900": [
+    3900,
+    165
+   ]
+  }
+ },
+ "augment-360": {
+  "achat": 199000,
+  "options": [
+   "PURCHASE",
+   "SUBSCRIPTION"
+  ],
+  "stock": "in-stock",
+  "livraison": "7-10",
+  "financement": {
+   "mois": 24,
+   "mensualite": 9638,
+   "total": 231324,
+   "taeg": 0.1599
+  },
+  "grille": {
+   "12": {
+    "29000": 15990,
+    "59000": 13290,
+    "89000": 10690,
+    "119000": 7990,
+    "149000": 5190
+   },
+   "24": {
+    "29000": 8990,
+    "59000": 7490,
+    "89000": 5990,
+    "119000": 4290,
+    "149000": 2790
+   },
+   "36": {
+    "29000": 6490,
+    "59000": 5590,
+    "89000": 4690,
+    "119000": 3690,
+    "149000": 2590
+   }
+  },
+  "services": {},
+  "accessoires": {
+   "360-1080-Wh-Battery-Extra-Charge-ONE_TIME-69000": [
+    69000,
+    95
+   ]
+  }
+ }
+}

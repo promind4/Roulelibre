@@ -1,0 +1,10 @@
+# Moteurs de recherche et moteurs de réponse IA autorisés (citation possible du site).
+User-agent: *
+Allow: /
+Disallow: /tools/
+
+# Robot d’entraînement seul (Common Crawl) : non nécessaire.
+User-agent: CCBot
+Disallow: /
+
+Sitemap: https://roulelibre.fr/sitemap.xml

@@ -1,0 +1,41 @@
+query configurableItems($country: CountryCode!, $language: Language!, $checkoutMode: SaleableScooterCheckoutMode) {
+  saleableItems(input: {country: $country, language: $language, checkoutMode: $checkoutMode}) {
+    ... on SaleableScooter {
+      id
+      name
+      checkoutOptions
+      purchaseAmountInCents
+      shippingTimeInBusinessDays
+      availability { code }
+      financingInfo {
+        nominalAnnualInterestRate
+        annualPercentageRate
+        durationInMonths
+        installmentAmountInCents
+        monthlyFeeInCents
+        originationFeeInCents
+        totalCostOfCreditInCents
+        totalAmountPayableInCents
+      }
+      planDetails {
+        durations {
+          id
+          durationInMonths
+          isDefault
+          downPayments { id amountInCents isDefault monthlyAmountInCents }
+        }
+      }
+      accessories {
+        options { id isDefault isOptional title pricingType amountInCents extraMonthlyAmountInCents }
+      }
+      services {
+        id
+        extraMonthlyAmountInCents
+        extraMonthlyAmountInCentsByDuration { durationInMonths extraMonthlyAmountInCents }
+        isDefault
+        isOptional
+        title
+      }
+    }
+  }
+}
