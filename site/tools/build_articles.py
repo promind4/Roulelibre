@@ -128,7 +128,7 @@ for a in ARTICLES:
     ld = {'@context': 'https://schema.org', '@graph': [
         {'@type': 'Article', 'headline': txt(a['h1']), 'description': a['description'], 'image': img_url, 'inLanguage': 'fr-FR',
          'datePublished': D[a['slug']]['publie'], 'dateModified': D[a['slug']]['maj'], 'author': {'@type': 'Organization', 'name': 'La rédaction de ' + NAME, 'url': SITE + '/a-propos'},
-         'editor': {'@type': 'Person', 'name': 'Kesiah Ntumba', 'url': SITE + '/a-propos'}, 'publisher': ORG, 'mainEntityOfPage': url, 'articleSection': a['categorie']},
+         'publisher': ORG, 'mainEntityOfPage': url, 'articleSection': a['categorie']},
         {'@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': r}} for q, r in a['faq']]},
         {'@type': 'BreadcrumbList', 'itemListElement': [
             {'@type': 'ListItem', 'position': 1, 'name': 'Accueil', 'item': SITE + '/'},
@@ -142,7 +142,7 @@ for a in ARTICLES:
       <p class="eyebrow">%(cat)s</p>
       <h1>%(h1)s</h1>
       <p class="lead art__chapo">%(chapo)s</p>
-      <p class="art__meta"><span>Par <a href="../a-propos.html">la rédaction de %(name)s</a></span><span>Relu par <a href="../a-propos.html#qui">Kesiah Ntumba</a></span><span>Mis à jour le %(maj)s</span><span>%(lecture)d&nbsp;min de lecture</span></p>
+      <p class="art__meta"><span>Par <a href="../a-propos.html">la rédaction de %(name)s</a></span><span>Relu par <a href="../a-propos.html#qui">l’éditeur</a></span><span>Mis à jour le %(maj)s</span><span>%(lecture)d&nbsp;min de lecture</span></p>
     </header>
     <figure class="wrap art__hero">
       %(hero)s

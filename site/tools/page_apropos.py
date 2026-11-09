@@ -28,7 +28,7 @@ body = '''<main id="contenu">
       <div class="prose">
         <section aria-labelledby="qui">
           <h2 id="qui">Qui édite le site</h2>
-          <p>Le site est édité par Kesiah Ntumba, entrepreneur individuel installé à Bordeaux (nom commercial Azura). Il relit chaque article avant sa publication et à chaque mise à jour. Coordonnées complètes dans les <a href="/mentions-legales">mentions légales</a>&nbsp;; pour nous écrire&nbsp;: <a href="mailto:contact@roulelibre.fr">contact@roulelibre.fr</a>. Nous ne sommes ni Augment ni un revendeur&nbsp;: aucun véhicule n’est vendu ici, la commande se fait toujours sur augment.eco.</p>
+          <p>Le site est édité par Azura, une entreprise individuelle basée à Bordeaux. Chaque article est relu par l’éditeur avant sa publication et à chaque mise à jour. Coordonnées complètes dans les <a href="/mentions-legales">mentions légales</a>&nbsp;; pour nous écrire&nbsp;: <a href="mailto:contact@roulelibre.fr">contact@roulelibre.fr</a>. Nous ne sommes ni Augment ni un revendeur&nbsp;: aucun véhicule n’est vendu ici, la commande se fait toujours sur augment.eco.</p>
         </section>
 
         <section aria-labelledby="pourquoi">
