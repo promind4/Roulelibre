@@ -28,7 +28,7 @@ PRODUCTS = [
     product('E-scooter 360', 'Scooter électrique pliable à assise, 45 km/h, 53 km d’autonomie (106 km avec une seconde batterie), 36 kg. Location dès 25,90 €/mois.', '360-vue-3-4.webp', '1990', 'https://augment.eco/fr-fr/augment-360/'),
 ]
 
-ORG = {'@type': 'Organization', '@id': SITE + '/#editeur', 'name': NAME, 'legalName': 'Azura', 'url': SITE + '/', 'logo': SITE + '/img/logo-512.png',
+ORG = {'@type': 'Organization', '@id': SITE + '/#editeur', 'name': NAME, 'legalName': 'Kesiah Ntumba (EI, nom commercial Azura)', 'email': 'contact@roulelibre.fr', 'founder': {'@type': 'Person', 'name': 'Kesiah Ntumba'}, 'url': SITE + '/', 'logo': SITE + '/img/logo-512.png',
        'address': {'@type': 'PostalAddress', 'streetAddress': 'Cours d’Albret', 'addressLocality': 'Bordeaux', 'postalCode': '33000', 'addressCountry': 'FR'},
        'publishingPrinciples': SITE + '/a-propos'}
 WEBSITE = {'@type': 'WebSite', '@id': SITE + '/#site', 'name': NAME, 'url': SITE + '/', 'inLanguage': 'fr-FR', 'publisher': {'@id': SITE + '/#editeur'}}
