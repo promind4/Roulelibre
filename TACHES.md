@@ -13,4 +13,6 @@ Objectif : site déployable ce soir sur Vercel.
 | 7 | Articles de base | 4 articles en ligne dans `site/conseils/` (location ou achat, assurance et règles, écologie, scooter 45 km/h) ; suite du cocon dans `COCON.md` | Fait |
 | 8 | Déploiement | Mise en ligne sur Vercel, domaine branché, vérification finale (liens AWIN, mentions légales, cookies) | À faire |
 
+| 9 | Logo et favicon | Piste D (oiseau-roue) retenue ; autres pistes conservées dans `visuels/logo/propositions` ; script `site/tools/logo_final.py` | Fait |
+
 Plus tard : multilingue, autres images (lot 2), mentions légales à compléter (SIREN, e-mail, directeur de publication).

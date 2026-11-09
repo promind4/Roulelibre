@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 """Génère la rubrique Conseils : conseils/index.html + une page par article (tools/articles_contenu.py).
-    python tools/build_articles.py [https://roulelibre.fr] [Roulelibre]
-Gabarit (en-tête, pied de page, cookies) repris de a-propos.html, chemins relatifs corrigés pour le sous-dossier."""
+    python tools/build_articles.py [https://www.roulelibre.fr] [Roulelibre]
+Gabarit (en-tête, pied de page, cookies) repris de a-propos.html, liens internes absolus (voir absolutise)."""
 import io, re, os, sys, json, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))).replace('\\', '/') + '/'
 sys.path.insert(0, ROOT + 'tools')
 from articles_contenu import ARTICLES
 
-SITE = (sys.argv[1] if len(sys.argv) > 1 else 'https://roulelibre.fr').rstrip('/')
+SITE = (sys.argv[1] if len(sys.argv) > 1 else 'https://www.roulelibre.fr').rstrip('/')
 NAME = sys.argv[2] if len(sys.argv) > 2 else 'Roulelibre'
 PUBLIE = '2026-11-08'
 MAJ = datetime.date.today().isoformat()
@@ -23,18 +23,45 @@ foot = rest.split('</main>', 1)[1]
 head = head.replace('css/legal.css', 'css/article.css')
 head = head.replace(' aria-current="page"', '').replace('<a href="conseils/index.html"><small>05</small>', '<a href="conseils/index.html" aria-current="page"><small>05</small>')
 
-def relatif(html):
+import posixpath
+
+def _propre(path):
+    """Chemin absolu sans .html (Vercel sert les URL propres, cleanUrls) : /x/index -> /x, /index -> /."""
+    if path.endswith('.html'):
+        path = path[:-5]
+    if path == '/index':
+        return '/'
+    if path.endswith('/index'):
+        return path[:-6] or '/'
+    return path
+
+def _resoudre(val, base):
+    if re.match(r'(https?:|#|mailto:|data:|//|tel:|javascript:)', val) or val == '':
+        return val
+    m = re.match(r'([^?#]*)(.*)', val, re.S)
+    path, tail = m.group(1), m.group(2)
+    if path == '':
+        return val
+    if not path.startswith('/'):
+        path = posixpath.normpath(posixpath.join(base, path))
+    return _propre(path) + tail
+
+def absolutise(html, base):
+    """Réécrit les liens relatifs en liens absolus depuis la racine du site. Une page servie sans barre finale
+    (/conseils) résout les liens relatifs depuis / et non depuis /conseils/ : les liens absolus évitent ce piège."""
     def fix(m):
         attr, val = m.group(1), m.group(2)
-        if re.match(r'(https?:|#|mailto:|data:|//|tel:)', val):
-            return m.group(0)
         if attr == 'srcset':
-            val = ', '.join(('../' + p.strip()) for p in val.split(','))
-            return '%s="%s"' % (attr, val)
-        return '%s="../%s"' % (attr, val)
+            parts = []
+            for p in val.split(','):
+                bits = p.strip().split(' ', 1)
+                bits[0] = _resoudre(bits[0], base)
+                parts.append(' '.join(bits))
+            return '%s="%s"' % (attr, ', '.join(parts))
+        return '%s="%s"' % (attr, _resoudre(val, base))
     return re.sub(r'\b(href|src|srcset)="([^"]*)"', fix, html)
 
-head, foot = relatif(head), relatif(foot)
+head, foot = absolutise(head, '/'), absolutise(foot, '/')
 BY = {a['slug']: a for a in ARTICLES}
 
 def esc(s): return s.replace('&', '&amp;').replace('"', '&quot;')
@@ -118,7 +145,7 @@ for a in ARTICLES:
                  faq=''.join('<details class="hfaq__item"><summary><span class="hfaq__q">%s</span><span class="hfaq__icon" aria-hidden="true">+</span></summary><p class="hfaq__a">%s</p></details>' % (q.replace(' ?', '&nbsp;?'), r) for q, r in a['faq']),
                  sources=''.join('<li><a href="%s" target="_blank" rel="noopener">%s</a></li>' % (u, t) for t, u in a['sources']),
                  lies=''.join(carte(BY[s], small=True) for s in a['lies'] if s in BY))
-    html = page_head(a['titre_seo'], a['description'], seo_block(url, a['titre_seo'], a['description'], img_url, 'article', ld)) + main + foot
+    html = page_head(a['titre_seo'], a['description'], seo_block(url, a['titre_seo'], a['description'], img_url, 'article', ld)) + absolutise(main, '/conseils/') + foot
     os.makedirs(ROOT + 'conseils', exist_ok=True)
     io.open(ROOT + 'conseils/%s.html' % a['slug'], 'w', encoding='utf-8', newline='').write(html)
 
@@ -140,6 +167,6 @@ main = '''<main id="contenu">
   </section>
   <section class="wrap art__list" aria-label="Articles"><ul class="acards acards--big">%s</ul></section>
 </main>''' % ''.join(carte(a) for a in ARTICLES)
-html = page_head(title, desc, seo_block(url, title, desc, SITE + '/img/og.jpg', 'website', ld)) + main + foot
+html = page_head(title, desc, seo_block(url, title, desc, SITE + '/img/og.jpg', 'website', ld)) + absolutise(main, '/conseils/') + foot
 io.open(ROOT + 'conseils/index.html', 'w', encoding='utf-8', newline='').write(html)
 print('%d articles + index générés' % len(ARTICLES))

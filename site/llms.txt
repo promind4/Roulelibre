@@ -4,10 +4,10 @@
 
 ## Pages
 
-- [Accueil](https://roulelibre.fr/) : la gamme, la location expliquée, avis clients, FAQ
-- [Comparatif](https://roulelibre.fr/comparateur) : les 3 modèles critère par critère, guides pratiques, FAQ technique
-- [Simulateur de location](https://roulelibre.fr/configurateur) : prix mensuel selon la durée, l'acompte et les options
-- [Vidéos](https://roulelibre.fr/videos) : tests et avis vidéo
+- [Accueil](https://www.roulelibre.fr/) : la gamme, la location expliquée, avis clients, FAQ
+- [Comparatif](https://www.roulelibre.fr/comparateur) : les 3 modèles critère par critère, guides pratiques, FAQ technique
+- [Simulateur de location](https://www.roulelibre.fr/configurateur) : prix mensuel selon la durée, l'acompte et les options
+- [Vidéos](https://www.roulelibre.fr/videos) : tests et avis vidéo
 
 ## Prix (France, relevés sur augment.eco)
 

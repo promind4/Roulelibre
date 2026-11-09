@@ -5,7 +5,7 @@ JSON-LD), ainsi que sitemap.xml, robots.txt et llms.txt à la racine du site."""
 import io, re, sys, json, datetime, os
 
 S = os.path.dirname(os.path.dirname(os.path.abspath(__file__))).replace('\\', '/') + '/'
-SITE = (sys.argv[1] if len(sys.argv) > 1 else 'https://roulelibre.fr').rstrip('/')
+SITE = (sys.argv[1] if len(sys.argv) > 1 else 'https://www.roulelibre.fr').rstrip('/')
 NAME = sys.argv[2] if len(sys.argv) > 2 else 'Roulelibre'
 TODAY = datetime.date.today().isoformat()
 OG = SITE + '/img/og.jpg'
@@ -28,7 +28,7 @@ PRODUCTS = [
     product('E-scooter 360', 'Scooter électrique pliable à assise, 45 km/h, 53 km d’autonomie (106 km avec une seconde batterie), 36 kg. Location dès 25,90 €/mois.', '360-vue-3-4.webp', '1990', 'https://augment.eco/fr-fr/augment-360/'),
 ]
 
-ORG = {'@type': 'Organization', '@id': SITE + '/#editeur', 'name': NAME, 'legalName': 'Azura', 'url': SITE + '/', 'logo': SITE + '/apple-touch-icon.png',
+ORG = {'@type': 'Organization', '@id': SITE + '/#editeur', 'name': NAME, 'legalName': 'Azura', 'url': SITE + '/', 'logo': SITE + '/img/logo-512.png',
        'address': {'@type': 'PostalAddress', 'streetAddress': 'Cours d’Albret', 'addressLocality': 'Bordeaux', 'postalCode': '33000', 'addressCountry': 'FR'},
        'publishingPrinciples': SITE + '/a-propos'}
 WEBSITE = {'@type': 'WebSite', '@id': SITE + '/#site', 'name': NAME, 'url': SITE + '/', 'inLanguage': 'fr-FR', 'publisher': {'@id': SITE + '/#editeur'}}
