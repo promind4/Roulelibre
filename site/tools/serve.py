@@ -41,6 +41,11 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             self.path = path + '.html' + ('?' + p.query if p.query else '')
         return super().do_GET()
 
+    def end_headers(self):
+        # Pas de cache en local : le navigateur affiche toujours la dernière version générée
+        self.send_header('Cache-Control', 'no-store')
+        super().end_headers()
+
     def log_message(self, *a):
         pass
 
