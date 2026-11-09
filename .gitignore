@@ -26,3 +26,6 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Copie produite par Vercel au déploiement (site sans tools/)
+dist/

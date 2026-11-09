@@ -1,5 +1,6 @@
 {
-  "outputDirectory": "site",
+  "buildCommand": "rm -rf dist && mkdir dist && cp -R site/. dist/ && rm -rf dist/tools dist/README.md dist/.vercelignore dist/vercel.json",
+  "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
