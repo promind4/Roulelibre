@@ -38,12 +38,13 @@
      Pour les liens qui pointent vers une ancre de la page courante (accueil : La gamme,
      Service tout couvert). Avant la première section, la première rubrique reste allumée. */
   if (nav) {
-    var page = location.pathname.split('/').pop() || 'index.html';
+    var norm = function (p) { return p.replace(/\.html$/, '').replace(/\/index$/, '/') || '/'; };
     var spy = [];
     nav.querySelectorAll('a[href*="#"]:not(.btn)').forEach(function (a) {
       var parts = a.getAttribute('href').split('#');
       var target = parts[1] && document.getElementById(parts[1]);
-      if ((parts[0] || page) === page && target) spy.push({ a: a, el: target });
+      var same = !parts[0] || norm(new URL(parts[0], location.href).pathname) === norm(location.pathname);
+      if (same && target) spy.push({ a: a, el: target });
     });
     if (spy.length) {
       var setCurrent = function (item) {

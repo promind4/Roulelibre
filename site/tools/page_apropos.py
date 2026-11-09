@@ -28,7 +28,7 @@ body = '''<main id="contenu">
       <div class="prose">
         <section aria-labelledby="qui">
           <h2 id="qui">Qui édite le site</h2>
-          <p>Le site est édité par Azura, à Bordeaux (coordonnées complètes dans les <a href="mentions-legales.html">mentions légales</a>). Nous ne sommes ni Augment ni un revendeur&nbsp;: aucun véhicule n’est vendu ici, la commande se fait toujours sur augment.eco.</p>
+          <p>Le site est édité par Azura, à Bordeaux (coordonnées complètes dans les <a href="/mentions-legales">mentions légales</a>). Nous ne sommes ni Augment ni un revendeur&nbsp;: aucun véhicule n’est vendu ici, la commande se fait toujours sur augment.eco.</p>
         </section>
 
         <section aria-labelledby="pourquoi">
@@ -69,7 +69,7 @@ body = '''<main id="contenu">
 
         <section aria-labelledby="corrections">
           <h2 id="corrections">Signaler une erreur</h2>
-          <p>Un prix qui a changé, une caractéristique inexacte&nbsp;? Écrivez-nous à l’adresse indiquée dans les <a href="mentions-legales.html">mentions légales</a>&nbsp;: nous corrigeons et nous mettons la page à jour.</p>
+          <p>Un prix qui a changé, une caractéristique inexacte&nbsp;? Écrivez-nous à l’adresse indiquée dans les <a href="/mentions-legales">mentions légales</a>&nbsp;: nous corrigeons et nous mettons la page à jour.</p>
         </section>
       </div>
     </div>
@@ -87,8 +87,8 @@ io.open(S + 'a-propos.html', 'w', encoding='utf-8', newline='').write(s)
 # lien dans le pied de page de toutes les pages
 for f in glob.glob(S + '*.html') + glob.glob(S + 'tools/partials/*.html'):
     t = io.open(f, encoding='utf-8').read()
-    if 'href="a-propos.html"' not in t and '<li><a href="mentions-legales.html">Mentions légales</a></li>' in t:
-        t = t.replace('<li><a href="mentions-legales.html">Mentions légales</a></li>',
-                      '<li><a href="a-propos.html">Qui sommes-nous</a></li>\n        <li><a href="mentions-legales.html">Mentions légales</a></li>', 1)
+    if 'href="/a-propos"' not in t and '<li><a href="/mentions-legales">Mentions légales</a></li>' in t:
+        t = t.replace('<li><a href="/mentions-legales">Mentions légales</a></li>',
+                      '<li><a href="/a-propos">Qui sommes-nous</a></li>\n        <li><a href="/mentions-legales">Mentions légales</a></li>', 1)
         io.open(f, 'w', encoding='utf-8', newline='').write(t)
 print('ok')

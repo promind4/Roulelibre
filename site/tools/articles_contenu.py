@@ -17,7 +17,7 @@ dict(
  slug='forfait-mobilites-durables-trottinette-electrique',
  categorie='Budget',
  titre_seo='Forfait mobilités durables trottinette : jusqu’à 600 €/an',
- description='Votre employeur peut prendre en charge jusqu’à 600 € par an de vos trajets en trottinette électrique, personnelle ou louée. Qui y a droit et comment le demander.',
+ description='Votre employeur peut prendre en charge jusqu’à 600 € par an de vos trajets en trottinette électrique, personnelle ou louée. Qui y a droit, comment le demander.',
  h1='Forfait mobilités durables&nbsp;: et si votre employeur payait votre trottinette&nbsp;?',
  chapo='Jusqu’à 600&nbsp;€ par an, sans impôt ni cotisations, pour venir au travail en trottinette électrique. Le forfait mobilités durables existe depuis 2020, et pourtant beaucoup de salariés ne pensent même pas à le demander. Voici comment ça marche, simplement.',
  image=('anim-fmd', 'Illustration animée : un salarié file en trottinette électrique dans une ville ensoleillée, une fiche de paie validée et des pièces en euros s’envolent derrière lui'),
@@ -89,14 +89,14 @@ dict(
  sources=[('FAQ forfait mobilités durables, ministère de la Transition écologique (mise à jour du 27 mars 2026)', 'https://www.ecologie.gouv.fr/politiques-publiques/faq-forfait-mobilites-durables-fmd'),
           ('Forfait mobilités durables : conditions d’exonération, Urssaf', 'https://www.urssaf.fr/portail/home/employeur/calculer-les-cotisations/les-elements-a-prendre-en-compte/les-frais-professionnels/les-frais-de-transport/trajet-domicilelieu-de-travail/prise-en-charge-facultative-des/forfait-mobilites-durables.html'),
           ('Tarifs de location : tunnel de commande augment.eco (France)', 'https://augment.eco/fr-fr/agaru-ultra/')],
- lies=['louer-ou-acheter-trottinette-electrique', 'scooter-electrique-pliable-45-km-h', 'trottinette-electrique-ecologique'],
+ lies=['louer-ou-acheter-trottinette-electrique', 'prendre-le-train-avec-sa-trottinette-electrique', 'scooter-electrique-pliable-45-km-h'],
 ),
 # ---------------------------------------------------------------------------------------------
 dict(
  slug='louer-ou-acheter-trottinette-electrique',
  categorie='Location',
  titre_seo='Louer ou acheter une trottinette électrique : que choisir ?',
- description='Location longue durée, achat comptant ou paiement en plusieurs fois : on compare le vrai coût d’une trottinette électrique sur 12, 24 et 36 mois, chiffres à l’appui.',
+ description='Location longue durée, achat comptant ou paiement en plusieurs fois : le vrai coût d’une trottinette électrique sur 12, 24 et 36 mois, chiffres à l’appui.',
  h1='Louer ou acheter sa trottinette électrique&nbsp;: le match, chiffres à l’appui.',
  chapo='Payer 549&nbsp;€ d’un coup, ou quelques dizaines d’euros par mois avec les réparations comprises&nbsp;? La réponse dépend surtout de combien de temps vous comptez la garder. On a fait les calculs avec les vrais tarifs d’Augment.',
  image=('art-location-budget', 'Sur une table de cuisine, un carnet de calculs, un téléphone en mode calculatrice, un café et un casque : le moment de comparer location et achat d’une trottinette électrique'),
@@ -168,7 +168,7 @@ dict(
   ('La location d’une trottinette Augment comprend-elle les réparations ?', 'Pour l’Agaru Ultra, oui : le service tout compris couvre les pannes, l’usure, les accidents, la batterie, les freins et les pneus, avec une trottinette de remplacement. Pour l’E-scooter 360, la garantie constructeur et un service de pièces d’usure s’appliquent.'),
  ],
  sources=[('Tarifs, durées et acomptes : tunnel de commande augment.eco (France)', 'https://augment.eco/fr-fr/agaru-ultra/'), ('Essai 14 jours et option d’achat : FAQ augment.eco', 'https://augment.eco/fr-fr/agaru-smart/')],
- lies=['forfait-mobilites-durables-trottinette-electrique', 'trottinette-electrique-assurance-reglementation', 'scooter-electrique-pliable-45-km-h'],
+ lies=['forfait-mobilites-durables-trottinette-electrique', 'trottinette-electrique-volee-que-faire', 'agaru-smart-ou-agaru-ultra-difference'],
 ),
 # ---------------------------------------------------------------------------------------------
 dict(
@@ -232,14 +232,14 @@ dict(
  sources=[('Sécurité routière : réglementation des engins de déplacement personnels motorisés', 'https://www.securite-routiere.gouv.fr/reglementation-liee-aux-modes-de-deplacements/reglementation-des-edpm'),
           ('Sécurité routière : obligation d’assurer les EDPM', 'https://www.securite-routiere.gouv.fr/actualites/une-campagne-radio-rappelle-lobligation-dassurer-les-engins-de-deplacement-personnels'),
           ('Code Rousseau : trottinette électrique et code de la route en 2026', 'https://public.codesrousseau.fr/conseils-pratiques/473-trottinette-electrique-reglementation-et-code-de-la-route-en-2026-edpm.html')],
- lies=['louer-ou-acheter-trottinette-electrique', 'scooter-electrique-pliable-45-km-h', 'trottinette-electrique-ecologique'],
+ lies=['trottinette-electrique-volee-que-faire', 'rouler-sous-la-pluie-trottinette-electrique', 'prendre-le-train-avec-sa-trottinette-electrique'],
 ),
 # ---------------------------------------------------------------------------------------------
 dict(
  slug='trottinette-electrique-ecologique',
  categorie='Écologie',
  titre_seo='La trottinette électrique est-elle vraiment écologique ?',
- description='Bilan carbone, fabrication, batterie, durée de vie : on fait le point honnêtement sur l’impact d’une trottinette électrique, et sur ce qui la rend vraiment plus verte.',
+ description='Bilan carbone, fabrication, batterie, durée de vie : le point honnête sur l’impact d’une trottinette électrique, et ce qui la rend vraiment plus verte.',
  h1='La trottinette électrique est-elle vraiment écologique&nbsp;?',
  chapo='Pas de pot d’échappement, pas de bruit… mais une batterie et de l’aluminium à fabriquer. Alors, vraiment plus verte que la voiture&nbsp;? La réponse est oui, à une condition&nbsp;: la garder longtemps.',
  image=('art-ecologie-rue', 'Rue arborée au printemps avec piste cyclable, ligne de tram, cyclistes et piétons'),
@@ -284,14 +284,14 @@ dict(
  sources=[('Étude sur l’impact des trottinettes en libre-service (relayée par Connaissance des Énergies, AFP)', 'https://www.connaissancedesenergies.org/afp/la-trottinette-en-libre-service-doit-encore-prouver-quelle-est-ecologique-190705'),
           ('ADEME : calculer les émissions de carbone de vos trajets', 'https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-empreinte-carbone/calculer-emissions-carbone-trajets'),
           ('Service de réparation et couverture vol : augment.eco', 'https://augment.eco/fr-fr/')],
- lies=['louer-ou-acheter-trottinette-electrique', 'trottinette-electrique-assurance-reglementation', 'scooter-electrique-pliable-45-km-h'],
+ lies=['batterie-trottinette-electrique-duree-de-vie', 'prendre-le-train-avec-sa-trottinette-electrique', 'trottinette-ou-scooter-electrique-choisir'],
 ),
 # ---------------------------------------------------------------------------------------------
 dict(
  slug='scooter-electrique-pliable-45-km-h',
  categorie='Scooter 45 km/h',
- titre_seo='Scooter électrique pliable 45 km/h : permis, assurance, rangement',
- description='Permis AM, carte grise, assurance, casque et gants, rangement en appartement : le guide simple du scooter électrique pliable 45 km/h, avec l’exemple de l’E-scooter 360.',
+ titre_seo='Scooter électrique pliable 45 km/h : permis et assurance',
+ description='Permis AM, carte grise, assurance, casque, rangement en appartement : le guide simple du scooter électrique pliable 45 km/h, avec l’E-scooter 360.',
  h1='Scooter électrique pliable 45&nbsp;km/h&nbsp;: le guide simple.',
  chapo='Plus rapide qu’une trottinette, plus compact qu’un scooter classique&nbsp;: le scooter pliable à 45&nbsp;km/h a tout pour plaire en ville. Mais ce n’est plus un simple engin de déplacement&nbsp;: permis, carte grise et équipement entrent en jeu. On vous explique.',
  image=('art-scooter-stationnement', 'Scooters et cyclomoteurs garés sur un emplacement deux-roues dans une rue en ville'),
@@ -340,7 +340,7 @@ dict(
  sources=[('Caractéristiques et prix de l’E-scooter 360 : augment.eco (France)', 'https://augment.eco/fr-fr/augment-360/'),
           ('Immatriculation d’un véhicule : ANTS', 'https://immatriculation.ants.gouv.fr/'),
           ('Que Choisir : le speed bike, un cyclomoteur à pédales (règles L1e)', 'https://www.quechoisir.org/decryptage-velo-electrique-le-speed-bike-un-cyclomoteur-a-pedale-n89126/')],
- lies=['louer-ou-acheter-trottinette-electrique', 'trottinette-electrique-assurance-reglementation', 'trottinette-electrique-ecologique'],
+ lies=['trottinette-ou-scooter-electrique-choisir', 'forfait-mobilites-durables-trottinette-electrique', 'trottinette-electrique-assurance-reglementation'],
 ),
 
 # ---------------------------------------------------------------------------------------------
@@ -403,13 +403,13 @@ dict(
  sources=[('Démarche de pré-plainte en ligne du ministère de l’Intérieur', 'https://www.pre-plainte-en-ligne.gouv.fr/'),
           ('Conditions générales et couverture vol : help.augment.eco/fr', 'https://help.augment.eco/fr/articles/6462725-que-faire-en-cas-de-vol'),
           ('Guide de prévention du vol de deux-roues : FUB (Fédération française des usagers de la bicyclette)', 'https://www.fub.fr/antivols')],
- lies=['louer-ou-acheter-trottinette-electrique', 'trottinette-electrique-assurance-reglementation', 'agaru-smart-ou-agaru-ultra-difference'],
+ lies=['trottinette-electrique-assurance-reglementation', 'louer-ou-acheter-trottinette-electrique', 'rouler-sous-la-pluie-trottinette-electrique'],
 ),
 # ---------------------------------------------------------------------------------------------
 dict(
  slug='rouler-sous-la-pluie-trottinette-electrique',
  categorie='Pratique',
- titre_seo='Rouler sous la pluie en trottinette : étanchéité IPX5 et conseils',
+ titre_seo='Trottinette électrique sous la pluie : IPX5 et conseils',
  description='Peut-on rouler sous la pluie en trottinette électrique ? Comprendre l’indice IPX5, éviter les glissades, freiner court et bien sécher votre engin.',
  h1='Rouler sous la pluie en trottinette électrique&nbsp;: ce qui est permis, ce qui est risqué',
  chapo='L’automne et l’hiver n’épargnent personne : tôt ou tard, vous allez croiser des averses sur votre trajet. Est-ce dangereux pour l’électronique ? Vos pneus tiennent-ils la route ? Voici les règles indispensables pour rouler en toute sécurité sans abîmer votre matériel.',
@@ -469,7 +469,7 @@ dict(
  sources=[('Comprendre les indices de protection IP : Commission Électrotechnique Internationale (IEC 60529)', 'https://www.iec.ch/ip-ratings'),
           ('Sécurité routière : conseils de conduite pour les engins de déplacement personnel motorisés (EDPM)', 'https://www.securite-routiere.gouv.fr/chacun-son-mode-de-deplacement/dpm-trottinette-electrique'),
           ('Guide d’entretien et étanchéité : help.augment.eco/fr', 'https://help.augment.eco/fr/articles/6462720-etancheite-et-pluie')],
- lies=['trottinette-electrique-assurance-reglementation', 'batterie-trottinette-electrique-duree-de-vie', 'agaru-smart-ou-agaru-ultra-difference'],
+ lies=['batterie-trottinette-electrique-duree-de-vie', 'trottinette-electrique-volee-que-faire', 'trottinette-electrique-ecologique'],
 ),
 # ---------------------------------------------------------------------------------------------
 dict(
@@ -542,13 +542,13 @@ dict(
  sources=[('Réglementation des cyclomoteurs L1e : Service-Public.fr', 'https://www.service-public.fr/particuliers/vosdroits/F31825'),
           ('Code de la route : circulation des engins de déplacement personnel motorisés (EDPM)', 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074228/LEGISCTA000039270503/'),
           ('Fiches comparatives officielles : augment.eco/fr-fr', 'https://augment.eco/fr-fr/')],
- lies=['scooter-electrique-pliable-45-km-h', 'louer-ou-acheter-trottinette-electrique', 'forfait-mobilites-durables-trottinette-electrique'],
+ lies=['scooter-electrique-pliable-45-km-h', 'agaru-smart-ou-agaru-ultra-difference', 'trottinette-electrique-ecologique'],
 ),
 # ---------------------------------------------------------------------------------------------
 dict(
  slug='batterie-trottinette-electrique-duree-de-vie',
  categorie='Technique',
- titre_seo='Batterie trottinette électrique : durée de vie, froid et entretien',
+ titre_seo='Batterie trottinette électrique : durée de vie et entretien',
  description='Combien de temps dure la batterie d’une trottinette ? L’impact méconnu du froid hivernal, la règle 20-80 % et le coût réel d’un remplacement.',
  h1='Batterie de trottinette électrique&nbsp;: longévité, pièges de l’hiver et bonnes pratiques',
  chapo='C’est le cœur de votre engin et l’élément le plus cher à remplacer : la batterie représente près de la moitié de la valeur d’une trottinette électrique. Combien d’années peut-elle réellement tenir ? Pourquoi votre autonomie fond-elle en hiver ? Voici tout ce que vous devez savoir pour la préserver au maximum.',
@@ -599,13 +599,13 @@ dict(
  sources=[('Filière de recyclage des accumulateurs et batteries : Corepile France', 'https://www.corepile.fr/'),
           ('Batteries lithium-ion : conseils de sécurité et risques thermiques : INRS', 'https://www.inrs.fr/risques/incendie-explosion/batteries-lithium.html'),
           ('Données techniques batteries Augment : augment.eco/fr-fr/agaru-ultra', 'https://augment.eco/fr-fr/agaru-ultra/')],
- lies=['agaru-smart-ou-agaru-ultra-difference', 'rouler-sous-la-pluie-trottinette-electrique', 'louer-ou-acheter-trottinette-electrique'],
+ lies=['rouler-sous-la-pluie-trottinette-electrique', 'agaru-smart-ou-agaru-ultra-difference', 'trottinette-electrique-ecologique'],
 ),
 # ---------------------------------------------------------------------------------------------
 dict(
  slug='agaru-smart-ou-agaru-ultra-difference',
  categorie='Gamme',
- titre_seo='Agaru Smart ou Agaru Ultra : quelles différences ? Le comparatif',
+ titre_seo='Agaru Smart ou Agaru Ultra : quelles différences ?',
  description='Même moteur 500W, même châssis, mais 150 € d’écart : batterie 499 Wh vs 768 Wh, autonomie réelle et formules de location. Quel modèle choisir ?',
  h1='Agaru Smart ou Agaru Ultra&nbsp;: les 768&nbsp;Wh valent-ils l’écart de prix&nbsp;?',
  chapo='Au premier coup d’œil, impossible de les distinguer : elles partagent exactement le même design noir mat, les mêmes roues de 10 pouces et le même moteur de 500 W. Pourtant, l’une coûte 399 € et l’autre 549 €, et seule l’Ultra est proposée en location. Voici le comparatif détaillé pour faire le bon choix.',
@@ -674,13 +674,13 @@ dict(
  sources=[('Fiche produit Agaru Smart : augment.eco/fr-fr/agaru-smart', 'https://augment.eco/fr-fr/agaru-smart/'),
           ('Fiche produit Agaru Ultra : augment.eco/fr-fr/agaru-ultra', 'https://augment.eco/fr-fr/agaru-ultra/'),
           ('Relevé des tarifs et grilles de financement : configurateur Augment officiel', 'https://augment.eco/fr-fr/')],
- lies=['louer-ou-acheter-trottinette-electrique', 'batterie-trottinette-electrique-duree-de-vie', 'trottinette-ou-scooter-electrique-choisir'],
+ lies=['batterie-trottinette-electrique-duree-de-vie', 'louer-ou-acheter-trottinette-electrique', 'trottinette-ou-scooter-electrique-choisir'],
 ),
 # ---------------------------------------------------------------------------------------------
 dict(
  slug='prendre-le-train-avec-sa-trottinette-electrique',
  categorie='Pratique',
- titre_seo='Prendre le train avec sa trottinette électrique : règles SNCF et TER',
+ titre_seo='Trottinette électrique dans le train : règles SNCF et TER',
  description='TGV, TER, Ouigo, Transilien ou métro : règles officielles, dimensions maximales admises, rangement à bord et recharge interdite. Le guide complet.',
  h1='Prendre le train avec sa trottinette électrique&nbsp;: le guide des règles SNCF et TER',
  chapo='Combiner le train et la trottinette électrique est la solution parfaite pour les trajets domicile-travail interurbains. Mais attention aux mauvaises surprises sur le quai : les contrôleurs appliquent désormais des consignes strictes sur le pliage, le gabarit et l’emplacement à bord. Voici le point complet pour voyager sans stress ni amende.',
@@ -735,7 +735,7 @@ dict(
  sources=[('Règles relatives aux bagages à bord des trains TGV et TER : SNCF Voyageurs', 'https://www.sncf-voyageurs.com/fr/voyagez-avec-nous/en-france/tgv-inoui/services-a-bord/bagages/'),
           ('Règlement général des transports d’Île-de-France Mobilités / RATP', 'https://www.ratp.fr/regles-d-usage-et-de-securite'),
           ('Dimensions et pliage de l’Agaru : augment.eco/fr-fr/agaru-ultra', 'https://augment.eco/fr-fr/agaru-ultra/')],
- lies=['forfait-mobilites-durables-trottinette-electrique', 'louer-ou-acheter-trottinette-electrique', 'trottinette-ou-scooter-electrique-choisir'],
+ lies=['trottinette-electrique-volee-que-faire', 'forfait-mobilites-durables-trottinette-electrique', 'trottinette-electrique-assurance-reglementation'],
 ),
 
 ]
