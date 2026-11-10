@@ -40,7 +40,7 @@
     { letter: 'D', label: 'Profil plié', src: 'img/agaru-profil-plie.webp', w: 1788, h: 737, posed: true,
       alt: 'Trottinette Agaru repliée, vue de profil',
       caption: 'Trottinette repliée : potence rabattue, crochet avant engagé dans le garde-boue arrière.' },
-    { letter: 'E', label: 'Cockpit LED', src: 'img/agaru-cockpit.webp', w: 1786, h: 1175,
+    { letter: 'E', hidden: true, label: 'Cockpit LED', src: 'img/agaru-cockpit.webp', w: 1786, h: 1175,
       alt: 'Cockpit de l’Agaru : guidon, écran LED et commandes',
       caption: 'Guidon élargi, écran LED (vitesse, mode, niveau de batterie), bouton de fonction et commandes de clignotants gauche / droite.' },
     { letter: 'F', label: 'Détail marque', src: 'img/agaru-studio-detail-marque.webp', w: 1536, h: 1024, studio: true,
@@ -49,7 +49,7 @@
     { letter: 'G', label: 'Détail frein arrière', src: 'img/agaru-plateau-frein.webp', w: 1805, h: 1642,
       alt: 'Plateau de l’Agaru et frein à disque arrière',
       caption: 'Plateau avec batterie fixe intégrée, feu stop arrière et étrier de frein à disque mécanique arrière sur pneu 10 × 2,5 pouces.' },
-    { letter: 'H', label: 'Au quotidien', src: 'img/photo-quotidien.webp', w: 1536, h: 1024, photo: true,
+    { letter: 'H', hidden: true, label: 'Au quotidien', src: 'img/photo-quotidien.webp', w: 1536, h: 1024, photo: true,
       alt: 'Un homme en manteau et baskets blanches traverse une place ensoleillée en trottinette Agaru',
       caption: 'Au quotidien : légère et pliable, jusqu’à 25 km/h. Casque conseillé.' }
   ];
@@ -65,10 +65,10 @@
     { letter: 'D', label: 'Roue arrière', src: 'img/360-roue-arriere.webp', w: 1446, h: 1638,
       alt: 'E-scooter 360, roue arrière, frein à disque et molette orange de pliage',
       caption: 'Pneu 120/90-R10, frein à disque hydraulique arrière, support de plaque et molette orange de déverrouillage du pliage.' },
-    { letter: 'E', label: 'En ville', src: 'img/photo-360-ville.webp', w: 1536, h: 1024, photo: true,
+    { letter: 'E', hidden: true, label: 'En ville', src: 'img/photo-360-ville.webp', w: 1536, h: 1024, photo: true,
       alt: 'Un homme en veste de cuir roule en E-scooter 360 dans une rue ensoleillée, casque et gants portés',
       caption: 'En ville, jusqu’à 45 km/h. Casque et gants obligatoires.' },
-    { letter: 'F', label: 'Le week-end', src: 'img/photo-weekend.webp', w: 1536, h: 1024, photo: true,
+    { letter: 'F', hidden: true, label: 'Le week-end', src: 'img/photo-weekend.webp', w: 1536, h: 1024, photo: true,
       alt: 'E-scooter 360 garé devant une terrasse de café, casque et gants posés sur la selle',
       caption: 'Le week-end : le 360 garé devant un café, casque et gants posés sur la selle.' }
   ];
@@ -335,7 +335,7 @@
   var hot = { open: null, pinned: false };
 
   function M() { return MODELS[state.model]; }
-  function views() { return M().agaru ? AGARU_VIEWS : S360_VIEWS; }
+  function views() { return (M().agaru ? AGARU_VIEWS : S360_VIEWS).filter(function (v) { return !v.hidden; }); }
   function points() { return M().agaru ? agaruPoints(M()) : S360_POINTS; }
   function setText(sel, s) { var el = $(sel); if (el) el.textContent = fr(s); }
   function show(sel, on) { var el = $(sel); if (el) el.hidden = !on; }
