@@ -192,6 +192,9 @@
 .viewer__stage.is-photo { background: var(--ink); }
 .viewer__frame.is-photo { position: absolute; inset: 0; width: auto; height: auto; max-width: none; aspect-ratio: auto; }
 .viewer__frame.is-photo img { width: 100%; height: 100%; object-fit: cover; padding: 0; }
+/* La photo remplit toute la scène (sans la marge réservée aux produits détourés) */
+.viewer__stage.is-photo .viewer__area { inset: 0; }
+.viewer__stage.is-photo .viewer__view { color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.55); }
 
 /* ---------- Les 4 points clés ---------- */
 .points__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }

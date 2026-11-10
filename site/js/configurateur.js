@@ -29,15 +29,15 @@
      recadrée au contenu). Pour remplacer une photo, garder le même nom de fichier ou mettre à jour
      src + w + h ici (les points chauds de la vue A sont en % de l'image recadrée). */
   var AGARU_VIEWS = [
-    { letter: 'A', label: 'Profil déplié', src: 'img/agaru-profil-deplie.webp', w: 1297, h: 1400, main: true, posed: true,
+    { letter: 'A', label: 'Profil déplié', src: 'img/agaru-profil-deplie.webp', w: 1589, h: 1715, main: true, posed: true,
       alt: 'Trottinette Agaru dépliée, vue de profil' },
-    { letter: 'B', label: 'Profil plié', src: 'img/agaru-profil-plie.webp', w: 1400, h: 577, posed: true,
+    { letter: 'B', label: 'Profil plié', src: 'img/agaru-profil-plie.webp', w: 1788, h: 737, posed: true,
       alt: 'Trottinette Agaru repliée, vue de profil',
       caption: 'Trottinette repliée : potence rabattue, crochet avant engagé dans le garde-boue arrière.' },
-    { letter: 'C', label: 'Cockpit LED', src: 'img/agaru-cockpit.webp', w: 1400, h: 921,
+    { letter: 'C', label: 'Cockpit LED', src: 'img/agaru-cockpit.webp', w: 1786, h: 1175,
       alt: 'Cockpit de l’Agaru : guidon, écran LED et commandes',
       caption: 'Guidon élargi, écran LED (vitesse, mode, niveau de batterie), bouton de fonction et commandes de clignotants gauche / droite.' },
-    { letter: 'D', label: 'Détail frein arrière', src: 'img/agaru-plateau-frein.webp', w: 1400, h: 1274,
+    { letter: 'D', label: 'Détail frein arrière', src: 'img/agaru-plateau-frein.webp', w: 1805, h: 1642,
       alt: 'Plateau de l’Agaru et frein à disque arrière',
       caption: 'Plateau avec batterie fixe intégrée, feu stop arrière et étrier de frein à disque mécanique arrière sur pneu 10 × 2,5 pouces.' },
     { letter: 'E', label: 'Au quotidien', src: 'img/photo-quotidien.webp', w: 1536, h: 1024, photo: true,
@@ -47,7 +47,7 @@
   var S360_VIEWS = [
     { letter: 'A', label: 'Vue 3/4 dépliée', src: 'img/360-vue-3-4.webp', w: 1387, h: 1209, main: true, posed: true,
       alt: 'E-scooter 360 déplié, vue de trois quarts avant' },
-    { letter: 'D', label: 'Roue arrière', src: 'img/360-roue-arriere.webp', w: 1236, h: 1400,
+    { letter: 'D', label: 'Roue arrière', src: 'img/360-roue-arriere.webp', w: 1446, h: 1638,
       alt: 'E-scooter 360, roue arrière, frein à disque et molette orange de pliage',
       caption: 'Pneu 120/90-R10, frein à disque hydraulique arrière, support de plaque et molette orange de déverrouillage du pliage.' },
     { letter: 'E', label: 'En ville', src: 'img/photo-360-ville.webp', w: 1536, h: 1024, photo: true,
@@ -347,6 +347,14 @@
   var hotspots = $('[data-hotspots]'), viewsBox = $('[data-views]'), bubble = $('[data-bubble]');
   var family = null;
 
+  /* srcset d'une vue : sans lui, le srcset de la balise d'origine l'emportait sur le src et la galerie restait sur la
+     première image. Détourés : -800, -1280 et pleine taille ; photos : -800 et pleine taille. */
+  function srcsetOf(v) {
+    var b = v.src.replace(/\.webp$/, '');
+    return v.photo ? b + '-800.webp 800w, ' + v.src + ' ' + v.w + 'w'
+                   : b + '-800.webp 800w, ' + b + '-1280.webp 1280w, ' + v.src + ' ' + v.w + 'w';
+  }
+
   /* Libellé affiché d'une vue, sans répéter « Vue » (ex. « Vue 3/4 dépliée » → « 3/4 dépliée »). */
   function vlabel(v) { return v.label.replace(/^Vue\s+/, ''); }
 
@@ -375,6 +383,8 @@
       mainImg.onload = function () { frame.classList.remove('is-swapping'); };
       mainImg.setAttribute('width', V.w);
       mainImg.setAttribute('height', V.h);
+      mainImg.sizes = V.photo ? '(max-width: 959px) 144vw, 1110px' : '(max-width: 959px) 92vw, 740px';
+      mainImg.srcset = srcsetOf(V);
       mainImg.src = V.src;
       setTimeout(function () { frame.classList.remove('is-swapping'); }, 600);
     }
