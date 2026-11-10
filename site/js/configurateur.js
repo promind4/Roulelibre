@@ -31,22 +31,37 @@
   var AGARU_VIEWS = [
     { letter: 'A', label: 'Profil déplié', src: 'img/agaru-profil-deplie.webp', w: 1589, h: 1715, main: true, posed: true,
       alt: 'Trottinette Agaru dépliée, vue de profil' },
-    { letter: 'B', label: 'Profil plié', src: 'img/agaru-profil-plie.webp', w: 1788, h: 737, posed: true,
+    { letter: 'B', label: '3/4 avant', src: 'img/agaru-studio-3-4-avant.webp', w: 1536, h: 1024, studio: true,
+      alt: 'Trottinette Agaru en vue de trois quarts avant, sur fond chaleureux',
+      caption: 'Vue de trois quarts avant : potence rigide, roue avant de 10 pouces avec réflecteur ambre, plateau antidérapant.' },
+    { letter: 'C', label: '3/4 arrière', src: 'img/agaru-studio-3-4-arriere.webp', w: 1536, h: 1024, studio: true,
+      alt: 'Trottinette Agaru en vue de trois quarts arrière, sur fond chaleureux',
+      caption: 'Vue de trois quarts arrière : garde-boue avec feu stop, frein à disque et réflecteur ambre.' },
+    { letter: 'D', label: 'Profil plié', src: 'img/agaru-profil-plie.webp', w: 1788, h: 737, posed: true,
       alt: 'Trottinette Agaru repliée, vue de profil',
       caption: 'Trottinette repliée : potence rabattue, crochet avant engagé dans le garde-boue arrière.' },
-    { letter: 'C', label: 'Cockpit LED', src: 'img/agaru-cockpit.webp', w: 1786, h: 1175,
+    { letter: 'E', label: 'Cockpit LED', src: 'img/agaru-cockpit.webp', w: 1786, h: 1175,
       alt: 'Cockpit de l’Agaru : guidon, écran LED et commandes',
       caption: 'Guidon élargi, écran LED (vitesse, mode, niveau de batterie), bouton de fonction et commandes de clignotants gauche / droite.' },
-    { letter: 'D', label: 'Détail frein arrière', src: 'img/agaru-plateau-frein.webp', w: 1805, h: 1642,
+    { letter: 'F', label: 'Détail marque', src: 'img/agaru-studio-detail-marque.webp', w: 1536, h: 1024, studio: true,
+      alt: 'Gros plan sur la potence de l’Agaru et son inscription augment°',
+      caption: 'Gros plan : potence en alliage noir mat, marque augment° et écran LED.' },
+    { letter: 'G', label: 'Détail frein arrière', src: 'img/agaru-plateau-frein.webp', w: 1805, h: 1642,
       alt: 'Plateau de l’Agaru et frein à disque arrière',
       caption: 'Plateau avec batterie fixe intégrée, feu stop arrière et étrier de frein à disque mécanique arrière sur pneu 10 × 2,5 pouces.' },
-    { letter: 'E', label: 'Au quotidien', src: 'img/photo-quotidien.webp', w: 1536, h: 1024, photo: true,
+    { letter: 'H', label: 'Au quotidien', src: 'img/photo-quotidien.webp', w: 1536, h: 1024, photo: true,
       alt: 'Un homme en manteau et baskets blanches traverse une place ensoleillée en trottinette Agaru',
       caption: 'Au quotidien : légère et pliable, jusqu’à 25 km/h. Casque conseillé.' }
   ];
   var S360_VIEWS = [
     { letter: 'A', label: 'Vue 3/4 dépliée', src: 'img/360-vue-3-4.webp', w: 1387, h: 1209, main: true, posed: true,
       alt: 'E-scooter 360 déplié, vue de trois quarts avant' },
+    { letter: 'B', label: 'Profil', src: 'img/360-studio-profil.webp', w: 1536, h: 1024, studio: true,
+      alt: 'E-scooter 360 en vue de profil, sur fond chaleureux',
+      caption: 'De profil : cadre en un seul arc, colonne de batterie amovible sous la selle, pneus larges de 12 pouces.' },
+    { letter: 'C', label: '3/4 avant', src: 'img/360-studio-3-4-avant.webp', w: 1536, h: 1024, studio: true,
+      alt: 'E-scooter 360 en vue de trois quarts avant, sur fond chaleureux',
+      caption: 'Trois quarts avant : guidon avec rétroviseur, fourche noire, frein à disque avant.' },
     { letter: 'D', label: 'Roue arrière', src: 'img/360-roue-arriere.webp', w: 1446, h: 1638,
       alt: 'E-scooter 360, roue arrière, frein à disque et molette orange de pliage',
       caption: 'Pneu 120/90-R10, frein à disque hydraulique arrière, support de plaque et molette orange de déverrouillage du pliage.' },
@@ -344,6 +359,8 @@
 
   /* ---------- Scène produit ---------- */
   var stage = $('[data-stage]'), frame = $('[data-frame]'), mainImg = $('[data-main-img]');
+  /* Fond flou des vues « studio » : la même image agrandie et floutée, pour que la photo 3:2 remplisse la scène carrée sans bandes. */
+  var blurEl = document.createElement('div'); blurEl.className = 'viewer__blur'; blurEl.setAttribute('aria-hidden', 'true'); stage.insertBefore(blurEl, stage.firstChild);
   var hotspots = $('[data-hotspots]'), viewsBox = $('[data-views]'), bubble = $('[data-bubble]');
   var family = null;
 
@@ -351,7 +368,7 @@
      première image. Détourés : -800, -1280 et pleine taille ; photos : -800 et pleine taille. */
   function srcsetOf(v) {
     var b = v.src.replace(/\.webp$/, '');
-    return v.photo ? b + '-800.webp 800w, ' + v.src + ' ' + v.w + 'w'
+    return (v.photo || v.studio) ? b + '-800.webp 800w, ' + v.src + ' ' + v.w + 'w'
                    : b + '-800.webp 800w, ' + b + '-1280.webp 1280w, ' + v.src + ' ' + v.w + 'w';
   }
 
@@ -363,9 +380,9 @@
     if (fam !== family) {
       family = fam;
       viewsBox.innerHTML = V.map(function (v, i) {
-        return '<button type="button" class="view' + (v.photo ? ' view--photo' : '') + '" data-view="' + i + '" aria-pressed="false" ' +
+        return '<button type="button" class="view' + ((v.photo || v.studio) ? ' view--photo' : '') + '" data-view="' + i + '" aria-pressed="false" ' +
           'aria-label="' + esc('Image ' + (i + 1) + ' sur ' + V.length + ' : ' + vlabel(v)) + '">' +
-          '<span class="view__img"><img src="' + v.src.replace(/\.webp$/, '-800.webp') + '" width="' + v.w + '" height="' + v.h + '" alt="" loading="lazy" decoding="async"></span></button>';
+          '<span class="view__img"><img src="' + v.src.replace(/\.webp$/, '-800.webp') + '" width="' + v.w + '" height="' + v.h + '" alt="" decoding="async"></span></button>';
       }).join('');
     }
     $$('.view', viewsBox).forEach(function (b, i) { b.setAttribute('aria-pressed', String(i === state.view)); });
@@ -376,6 +393,9 @@
     frame.style.setProperty('--r', V.w + ' / ' + V.h);
     frame.classList.toggle('is-posed', !!V.posed);
     frame.classList.toggle('is-photo', !!V.photo);
+    frame.classList.toggle('is-studio', !!V.studio);
+    stage.classList.toggle('is-studio', !!V.studio);
+    blurEl.style.backgroundImage = V.studio ? 'url(' + V.src.replace(/\.webp$/, '-800.webp') + ')' : '';
     stage.classList.toggle('is-photo', !!V.photo);
     frame.classList.toggle('is-main', !!V.main);
     if (mainImg.getAttribute('src') !== V.src) {
@@ -383,7 +403,7 @@
       mainImg.onload = function () { frame.classList.remove('is-swapping'); };
       mainImg.setAttribute('width', V.w);
       mainImg.setAttribute('height', V.h);
-      mainImg.sizes = V.photo ? '(max-width: 959px) 144vw, 1110px' : '(max-width: 959px) 92vw, 740px';
+      mainImg.sizes = V.photo ? '(max-width: 959px) 144vw, 1110px' : V.studio ? '(max-width: 959px) 96vw, 740px' : '(max-width: 959px) 92vw, 740px';
       mainImg.srcset = srcsetOf(V);
       mainImg.src = V.src;
       setTimeout(function () { frame.classList.remove('is-swapping'); }, 600);

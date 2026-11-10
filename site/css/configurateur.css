@@ -402,3 +402,11 @@
   .segmented--ac label { padding: 0 2px; font-size: 12.5px; letter-spacing: -.01em; }
 }
 .sim__cta-hint { margin: 10px 0 0; text-align: center; }
+
+/* Vues « studio » : photo de produit 3:2 entière, sur un fond flou de la même image */
+.viewer__blur { position: absolute; inset: -40px; z-index: -1; background-size: cover; background-position: center; filter: blur(34px) saturate(1.05); opacity: 0; transition: opacity .35s var(--ease); }
+.viewer__stage.is-studio .viewer__blur { opacity: 1; }
+.viewer__stage.is-studio .viewer__area { inset: 0; }
+.viewer__frame.is-studio { position: absolute; inset: 0; width: auto; height: auto; max-width: none; aspect-ratio: auto; display: grid; place-items: center; }
+.viewer__frame.is-studio img { width: 100%; height: auto; max-height: 100%; object-fit: contain; border-radius: 0; }
+.viewer__stage.is-studio .viewer__view { color: var(--ink-2); }
