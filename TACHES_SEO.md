@@ -25,7 +25,8 @@ Légende : ✅ fait et vérifié · 🔶 fait, action de l'utilisateur à finir 
 | 3.1 | Balise Umami générée sur toutes les pages à partir de `site/tools/data/umami.json` | ✅ | testée avec un faux identifiant, puis retirée |
 | 3.2 | Événement « clic-partenaire » (AWIN et augment.eco) avec page, produit, texte du lien | ✅ | `site/js/main.js`, sans effet tant qu'Umami n'est pas chargé |
 | 3.3 | Phrase « mesure d'audience sans cookie » ajoutée automatiquement à la page confidentialité à l'activation | ✅ | marqueur testé |
-| 3.4 | Créer le site « Roulelibre » dans Umami (https://stats.lespace-libre.fr) et coller son identifiant dans `website_id` | 🔶 | à faire par l'utilisateur, puis `python site/tools/set_domain.py` et publication |
+| 3.4 | Site « Roulelibre » créé dans Umami, identifiant branché sur les 19 pages | ✅ | balise vérifiée en ligne |
+| 3.4b | Suivi détaillé anonyme : clics partenaires, simulateur, galerie, FAQ, vidéos, défilement, temps de lecture, fin d'article | ✅ | testé en local avec un faux Umami, en ligne depuis le push |
 | 3.5 | Vérifier qu'une visite apparaît dans Umami et qu'un clic partenaire crée un événement | ⏳ | après 3.4 |
 
 ## 4. Audit SEO organique
@@ -43,4 +44,8 @@ Légende : ✅ fait et vérifié · 🔶 fait, action de l'utilisateur à finir 
 | 4.10 | Réseaux sociaux / YouTube pour `sameAs` | Basse | 🔶 à fournir |
 | 4.11 | Pages locales (Bordeaux, Paris…) : seulement avec une vraie valeur locale | Basse | ⏳ décision de l'utilisateur |
 | 4.12 | Articles « Agaru Ultra avis », « Augment 360 avis » (seulement avec expérience réelle) | Moyenne | ⏳ |
-| 4.13 | Noindex pour roulelibree.vercel.app (doublon possible) | Basse | ⏳ proposé, non demandé |
+| 4.13 | roulelibree.vercel.app redirigé (308) vers www, noindex sur les autres adresses vercel.app | Basse | ✅ en local, à vérifier après push |
+| 4.14 | Section « Autonomie et temps de charge » (article batterie) + FAQ, H2 « Quel permis pour un scooter 45 km/h ? » | Moyenne | ✅ |
+| 4.15 | Liens internes depuis le contenu : accueil 2 → 13, vidéos 1 → 13, comparatif 10 → 14 | Moyenne | ✅ |
+| 4.16 | Relevé des prix augment.eco du 15/11 : aucun écart | Moyenne | ✅ |
+| 4.17 | Pages produits Agaru Ultra, E-scooter 360, Agaru Smart | Haute | ⏳ prochaine étape |
