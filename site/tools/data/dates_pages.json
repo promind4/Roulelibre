@@ -1,30 +1,34 @@
 {
  "a-propos.html": {
-  "empreinte": "cd934cb1d312bf03bb18f750ba20224f8fe56a74",
+  "empreinte": "f2551b227b87e37f52bdea65fe5af2fd10f274be",
+  "maj": "2026-11-15"
+ },
+ "agaru-ultra.html": {
+  "empreinte": "e8b80b9bad16065c5eafe19bdfb2e7d456d50436",
   "maj": "2026-11-15"
  },
  "comparateur.html": {
-  "empreinte": "6451a9687f0a327adbc77a9b07ad7cee25b4d1fe",
+  "empreinte": "53125205fb841e994dd11653e45939130211268a",
   "maj": "2026-11-15"
  },
  "confidentialite.html": {
-  "empreinte": "4caec4fee48bebb96d5f2af04c609c0ea8495b2d",
+  "empreinte": "8c3eadb441caff33c4e3f9623d448afb5924e9cd",
   "maj": "2026-11-15"
  },
  "configurateur.html": {
-  "empreinte": "20f0d9aacdd7b93161041e380e2ab2d1f4b0cdf1",
+  "empreinte": "a97b11a4dfa14eb478fcd0f684cbbb0ca34a44aa",
   "maj": "2026-11-15"
  },
  "index.html": {
-  "empreinte": "1944a75b86a48784d564ad21d24536f8fe1c1b70",
+  "empreinte": "af85e0807c59d6c1b2c08bc990dc0b5c5044c14d",
   "maj": "2026-11-15"
  },
  "mentions-legales.html": {
-  "empreinte": "542e58ff3b0b80eb2c2d7ece04f2600393d34cfe",
+  "empreinte": "b5e55db310c926bc48ee199802235d0bed4b3c15",
   "maj": "2026-11-15"
  },
  "videos.html": {
-  "empreinte": "5933c70ad5f64d8f606136b21043d838151c005e",
+  "empreinte": "bdd6743b89abd1cc8a7e129790991c5ffa8f2be0",
   "maj": "2026-11-15"
  }
 }

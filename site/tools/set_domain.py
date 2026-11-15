@@ -28,6 +28,8 @@ PRODUCTS = [
     product('E-scooter 360', 'Scooter électrique pliable à assise, 45 km/h, 53 km d’autonomie (106 km avec une seconde batterie), 36 kg. Location dès 25,90 €/mois.', '360-vue-3-4.webp', '1990', 'https://augment.eco/fr-fr/augment-360/'),
 ]
 
+PAGES_PRODUITS = {'agaru-ultra.html': 'Agaru Ultra'}
+
 ORG = {'@type': 'Organization', '@id': SITE + '/#editeur', 'name': NAME, 'legalName': 'Azura', 'email': 'contact@roulelibre.fr', 'url': SITE + '/', 'logo': SITE + '/img/logo-512.png',
        'address': {'@type': 'PostalAddress', 'streetAddress': 'Cours d’Albret', 'addressLocality': 'Bordeaux', 'postalCode': '33000', 'addressCountry': 'FR'},
        'publishingPrinciples': SITE + '/a-propos'}
@@ -40,7 +42,7 @@ def crumbs(label, path):
 
 def faq_from_page(html):
     out = []
-    for m in re.finditer(r'<summary>.*?class="qa__q">(.*?)</span>.*?</summary>\s*<div class="qa__a">(.*?)</div>\s*</details>', html, re.S):
+    for m in re.finditer(r'<summary>.*?class="(?:qa__q|hfaq__q)">(.*?)</span>.*?</summary>\s*<(?:div|p) class="(?:qa__a|hfaq__a)">(.*?)</(?:div|p)>\s*</details>', html, re.S):
         q = re.sub(r'<[^>]+>', '', m.group(1)).replace('&nbsp;', ' ').strip()
         a = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', m.group(2)).replace('&nbsp;', ' ')).strip()
         if q and a:
@@ -58,8 +60,9 @@ PAGES = {
     'a-propos.html': ('/a-propos', 'website'),
     'mentions-legales.html': ('/mentions-legales', 'website'),
     'confidentialite.html': ('/confidentialite', 'website'),
+    'agaru-ultra.html': ('/agaru-ultra', 'website'),
 }
-LABELS = {'a-propos.html': 'Qui sommes-nous', 'comparateur.html': 'Comparatif', 'configurateur.html': 'Simuler sa location', 'videos.html': 'Vidéos',
+LABELS = {'agaru-ultra.html': 'Agaru Ultra', 'a-propos.html': 'Qui sommes-nous', 'comparateur.html': 'Comparatif', 'configurateur.html': 'Simuler sa location', 'videos.html': 'Vidéos',
           'mentions-legales.html': 'Mentions légales', 'confidentialite.html': 'Confidentialité'}
 
 def umami_tag():
@@ -139,6 +142,14 @@ for f, (path, kind) in PAGES.items():
     if f == 'comparateur.html':
         graph.append({'@type': 'ItemList', 'name': 'Comparatif Agaru Smart, Agaru Ultra, E-scooter 360',
                       'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'item': pr} for i, pr in enumerate(PRODUCTS)]})
+        pairs = faq_from_page(html)
+        if pairs:
+            graph.append(faqpage(pairs))
+    if f in PAGES_PRODUITS:
+        pr = dict(next(x for x in PRODUCTS if x['name'] == PAGES_PRODUITS[f]))
+        pr['@id'] = url + '#produit'
+        pr['url'] = url
+        graph.append(pr)
         pairs = faq_from_page(html)
         if pairs:
             graph.append(faqpage(pairs))

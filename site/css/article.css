@@ -106,3 +106,9 @@
   .art__body { font-size: 17px; }
   .art__cta-btns .btn { flex: 1 1 100%; justify-content: center; }
 }
+
+/* Pages produits : galerie de détails */
+.pgal { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 1.4em 0 0; }
+.pgal img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: var(--cream, #F6F3EC); border-radius: var(--radius, 14px); padding: 10px; }
+.art__body h3 { margin-top: 1.5em; font-size: 20px; color: var(--ink); }
+.art-table--fiche td { white-space: normal; }
