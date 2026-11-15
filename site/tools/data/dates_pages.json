@@ -1,34 +1,42 @@
 {
  "a-propos.html": {
-  "empreinte": "f2551b227b87e37f52bdea65fe5af2fd10f274be",
+  "empreinte": "50790d5723fd39684855657467ac3b72787ebd8d",
+  "maj": "2026-11-15"
+ },
+ "agaru-smart.html": {
+  "empreinte": "4931d6de923d89ace27cf4f7ebbbd8726c6b795e",
   "maj": "2026-11-15"
  },
  "agaru-ultra.html": {
-  "empreinte": "e8b80b9bad16065c5eafe19bdfb2e7d456d50436",
+  "empreinte": "14355e86af02e9f5111bc7a87becbb8a31fbad77",
   "maj": "2026-11-15"
  },
  "comparateur.html": {
-  "empreinte": "53125205fb841e994dd11653e45939130211268a",
+  "empreinte": "704110a19bf4a8433c1b72e93441d0ac0cb32f7c",
   "maj": "2026-11-15"
  },
  "confidentialite.html": {
-  "empreinte": "8c3eadb441caff33c4e3f9623d448afb5924e9cd",
+  "empreinte": "1a5a7c752f37b56e9a510bdb8f662136aee7d866",
   "maj": "2026-11-15"
  },
  "configurateur.html": {
-  "empreinte": "a97b11a4dfa14eb478fcd0f684cbbb0ca34a44aa",
+  "empreinte": "7b9010d47654396ccbf6fb59138055ef15dbbc56",
+  "maj": "2026-11-15"
+ },
+ "e-scooter-360.html": {
+  "empreinte": "ec71e7b12c7484c0a17dc1f3eb6d7a767624a56d",
   "maj": "2026-11-15"
  },
  "index.html": {
-  "empreinte": "af85e0807c59d6c1b2c08bc990dc0b5c5044c14d",
+  "empreinte": "72069884a2a853b00083ce34cb87e5c5317bb26f",
   "maj": "2026-11-15"
  },
  "mentions-legales.html": {
-  "empreinte": "b5e55db310c926bc48ee199802235d0bed4b3c15",
+  "empreinte": "17577bfd6f9e66e8ddfe5003e8aac2e2db49733d",
   "maj": "2026-11-15"
  },
  "videos.html": {
-  "empreinte": "bdd6743b89abd1cc8a7e129790991c5ffa8f2be0",
+  "empreinte": "5fee72663ec39c0effd0ee5e117358b62b72f8cb",
   "maj": "2026-11-15"
  }
 }

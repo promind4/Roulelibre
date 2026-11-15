@@ -28,7 +28,7 @@ PRODUCTS = [
     product('E-scooter 360', 'Scooter électrique pliable à assise, 45 km/h, 53 km d’autonomie (106 km avec une seconde batterie), 36 kg. Location dès 25,90 €/mois.', '360-vue-3-4.webp', '1990', 'https://augment.eco/fr-fr/augment-360/'),
 ]
 
-PAGES_PRODUITS = {'agaru-ultra.html': 'Agaru Ultra'}
+PAGES_PRODUITS = {'agaru-ultra.html': 'Agaru Ultra', 'e-scooter-360.html': 'E-scooter 360', 'agaru-smart.html': 'Agaru Smart'}
 
 ORG = {'@type': 'Organization', '@id': SITE + '/#editeur', 'name': NAME, 'legalName': 'Azura', 'email': 'contact@roulelibre.fr', 'url': SITE + '/', 'logo': SITE + '/img/logo-512.png',
        'address': {'@type': 'PostalAddress', 'streetAddress': 'Cours d’Albret', 'addressLocality': 'Bordeaux', 'postalCode': '33000', 'addressCountry': 'FR'},
@@ -61,8 +61,10 @@ PAGES = {
     'mentions-legales.html': ('/mentions-legales', 'website'),
     'confidentialite.html': ('/confidentialite', 'website'),
     'agaru-ultra.html': ('/agaru-ultra', 'website'),
+    'e-scooter-360.html': ('/e-scooter-360', 'website'),
+    'agaru-smart.html': ('/agaru-smart', 'website'),
 }
-LABELS = {'agaru-ultra.html': 'Agaru Ultra', 'a-propos.html': 'Qui sommes-nous', 'comparateur.html': 'Comparatif', 'configurateur.html': 'Simuler sa location', 'videos.html': 'Vidéos',
+LABELS = {'agaru-ultra.html': 'Agaru Ultra', 'e-scooter-360.html': 'E-scooter 360', 'agaru-smart.html': 'Agaru Smart', 'a-propos.html': 'Qui sommes-nous', 'comparateur.html': 'Comparatif', 'configurateur.html': 'Simuler sa location', 'videos.html': 'Vidéos',
           'mentions-legales.html': 'Mentions légales', 'confidentialite.html': 'Confidentialité'}
 
 def umami_tag():

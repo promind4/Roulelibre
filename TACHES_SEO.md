@@ -48,4 +48,4 @@ Légende : ✅ fait et vérifié · 🔶 fait, action de l'utilisateur à finir 
 | 4.14 | Section « Autonomie et temps de charge » (article batterie) + FAQ, H2 « Quel permis pour un scooter 45 km/h ? » | Moyenne | ✅ |
 | 4.15 | Liens internes depuis le contenu : accueil 2 → 13, vidéos 1 → 13, comparatif 10 → 14 | Moyenne | ✅ |
 | 4.16 | Relevé des prix augment.eco du 15/11 : aucun écart | Moyenne | ✅ |
-| 4.17 | Pages produits Agaru Ultra, E-scooter 360, Agaru Smart | Haute | ⏳ prochaine étape |
+| 4.17 | Pages produits /agaru-ultra, /e-scooter-360, /agaru-smart (avis, prix relevés, fiche, FAQ, balisage Product + FAQ) reliées depuis l'accueil, le comparatif et les 11 articles (13 à 15 liens entrants chacune) | Haute | ✅ en local, à pousser |
