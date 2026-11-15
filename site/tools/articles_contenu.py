@@ -405,7 +405,7 @@ dict(
   ('Comment retrouver une trottinette électrique volée ?', 'Vérifiez les sites de petites annonces locales (Leboncoin, Facebook Marketplace) avec la marque et le modèle, transmettez les alertes à la police et surveillez les réseaux de revente sans jamais intervenir seul.'),
  ],
  sources=[('Démarche de pré-plainte en ligne du ministère de l’Intérieur', 'https://www.pre-plainte-en-ligne.gouv.fr/'),
-          ('Conditions générales et couverture vol : help.augment.eco/fr', 'https://help.augment.eco/fr/articles/6462725-que-faire-en-cas-de-vol'),
+          ('Centre d’aide Augment (couverture vol, conditions) : help.augment.eco/fr', 'https://help.augment.eco/fr'),
           ('Guide de prévention du vol de deux-roues : FUB (Fédération française des usagers de la bicyclette)', 'https://www.fub.fr/antivols')],
  lies=['trottinette-electrique-assurance-reglementation', 'louer-ou-acheter-trottinette-electrique', 'rouler-sous-la-pluie-trottinette-electrique'],
 ),
@@ -471,8 +471,8 @@ dict(
   ('Peut-on recharger une trottinette mouillée ?', 'Attendez toujours que la prise et le plateau soient totalement secs avant d’insérer l’embout du chargeur 220V, afin d’éviter tout court-circuit.'),
  ],
  sources=[('Comprendre les indices de protection IP : Commission Électrotechnique Internationale (IEC 60529)', 'https://www.iec.ch/ip-ratings'),
-          ('Sécurité routière : conseils de conduite pour les engins de déplacement personnel motorisés (EDPM)', 'https://www.securite-routiere.gouv.fr/chacun-son-mode-de-deplacement/dpm-trottinette-electrique'),
-          ('Guide d’entretien et étanchéité : help.augment.eco/fr', 'https://help.augment.eco/fr/articles/6462720-etancheite-et-pluie')],
+          ('Circulation à trottinette électrique et EDPM : règles officielles, service-public.gouv.fr', 'https://www.service-public.gouv.fr/particuliers/vosdroits/F308'),
+          ('Centre d’aide Augment (entretien, étanchéité) : help.augment.eco/fr', 'https://help.augment.eco/fr')],
  lies=['batterie-trottinette-electrique-duree-de-vie', 'trottinette-electrique-volee-que-faire', 'trottinette-electrique-ecologique'],
 ),
 # ---------------------------------------------------------------------------------------------
@@ -543,7 +543,7 @@ dict(
   ('La trottinette électrique est-elle plus rapide qu’un scooter en centre-ville ?', 'Sur des distances courtes (moins de 5 km) aux heures de pointe, la trottinette est souvent plus rapide car elle utilise les couloirs cyclables continus et évite les embouteillages de voitures.'),
   ('Peut-on transporter un passager sur un scooter électrique pliable ?', 'L’E-scooter 360 est un véhicule monoplace homologué pour une seule personne (charge utile maximale de 100 kg), tout comme les trottinettes électriques.'),
  ],
- sources=[('Réglementation des cyclomoteurs L1e : Service-Public.fr', 'https://www.service-public.fr/particuliers/vosdroits/F31825'),
+ sources=[('Réglementation des cyclomoteurs L1e : Service-Public.fr', 'https://www.service-public.gouv.fr/particuliers/vosdroits/F1113'),
           ('Code de la route : circulation des engins de déplacement personnel motorisés (EDPM)', 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074228/LEGISCTA000039270503/'),
           ('Fiches comparatives officielles : augment.eco/fr-fr', 'https://augment.eco/fr-fr/')],
  lies=['scooter-electrique-pliable-45-km-h', 'agaru-smart-ou-agaru-ultra-difference', 'trottinette-electrique-ecologique'],
@@ -618,7 +618,7 @@ dict(
   ('Que faire de son ancienne batterie de trottinette ?', 'Les batteries lithium sont des déchets dangereux recyclables à plus de 70 %. Déposez-les gratuitement dans un point de collecte officiel Corepile ou Screlec, en déchetterie ou auprès de votre réparateur.'),
  ],
  sources=[('Filière de recyclage des accumulateurs et batteries : Corepile France', 'https://www.corepile.fr/'),
-          ('Batteries lithium-ion : conseils de sécurité et risques thermiques : INRS', 'https://www.inrs.fr/risques/incendie-explosion/batteries-lithium.html'),
+          ('Batteries lithium-ion : conseils de sécurité et risques thermiques : INRS', 'https://www.inrs.fr/actualites/batterie-lithium-ion.html'),
           ('Données techniques batteries Augment : augment.eco/fr-fr/agaru-ultra', 'https://augment.eco/fr-fr/agaru-ultra/')],
  lies=['rouler-sous-la-pluie-trottinette-electrique', 'agaru-smart-ou-agaru-ultra-difference', 'trottinette-electrique-ecologique'],
 ),
@@ -757,6 +757,183 @@ dict(
           ('Règlement général des transports d’Île-de-France Mobilités / RATP', 'https://www.ratp.fr/regles-d-usage-et-de-securite'),
           ('Dimensions et pliage de l’Agaru : augment.eco/fr-fr/agaru-ultra', 'https://augment.eco/fr-fr/agaru-ultra/')],
  lies=['trottinette-electrique-volee-que-faire', 'forfait-mobilites-durables-trottinette-electrique', 'trottinette-electrique-assurance-reglementation'],
+),
+
+# ---------------------------------------------------------------------------------------------
+dict(
+ slug='augment-avis-service-client',
+ categorie='Marque',
+ titre_seo='Avis Augment : que valent la marque et son service client ?',
+ description='Augment vu par ses clients : 4 sur 5 sur Trustpilot, mais 13 % d’avis à une étoile. Ce qui plaît, ce qui coince (batterie, SAV, facturation) et nos conseils.',
+ h1='Avis Augment&nbsp;: ce que les clients disent vraiment de la marque et de son service',
+ chapo='Augment promet une trottinette sans souci, réparations comprises. Près de 5&nbsp;300 clients ont donné leur avis sur Trustpilot&nbsp;: la majorité est ravie, une minorité bruyante l’est beaucoup moins. Voici les deux côtés, chiffres en main.',
+ image=('anim-avis', 'Illustration animée : des étoiles de notation et des bulles d’avis flottent au-dessus d’une personne qui roule en trottinette électrique, une clé de réparation tourne à côté'),
+ anim=True,
+ lecture=6,
+ en_bref=[
+  'Augment obtient 4,0 sur 5 sur Trustpilot, sur près de 5&nbsp;300 avis tous pays confondus&nbsp;: 80&nbsp;% de 4 et 5 étoiles, 13&nbsp;% d’une étoile.',
+  'Les clients satisfaits citent la solidité, la maintenance comprise, la livraison rapide et le remplacement sans frais.',
+  'Les mécontents parlent surtout de batterie, de service client difficile à joindre, de retours longs et de litiges de facturation.',
+  'Avant de vous abonner&nbsp;: lisez les conditions, gardez tout par écrit et faites confirmer la fin de votre contrat.',
+ ],
+ corps='''
+<h2 id="qui-est-augment">Augment, qui est-ce&nbsp;?</h2>
+<p>Selon son site, Augment a été créée en 2015 en Autriche, d’abord dans le ski, avant de se tourner vers la micromobilité. Son service d’abonnement de trottinettes électriques a démarré en 2020 en Finlande, en Autriche et en Suède. L’entreprise annonce aujourd’hui plus de 80 salariés et une présence dans 11 pays, dont la France.</p>
+<p>En France, elle vend trois véhicules&nbsp;: les trottinettes <a href="/agaru-smart">Agaru Smart</a> et <a href="/agaru-ultra">Agaru Ultra</a>, et le scooter pliable <a href="/e-scooter-360">E-scooter 360</a>. L’Ultra et le 360 se louent par abonnement de 12 à 36&nbsp;mois, les trois s’achètent comptant ou en plusieurs fois.</p>
+
+<h2 id="note-trustpilot">Ce que disent les avis Trustpilot</h2>
+<p>Au 15&nbsp;novembre 2026, Augment affiche <strong>4,0 sur 5</strong> sur Trustpilot, pour près de 5&nbsp;300 avis. Ces avis portent sur tous les pays et tous les modèles.</p>
+<div class="art-table-wrap">
+<table class="art-table">
+ <caption>Répartition des avis Augment sur Trustpilot (relevé du 15/11/2026)</caption>
+ <thead><tr><th scope="col">Note</th><th scope="col">Part des avis</th></tr></thead>
+ <tbody>
+  <tr><th scope="row">5 étoiles</th><td>70&nbsp;%</td></tr>
+  <tr><th scope="row">4 étoiles</th><td>10&nbsp;%</td></tr>
+  <tr><th scope="row">3 étoiles</th><td>4&nbsp;%</td></tr>
+  <tr><th scope="row">2 étoiles</th><td>3&nbsp;%</td></tr>
+  <tr><th scope="row">1 étoile</th><td>13&nbsp;%</td></tr>
+ </tbody>
+</table>
+</div>
+<p>Le profil est classique pour un service par abonnement&nbsp;: beaucoup de clients très contents, peu d’avis moyens, et un noyau d’insatisfaits qui ont vécu un problème mal résolu.</p>
+
+<h2 id="points-positifs">Ce qui plaît aux clients</h2>
+<ul class="check">
+ <li><strong>Le produit</strong>&nbsp;: robuste et maniable pour les trajets de tous les jours.</li>
+ <li><strong>La maintenance comprise</strong>&nbsp;: en abonnement, les pannes et l’usure sont prises en charge, et plusieurs clients racontent un remplacement de batterie sans frais.</li>
+ <li><strong>Le support</strong>&nbsp;: jugé réactif et efficace par une bonne partie des clients.</li>
+ <li><strong>La livraison et le pliage</strong>&nbsp;: réception rapide, trottinette facile à replier.</li>
+ <li><strong>L’application</strong>&nbsp;: appréciée pour le suivi et l’antivol, même si elle a aussi ses détracteurs.</li>
+</ul>
+
+<h2 id="points-negatifs">Ce qui coince</h2>
+<ul class="dash">
+ <li><strong>La batterie</strong>&nbsp;: autonomie plus courte qu’attendu, décharges rapides, quelques pannes précoces. Une partie vient du froid, qui fait perdre 20 à 30&nbsp;% d’autonomie (voir notre article sur la <a href="/conseils/batterie-trottinette-electrique-duree-de-vie">durée de vie de la batterie</a>).</li>
+ <li><strong>Le service client</strong>&nbsp;: difficile à joindre pour certains, procédures jugées compliquées, délais longs.</li>
+ <li><strong>Les retours et échanges</strong>&nbsp;: démarches longues, parfois plusieurs mois, et frais de transport contestés.</li>
+ <li><strong>La facturation</strong>&nbsp;: litiges sur des mensualités prélevées après la fin du contrat, frais imprévus, et quelques dossiers passés en recouvrement.</li>
+</ul>
+<p>Augment répond à environ un avis négatif sur cinq sur Trustpilot, souvent de façon technique.</p>
+
+<h2 id="service-compris">Le service tout compris, concrètement</h2>
+<p>D’après Augment, l’abonnement de l’Agaru Ultra couvre les réparations et remplacements gratuits, les trottinettes de rechange et les pièces détachées, l’usure naturelle, les accidents et les pannes. La couverture contre le vol est une option à 2,95&nbsp;€ par mois.</p>
+<p>Le scooter E-scooter 360 fonctionne autrement&nbsp;: garantie de 2&nbsp;ans (5&nbsp;ans sur le cadre) et service de pièces d’usure, mais pas de réparation tout compris. Pour joindre Augment, le site propose un centre d’aide et un chat.</p>
+
+<h2 id="conseils">Nos conseils avant de vous abonner</h2>
+<ol>
+ <li><strong>Lisez les conditions générales</strong>&nbsp;: durée, fin de contrat, restitution, frais de retour.</li>
+ <li><strong>Profitez des 14&nbsp;jours</strong> pour tester la trottinette sur vos vrais trajets.</li>
+ <li><strong>Photographiez le véhicule</strong> à la réception et le jour où vous le rendez.</li>
+ <li><strong>Gardez tout par écrit</strong>&nbsp;: privilégiez le chat et l’e-mail, notez les numéros de dossier.</li>
+ <li><strong>Faites confirmer la fin du contrat</strong> par écrit et surveillez vos prélèvements le mois suivant.</li>
+ <li><strong>Soyez réaliste sur l’autonomie</strong>&nbsp;: comptez 70 à 85&nbsp;% du chiffre annoncé, moins en hiver.</li>
+</ol>
+
+<h2 id="notre-avis">Notre avis</h2>
+<p>Le modèle d’Augment tient debout&nbsp;: pour quelqu’un qui roule tous les jours, payer une mensualité fixe avec les réparations comprises évite les mauvaises surprises. Les 80&nbsp;% d’avis positifs le confirment. Les 13&nbsp;% d’avis à une étoile rappellent qu’en cas de problème, l’après-vente peut être frustrante&nbsp;: c’est le point à surveiller.</p>
+<p>Si vous êtes bricoleur et que vous roulez peu, l’achat comptant reste plus économique. Nous détaillons les chiffres dans <a href="/conseils/louer-ou-acheter-trottinette-electrique">louer ou acheter une trottinette électrique</a>. Transparence&nbsp;: nous touchons une commission si vous commandez via nos liens, ce qui ne nous empêche pas de citer les critiques.</p>
+''',
+ cta=dict(titre='Vous hésitez encore&nbsp;?', texte='Comparez les trois modèles, puis simulez le coût réel de la location ou de l’achat avant de vous décider.',
+          boutons=['<a class="btn btn--primary" href="../comparateur.html">Voir le comparatif <span class="arr" aria-hidden="true">→</span></a>',
+                   '<a class="btn btn--secondary" href="../configurateur.html">Simuler ma location <span class="arr" aria-hidden="true">→</span></a>']),
+ faq=[
+  ('Augment est-il une entreprise fiable ?', 'Augment existe depuis 2015, opère dans 11 pays et compte plus de 80 salariés selon son site. Sur Trustpilot, 80 % des près de 5 300 avis donnent 4 ou 5 étoiles, et 13 % une seule étoile.'),
+  ('Comment contacter le service client Augment ?', 'Par le centre d’aide (help.augment.eco) et par le chat du site augment.eco. Gardez une trace écrite de vos échanges et notez vos numéros de dossier.'),
+  ('Que couvre l’abonnement Augment ?', 'Pour l’Agaru Ultra : réparations et remplacements gratuits, trottinette de rechange, pièces détachées, usure, accidents et pannes. Le vol est couvert en option pour 2,95 € par mois. Le 360 n’a pas la réparation tout compris.'),
+  ('Peut-on arrêter un abonnement Augment avant la fin ?', 'L’abonnement porte sur une durée choisie à la commande (12, 24 ou 36 mois). Les conditions d’arrêt anticipé et de restitution figurent dans les conditions générales d’Augment : lisez-les avant de signer.'),
+  ('Les avis Trustpilot sur Augment concernent-ils la France ?', 'Pas seulement : la note regroupe les avis de tous les pays où Augment est présent et tous les modèles.'),
+ ],
+ sources=[('Avis clients Augment, Trustpilot (relevé du 15/11/2026)', 'https://fr.trustpilot.com/review/augment.eco'),
+          ('Présentation de l’entreprise : augment.eco, About us', 'https://augment.eco/en/about-us'),
+          ('Service et réparation inclus : fiche Agaru Ultra, augment.eco', 'https://augment.eco/fr-fr/agaru-ultra/'),
+          ('Centre d’aide Augment', 'https://help.augment.eco/fr')],
+ lies=['louer-ou-acheter-trottinette-electrique', 'batterie-trottinette-electrique-duree-de-vie', 'trottinette-electrique-loa-leasing-paiement-plusieurs-fois'],
+),
+# ---------------------------------------------------------------------------------------------
+dict(
+ slug='trottinette-electrique-loa-leasing-paiement-plusieurs-fois',
+ categorie='Budget',
+ titre_seo='Trottinette électrique en LOA, leasing ou en plusieurs fois',
+ description='Paiement en plusieurs fois, LOA, leasing ou abonnement : comment payer une trottinette électrique sans tout régler d’un coup, et ce que chaque formule coûte vraiment.',
+ h1='LOA, leasing ou paiement en plusieurs fois&nbsp;: comment payer sa trottinette électrique&nbsp;?',
+ chapo='Payer 549&nbsp;€ d’un coup ne convient pas à tout le monde. Crédit, location avec option d’achat, abonnement&nbsp;: les formules se ressemblent, mais ne coûtent pas la même chose et ne vous engagent pas de la même façon. Le point, exemples chiffrés à l’appui.',
+ image=('anim-financement', 'Illustration animée : les pages d’un calendrier tournent, des pièces en euros tombent dans une tirelire et une carte bancaire flotte au-dessus d’une personne en trottinette électrique'),
+ anim=True,
+ lecture=6,
+ en_bref=[
+  'Le paiement en plusieurs fois est un crédit&nbsp;: vous êtes propriétaire tout de suite, mais vous payez des intérêts (TAEG de 15,99&nbsp;% chez Augment via PayPal).',
+  'La LOA (location avec option d’achat), souvent appelée leasing, est encadrée comme un crédit à la consommation&nbsp;: offre écrite et 14&nbsp;jours pour se rétracter.',
+  'L’abonnement Augment est une location longue durée avec les réparations comprises et une option d’achat en fin de contrat.',
+  'Sur l’Agaru Ultra, le comptant reste le moins cher (549&nbsp;€)&nbsp;; l’abonnement coûte plus, mais inclut l’entretien.',
+ ],
+ corps='''
+<h2 id="trois-formules">Trois façons de ne pas tout payer d’un coup</h2>
+<ul class="check">
+ <li><strong>Le paiement en plusieurs fois</strong>&nbsp;: un crédit qui étale le prix d’achat. La trottinette est à vous dès la livraison.</li>
+ <li><strong>La LOA ou leasing</strong>&nbsp;: vous louez, puis vous pouvez acheter à la fin pour un prix fixé au départ.</li>
+ <li><strong>L’abonnement</strong>&nbsp;: vous louez pour 12 à 36&nbsp;mois avec un service compris, et vous pouvez racheter ou rendre le véhicule à la fin.</li>
+</ul>
+
+<h2 id="plusieurs-fois">Le paiement en plusieurs fois chez Augment</h2>
+<p>Augment propose un financement sur 24&nbsp;mois par crédit PayPal, au <strong>TAEG fixe de 15,99&nbsp;%</strong>. Relevé du 15&nbsp;novembre 2026&nbsp;:</p>
+<div class="art-table-wrap">
+<table class="art-table">
+ <caption>Paiement en plusieurs fois sur 24 mois (crédit PayPal, TAEG fixe 15,99 %), relevé augment.eco</caption>
+ <thead><tr><th scope="col">Modèle</th><th scope="col">Comptant</th><th scope="col">Mensualité</th><th scope="col">Total dû</th><th scope="col">Coût du crédit</th></tr></thead>
+ <tbody>
+  <tr><th scope="row">Agaru Smart</th><td>399&nbsp;€</td><td>19,33&nbsp;€</td><td>463,78&nbsp;€</td><td>64,78&nbsp;€</td></tr>
+  <tr><th scope="row">Agaru Ultra</th><td>549&nbsp;€</td><td>26,59&nbsp;€</td><td>638,19&nbsp;€</td><td>89,19&nbsp;€</td></tr>
+  <tr><th scope="row">E-scooter 360</th><td>1&nbsp;990&nbsp;€</td><td>96,38&nbsp;€</td><td>2&nbsp;313,24&nbsp;€</td><td>323,24&nbsp;€</td></tr>
+ </tbody>
+</table>
+</div>
+<p>Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</p>
+
+<h2 id="loa-leasing">LOA et leasing&nbsp;: de quoi parle-t-on&nbsp;?</h2>
+<p>La <strong>location avec option d’achat</strong> (LOA), qu’on appelle souvent leasing, consiste à louer un bien avec la possibilité de l’acheter à la fin du contrat, à un prix fixé dès le départ. La loi l’assimile à un crédit à la consommation&nbsp;: le vendeur doit vous remettre une offre écrite et une fiche d’information, vérifier votre solvabilité, et vous disposez de <strong>14&nbsp;jours pour vous rétracter</strong> après la signature.</p>
+<p>La location longue durée (LLD), elle, est une simple location&nbsp;: vous rendez le bien à la fin, sans option d’achat prévue au contrat.</p>
+
+<h2 id="abonnement">L’abonnement Augment&nbsp;: ce que vous payez vraiment</h2>
+<p>Chez Augment, l’offre s’appelle abonnement. Elle concerne l’<a href="/agaru-ultra">Agaru Ultra</a> et l’<a href="/e-scooter-360">E-scooter 360</a>, pour 12, 24 ou 36&nbsp;mois, avec un acompte au choix. Pour l’Ultra, les réparations sont comprises, et Augment propose une option d’achat en fin d’abonnement ou à tout moment en réglant le solde. Voici le coût total de quelques combinaisons pour l’Agaru Ultra&nbsp;:</p>
+<div class="art-table-wrap">
+<table class="art-table">
+ <caption>Agaru Ultra : coût total selon la formule (relevé augment.eco du 15/11/2026)</caption>
+ <thead><tr><th scope="col">Formule</th><th scope="col">Détail</th><th scope="col">Total payé</th></tr></thead>
+ <tbody>
+  <tr><th scope="row">Achat comptant</th><td>Une fois</td><td><strong>549,00&nbsp;€</strong></td></tr>
+  <tr><th scope="row">Paiement en plusieurs fois</th><td>24 × 26,59&nbsp;€</td><td>638,19&nbsp;€</td></tr>
+  <tr><th scope="row">Abonnement 12 mois</th><td>Acompte 399&nbsp;€ + 12 × 12,95&nbsp;€</td><td>554,40&nbsp;€</td></tr>
+  <tr><th scope="row">Abonnement 24 mois</th><td>Acompte 59&nbsp;€ + 24 × 32,95&nbsp;€</td><td>849,80&nbsp;€</td></tr>
+  <tr><th scope="row">Abonnement 36 mois</th><td>Acompte 59&nbsp;€ + 36 × 29,95&nbsp;€</td><td>1&nbsp;137,20&nbsp;€</td></tr>
+ </tbody>
+</table>
+</div>
+<p>L’abonnement de 12&nbsp;mois avec un gros acompte coûte à peine plus que le comptant, avec l’entretien compris pendant un an. Les formules longues avec un petit acompte coûtent nettement plus, mais lissent le budget et couvrent les réparations pendant toute la durée. Pour l’E-scooter 360, l’abonnement va de 25,90 à 159,90&nbsp;€ par mois selon l’acompte et la durée, sans réparation tout compris.</p>
+
+<h2 id="choisir">Quelle formule choisir&nbsp;?</h2>
+<ul class="dash">
+ <li><strong>Vous avez la somme</strong> et vous gardez votre trottinette longtemps&nbsp;: le comptant.</li>
+ <li><strong>Vous voulez être propriétaire</strong> sans avancer le prix&nbsp;: le paiement en plusieurs fois, en acceptant le coût du crédit.</li>
+ <li><strong>Vous roulez tous les jours</strong> et ne voulez pas gérer les pannes&nbsp;: l’abonnement, idéalement avec un acompte élevé si vous le pouvez.</li>
+ <li><strong>Vous hésitez</strong>&nbsp;: comparez vos propres réglages dans le <a href="/configurateur">simulateur de location</a>.</li>
+</ul>
+<aside class="tip"><p class="tip__t">Pensez à votre employeur</p><p>Une trottinette louée peut être prise en charge en partie par le <a href="/conseils/forfait-mobilites-durables-trottinette-electrique">forfait mobilités durables</a>, jusqu’à 600&nbsp;€ par an sans impôt ni cotisations. De quoi alléger nettement la mensualité.</p></aside>
+''',
+ cta=dict(titre='Calculez votre mensualité', texte='Choisissez le modèle, la durée et l’acompte : le simulateur affiche la mensualité et le coût total, au prix d’augment.eco.',
+          boutons=['<a class="btn btn--primary" href="../configurateur.html">Simuler ma location <span class="arr" aria-hidden="true">→</span></a>',
+                   '<a class="btn btn--secondary" href="louer-ou-acheter-trottinette-electrique.html">Louer ou acheter&nbsp;? <span class="arr" aria-hidden="true">→</span></a>']),
+ faq=[
+  ('Quelle est la différence entre LOA et abonnement ?', 'La LOA est une location assortie d’une option d’achat, encadrée comme un crédit à la consommation. L’abonnement Augment est une location longue durée avec un service de réparation compris et une option d’achat proposée par Augment en fin de contrat.'),
+  ('Le paiement en plusieurs fois est-il un crédit ?', 'Oui. Chez Augment, il passe par un crédit PayPal sur 24 mois au TAEG fixe de 15,99 %. Sur l’Agaru Ultra, le crédit coûte 89,19 € au total.'),
+  ('Peut-on acheter la trottinette à la fin de l’abonnement ?', 'Oui. Augment propose une option d’achat à la fin de l’abonnement, ou à tout moment en réglant le solde restant.'),
+  ('Quelle formule revient le moins cher ?', 'L’achat comptant. Sur l’Agaru Ultra, il coûte 549 €, contre 638,19 € en paiement en plusieurs fois et de 554,40 € à 1 137,20 € en abonnement selon la durée et l’acompte.'),
+  ('A-t-on un délai de rétractation ?', 'Oui pour un crédit ou une LOA : 14 jours après la signature. Augment annonce aussi 14 jours pour changer d’avis après la réception de la commande.'),
+ ],
+ sources=[('Tarifs, financement et abonnement relevés sur augment.eco (15/11/2026)', 'https://augment.eco/fr-fr/agaru-ultra/'),
+          ('LOA et LLD : règles et rétractation, service-public.gouv.fr', 'https://www.service-public.gouv.fr/particuliers/vosdroits/F2437'),
+          ('FAQ forfait mobilités durables, ministère de la Transition écologique', 'https://www.ecologie.gouv.fr/politiques-publiques/faq-forfait-mobilites-durables-fmd')],
+ lies=['louer-ou-acheter-trottinette-electrique', 'forfait-mobilites-durables-trottinette-electrique', 'augment-avis-service-client'],
 ),
 
 ]

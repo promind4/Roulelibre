@@ -470,7 +470,56 @@ def s_train():
                  20, css, f, '.train{transform:translateX(200px)}', road_scroll=False, sun_pos=(1330, 170))
 
 
-SCENES = {'louer-acheter': s_louer_acheter, 'assurance': s_assurance, 'ecologie': s_ecologie, 'scooter-45': s_scooter45, 'volee': s_volee,
+def s_avis():
+    css = '''
+.star{transform-box:fill-box;transform-origin:center;animation:star 3.5s ease-in-out infinite;opacity:.25}
+.star:nth-of-type(2){animation-delay:.25s}.star:nth-of-type(3){animation-delay:.5s}.star:nth-of-type(4){animation-delay:.75s}.star:nth-of-type(5){animation-delay:1s}
+@keyframes star{0%,10%{opacity:.25;transform:scale(.8)}25%,85%{opacity:1;transform:scale(1)}100%{opacity:.25;transform:scale(.8)}}
+.bub{animation:float 4s ease-in-out infinite}.bub2{animation:float 4.6s ease-in-out infinite;animation-delay:-1.5s}
+.wrench{transform-origin:1180px 470px;animation:wrench 2.2s ease-in-out infinite}
+@keyframes wrench{0%,100%{transform:rotate(-18deg)}50%{transform:rotate(18deg)}}
+.heart{transform-origin:1000px 250px;animation:pulse 1.6s ease-in-out infinite}
+'''
+    star = lambda x, y: ('<g class="star"><path d="M%d %d l17 35 l38 5 l-28 26 l7 38 l-34 -18 l-34 18 l7 -38 l-28 -26 l38 -5z" fill="#FFC23D" stroke="#E8941C" stroke-width="5" stroke-linejoin="round"/></g>' % (x, y))
+    f = '''<g class="bub"><rect x="210" y="130" width="560" height="180" rx="40" fill="#FFFFFF"/><path d="M330 306 l-10 60 l60 -58z" fill="#FFFFFF"/>
+%(stars)s</g>
+<g class="bub2"><rect x="880" y="170" width="250" height="150" rx="34" fill="%(TEAL)s"/><path d="M960 316 l-6 46 l46 -44z" fill="%(TEAL)s"/>
+<rect x="912" y="208" width="150" height="14" rx="7" fill="#FFFFFF" opacity=".85"/><rect x="912" y="238" width="186" height="14" rx="7" fill="#FFFFFF" opacity=".6"/><rect x="912" y="268" width="120" height="14" rx="7" fill="#FFFFFF" opacity=".6"/></g>
+<g class="heart"><path d="M1000 282 C952 246 966 208 1000 232 C1034 208 1048 246 1000 282z" fill="%(ACC)s"/></g>
+<g class="wrench"><rect x="1166" y="440" width="28" height="230" rx="14" fill="#8A9096"/><path d="M1140 452 A52 52 0 0 1 1158 372 L1166 412 L1194 412 L1202 372 A52 52 0 0 1 1220 452 Q1180 478 1140 452 Z" fill="#9AA0A6"/><circle cx="1180" cy="640" r="9" fill="#6E747A"/></g>
+%(sh)s%(r)s''' % dict(stars=''.join(star(250 + i * 104, 165) for i in range(5)), TEAL=TEAL, ACC=ACCENT, sh=shadow(620), r=place(kick(shirt='#E9742B', helmet=TEAL, scarf=MUSTARD), 620, 1.0))
+    return scene('avis', 'Illustration animée : des étoiles de notation et des bulles d’avis flottent au-dessus d’une personne qui roule en trottinette électrique, une clé de réparation tourne à côté',
+                 21, css, f, '.star{opacity:1}', sun_pos=(1360, 140), cloud_pts=[(180, 560, .7), (900, 600, .6)])
+
+
+def s_financement():
+    css = '''
+.page{transform-origin:330px 200px;animation:flip 3s ease-in-out infinite}
+@keyframes flip{0%,30%{transform:scaleY(1)}50%{transform:scaleY(-.05)}51%,100%{transform:scaleY(0);opacity:0}}
+.coin{animation:drop 2.4s ease-in infinite;opacity:0}.coin:nth-of-type(2){animation-delay:.8s}.coin:nth-of-type(3){animation-delay:1.6s}
+@keyframes drop{0%{opacity:0;transform:translateY(-120px)}15%{opacity:1}80%{opacity:1;transform:translateY(120px)}100%{opacity:0;transform:translateY(140px)}}
+.pig{transform-origin:1040px 470px;animation:pig 2.4s ease-in-out infinite}
+@keyframes pig{0%,70%,100%{transform:scale(1)}80%{transform:scale(1.05,0.96)}}
+.card{animation:card 5s ease-in-out infinite;transform-origin:700px 330px}
+@keyframes card{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-16px) rotate(-3deg)}}
+'''
+    days = ''.join('<rect x="%d" y="%d" width="34" height="26" rx="6" fill="%s"/>' % (232 + (i % 5) * 42, 250 + (i // 5) * 36, ACCENT if i == 7 else '#EDE6DC') for i in range(15))
+    coin = lambda x, d: ('<g class="coin" style="animation-delay:%ss"><circle cx="%d" cy="300" r="26" fill="#FFC23D" stroke="#E8941C" stroke-width="5"/>%s</g>' % (d, x, txt(x, 311, '€', 30, '#A85A0A')))
+    f = '''<g><rect x="210" y="160" width="240" height="250" rx="26" fill="#FFFFFF"/><rect x="210" y="160" width="240" height="70" rx="26" fill="%(TEAL)s"/><rect x="210" y="200" width="240" height="30" fill="%(TEAL)s"/>
+<rect x="250" y="140" width="16" height="44" rx="8" fill="%(INK)s"/><rect x="394" y="140" width="16" height="44" rx="8" fill="%(INK)s"/>%(days)s</g>
+<g class="page"><rect x="210" y="160" width="240" height="70" rx="26" fill="#3E8C72"/>%(m)s</g>
+<g class="card"><rect x="580" y="260" width="250" height="150" rx="20" fill="%(ACC)s"/><rect x="580" y="296" width="250" height="30" fill="%(INK)s" opacity=".8"/><rect x="606" y="350" width="60" height="38" rx="8" fill="#FFC23D"/><rect x="690" y="362" width="110" height="12" rx="6" fill="#FFFFFF" opacity=".7"/></g>
+%(c1)s%(c2)s%(c3)s
+<g class="pig"><ellipse cx="1040" cy="480" rx="150" ry="110" fill="#FF9BB0"/><circle cx="1170" cy="460" r="46" fill="#FF9BB0"/><ellipse cx="1196" cy="466" rx="22" ry="18" fill="#FF7A98"/>
+<circle cx="1150" cy="438" r="7" fill="%(INK)s"/><path d="M1000 380 l30 -36 l24 40z" fill="#FF7A98"/><rect x="990" y="376" width="90" height="14" rx="7" fill="#C2475F"/>
+<rect x="940" y="570" width="34" height="50" rx="12" fill="#FF7A98"/><rect x="1090" y="570" width="34" height="50" rx="12" fill="#FF7A98"/></g>
+%(sh)s%(r)s''' % dict(TEAL=TEAL, INK=INK, ACC=ACCENT, days=days, m=txt(330, 210, '12 · 24 · 36', 28, '#FFFFFF', 800),
+                      c1=coin(1010, 0), c2=coin(1050, .8), c3=coin(1090, 1.6), sh=shadow(560, 180), r=place(kick(shirt=NAVY, helmet=MUSTARD, scarf=ACCENT), 560, .95))
+    return scene('financement', 'Illustration animée : les pages d’un calendrier tournent, des pièces en euros tombent dans une tirelire et une carte bancaire flotte au-dessus d’une personne en trottinette électrique',
+                 22, css, f, '.coin{opacity:1}', sun_pos=(1360, 140), cloud_pts=[(160, 580, .7), (1300, 600, .6)])
+
+
+SCENES = {'avis': s_avis, 'financement': s_financement, 'louer-acheter': s_louer_acheter, 'assurance': s_assurance, 'ecologie': s_ecologie, 'scooter-45': s_scooter45, 'volee': s_volee,
           'pluie': s_pluie, 'choisir': s_choisir, 'batterie': s_batterie, 'smart-ultra': s_smart_ultra, 'train': s_train}
 
 if __name__ == '__main__':

@@ -116,7 +116,7 @@ ULTRA = dict(
 <p>Bon à savoir&nbsp;: l’abonnement peut être pris en charge en partie par votre employeur grâce au <a href="/conseils/forfait-mobilites-durables-trottinette-electrique">forfait mobilités durables</a>.</p>
 
 <h2 id="avis-clients">Ce qu’en disent les clients et les essais</h2>
-<p>Sur Trustpilot, Augment obtient 4,0 sur 5 sur 5&nbsp;279&nbsp;avis, tous modèles et tous pays confondus. Les clients citent surtout le rapport qualité-prix, la maintenance comprise, la rapidité de livraison, la facilité de pliage et la qualité de l’application et du support.</p>
+<p>Sur Trustpilot, Augment obtient 4,0 sur 5 sur près de 5&nbsp;300&nbsp;avis, tous modèles et tous pays confondus (le détail, critiques comprises, est dans notre <a href="/conseils/augment-avis-service-client">avis sur Augment et son service client</a>). Les clients citent surtout le rapport qualité-prix, la maintenance comprise, la rapidité de livraison, la facilité de pliage et la qualité de l’application et du support.</p>
 <p>Côté essais, le journal La Provence a testé la trottinette d’Augment en conditions réelles. Retrouvez cet essai et les autres sur notre page <a href="/videos">tests en vidéo</a>.</p>
 
 <h2 id="alternatives">Agaru Ultra, Agaru Smart ou E-scooter 360&nbsp;?</h2>
@@ -231,7 +231,7 @@ S360 = dict(
 <p>Le 360 roule à 45&nbsp;km/h&nbsp;: c’est un cyclomoteur, pas une trottinette. Il faut le <strong>permis AM</strong> (l’ancien BSR) ou le <strong>permis B</strong>&nbsp;; les personnes nées avant le 1<sup>er</sup>&nbsp;janvier 1988 en sont dispensées. Il faut aussi une carte grise, une plaque et une assurance de véhicule motorisé, ainsi qu’un casque homologué et des gants. Tout est détaillé dans notre guide du <a href="/conseils/scooter-electrique-pliable-45-km-h">scooter électrique pliable 45&nbsp;km/h</a>.</p>
 
 <h2 id="avis-clients">Ce qu’en disent les clients et les essais</h2>
-<p>Sur Trustpilot, Augment obtient 4,0 sur 5 sur 5&nbsp;279&nbsp;avis, tous modèles et tous pays confondus. Le 360 a d’abord été vendu en Allemagne&nbsp;: la plupart des essais vidéo viennent de la chaîne allemande Scooterhelden, qui s’intéresse à la puissance, au confort, à l’autonomie et au pliage. Retrouvez-les, titres traduits, sur notre page <a href="/videos">tests en vidéo</a>.</p>
+<p>Sur Trustpilot, Augment obtient 4,0 sur 5 sur près de 5&nbsp;300&nbsp;avis, tous modèles et tous pays confondus (le détail, critiques comprises, est dans notre <a href="/conseils/augment-avis-service-client">avis sur Augment et son service client</a>). Le 360 a d’abord été vendu en Allemagne&nbsp;: la plupart des essais vidéo viennent de la chaîne allemande Scooterhelden, qui s’intéresse à la puissance, au confort, à l’autonomie et au pliage. Retrouvez-les, titres traduits, sur notre page <a href="/videos">tests en vidéo</a>.</p>
 
 <h2 id="alternatives">E-scooter 360 ou trottinette Agaru&nbsp;?</h2>
 <p>Si vous roulez surtout sur pistes cyclables, sans permis, ou si vous voulez les réparations comprises, une trottinette <a href="/agaru-ultra">Agaru Ultra</a> coûte beaucoup moins cher. Si vous voulez rouler à 45&nbsp;km/h avec une selle, le 360 n’a pas d’équivalent dans la gamme. Notre article <a href="/conseils/trottinette-ou-scooter-electrique-choisir">trottinette ou scooter électrique</a> vous aide à trancher, et le <a href="/comparateur">comparatif</a> met tous les chiffres côte à côte.</p>
@@ -253,7 +253,7 @@ S360 = dict(
     sources=[
         ('https://augment.eco/fr-fr/augment-360/', 'Fiche E-scooter 360 et tunnel de commande, augment.eco (prix relevés le 15/11/2026)'),
         ('https://www.trustpilot.com/review/augment.eco', 'Avis clients Augment, Trustpilot'),
-        ('https://www.service-public.fr/particuliers/vosdroits/F2829', 'Cyclomoteur : permis et immatriculation, service-public.fr'),
+        ('https://www.service-public.gouv.fr/particuliers/vosdroits/F1113', 'Documents pour circuler avec un deux-roues de 50 cm³ ou moins, service-public.gouv.fr'),
     ],
 )
 
@@ -336,7 +336,7 @@ SMART = dict(
 <p>Tout dépend de vos trajets. Moins de 15&nbsp;km par jour et l’envie d’acheter&nbsp;: la Smart suffit. Plus de 20&nbsp;km par jour, ou l’envie d’un abonnement avec réparations comprises&nbsp;: prenez l’<a href="/agaru-ultra">Agaru Ultra</a>. Nous comparons les deux en détail dans <a href="/conseils/agaru-smart-ou-agaru-ultra-difference">Agaru Smart ou Agaru Ultra&nbsp;: quelle différence&nbsp;?</a></p>
 
 <h2 id="avis-clients">Ce qu’en disent les clients et les essais</h2>
-<p>Sur Trustpilot, Augment obtient 4,0 sur 5 sur 5&nbsp;279&nbsp;avis, tous modèles et tous pays confondus. Les clients citent surtout le rapport qualité-prix, la rapidité de livraison, la facilité de pliage et la qualité de l’application. Le journal La Provence a testé la trottinette d’Augment en conditions réelles&nbsp;: l’essai est sur notre page <a href="/videos">tests en vidéo</a>.</p>
+<p>Sur Trustpilot, Augment obtient 4,0 sur 5 sur près de 5&nbsp;300&nbsp;avis, tous modèles et tous pays confondus (le détail, critiques comprises, est dans notre <a href="/conseils/augment-avis-service-client">avis sur Augment et son service client</a>). Les clients citent surtout le rapport qualité-prix, la rapidité de livraison, la facilité de pliage et la qualité de l’application. Le journal La Provence a testé la trottinette d’Augment en conditions réelles&nbsp;: l’essai est sur notre page <a href="/videos">tests en vidéo</a>.</p>
 ''' % dict(achat=eur(sm['achat']), fin_m=eur(fs['mensualite']), fin_n=fs['mois'], taeg=('%.2f' % (fs['taeg'] * 100)).replace('.', ',') + '&nbsp;%', fin_t=eur(fs['total'])),
     cta_t='L’Agaru Smart vous convient&nbsp;?',
     cta_x='Vérifiez le prix avec vos options, puis commandez sur le site d’Augment.',

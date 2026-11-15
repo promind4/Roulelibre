@@ -4,8 +4,13 @@
   "maj": "2026-11-15",
   "publie": "2026-11-08"
  },
+ "augment-avis-service-client": {
+  "empreinte": "ed05e2b997757be720969edc55f06271854b8d21",
+  "maj": "2026-11-15",
+  "publie": "2026-11-15"
+ },
  "batterie-trottinette-electrique-duree-de-vie": {
-  "empreinte": "8e7ebce6e7dd505e0baac1e39de7d481c8302d32",
+  "empreinte": "4cc0570d050bf7352d6f0df259b5aa2da41cdfa5",
   "maj": "2026-11-15",
   "publie": "2026-11-08"
  },
@@ -25,7 +30,7 @@
   "publie": "2026-11-08"
  },
  "rouler-sous-la-pluie-trottinette-electrique": {
-  "empreinte": "b47ef8c551b1638e54dbd58bf6ba226a170231cd",
+  "empreinte": "ffc8d102d80a5084eb17330bbec92d7eb0d06314",
   "maj": "2026-11-15",
   "publie": "2026-11-08"
  },
@@ -44,13 +49,18 @@
   "maj": "2026-11-15",
   "publie": "2026-11-08"
  },
+ "trottinette-electrique-loa-leasing-paiement-plusieurs-fois": {
+  "empreinte": "0749d35b740a37eaa11e135513a1651339274dab",
+  "maj": "2026-11-15",
+  "publie": "2026-11-15"
+ },
  "trottinette-electrique-volee-que-faire": {
-  "empreinte": "e7b5dfaf4654763b1881207b4e15bd9a75e3cab3",
+  "empreinte": "43ab5c266fd832b784ee5d4efd3928f765255a00",
   "maj": "2026-11-15",
   "publie": "2026-11-08"
  },
  "trottinette-ou-scooter-electrique-choisir": {
-  "empreinte": "2de6ab081ef850bbfe0c25a98636e70b70ad4b55",
+  "empreinte": "a4b4260af36f090ed1fbb4d2fb9ae122b28693e2",
   "maj": "2026-11-15",
   "publie": "2026-11-08"
  }

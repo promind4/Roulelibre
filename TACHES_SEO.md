@@ -49,3 +49,7 @@ Légende : ✅ fait et vérifié · 🔶 fait, action de l'utilisateur à finir 
 | 4.15 | Liens internes depuis le contenu : accueil 2 → 13, vidéos 1 → 13, comparatif 10 → 14 | Moyenne | ✅ |
 | 4.16 | Relevé des prix augment.eco du 15/11 : aucun écart | Moyenne | ✅ |
 | 4.17 | Pages produits /agaru-ultra, /e-scooter-360, /agaru-smart (avis, prix relevés, fiche, FAQ, balisage Product + FAQ) reliées depuis l'accueil, le comparatif et les 11 articles (13 à 15 liens entrants chacune) | Haute | ✅ en local, à pousser |
+| 4.18 | Article « Avis Augment : marque et service client » (Trustpilot détaillé, critiques comprises) + illustration animée | Moyenne | ✅ en local |
+| 4.19 | Guide « LOA, leasing ou paiement en plusieurs fois » (coûts totaux réels) + illustration animée | Moyenne | ✅ en local |
+| 4.20 | Sources externes mortes corrigées (4 liens 404 : help.augment.eco ×2, INRS, Sécurité routière) et 2 URL service-public fausses | Moyenne | ✅ |
+| 4.21 | Nombre d'avis Trustpilot actualisé (5 297) sur l'accueil | Basse | ✅ |
