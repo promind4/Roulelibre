@@ -95,12 +95,24 @@ for _a in ARTICLES:
 def esc(s): return s.replace('&', '&amp;').replace('"', '&quot;')
 def txt(h): return re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', h).replace('&nbsp;', ' ').replace('&amp;', '&')).strip()
 
+def umami_tag():
+    """Balise Umami si tools/data/umami.json contient un website_id (même règle que tools/set_domain.py)."""
+    try:
+        c = json.load(io.open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'umami.json'), encoding='utf-8'))
+    except Exception:
+        return ''
+    if not c.get('website_id'):
+        return ''
+    return ('<script defer src="%s/script.js" data-website-id="%s" data-domains="%s" data-do-not-track="true"></script>' % (
+        c['src'].rstrip('/'), c['website_id'], c.get('domains', 'www.roulelibre.fr'))) + chr(10)
+
+
 def seo_block(url, title, desc, image, kind, ld):
     return ('\n<!-- SEO:START -->\n<link rel="canonical" href="%s">\n<meta property="og:type" content="%s">\n<meta property="og:site_name" content="%s">\n'
             '<meta property="og:locale" content="fr_FR">\n<meta property="og:title" content="%s">\n<meta property="og:description" content="%s">\n'
             '<meta property="og:url" content="%s">\n<meta property="og:image" content="%s">\n<meta name="twitter:card" content="summary_large_image">\n'
-            '<script type="application/ld+json">%s</script>\n<!-- SEO:END -->\n') % (url, kind, esc(NAME), esc(title), esc(desc), url, image,
-            json.dumps(ld, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/'))
+            '<script type="application/ld+json">%s</script>\n%s<!-- SEO:END -->\n') % (url, kind, esc(NAME), esc(title), esc(desc), url, image,
+            json.dumps(ld, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/'), umami_tag())
 
 def page_head(title, desc, block):
     h = re.sub(r'<title>.*?</title>', '<title>%s</title>' % title, head, count=1, flags=re.S)
