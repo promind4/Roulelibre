@@ -62,6 +62,18 @@ PAGES = {
 LABELS = {'a-propos.html': 'Qui sommes-nous', 'comparateur.html': 'Comparatif', 'configurateur.html': 'Simuler sa location', 'videos.html': 'Vidéos',
           'mentions-legales.html': 'Mentions légales', 'confidentialite.html': 'Confidentialité'}
 
+def umami_tag():
+    """Balise Umami (auto-hébergé sur le VPS) : écrite seulement si tools/data/umami.json contient un website_id."""
+    try:
+        c = json.load(io.open(S + 'tools/data/umami.json', encoding='utf-8'))
+    except Exception:
+        return ''
+    if not c.get('website_id'):
+        return ''
+    return ('<script defer src="%s/script.js" data-website-id="%s" data-domains="%s" data-do-not-track="true"></script>' % (
+        c['src'].rstrip('/'), c['website_id'], c.get('domains', 'www.roulelibre.fr'))) + chr(10)
+
+
 def esc(s):
     return s.replace('&', '&amp;').replace('"', '&quot;')
 
@@ -111,6 +123,8 @@ sitemap = []
 for f, (path, kind) in PAGES.items():
     p = S + f
     html = io.open(p, encoding='utf-8').read()
+    if '<!--MESURE-->' in html and umami_tag():
+        html = html.replace('<!--MESURE-->', '<p>Mesure d’audience&nbsp;: le site utilise Umami, un outil de statistiques que nous hébergeons nous-mêmes. Il ne dépose aucun cookie, n’identifie pas les visiteurs et ne transmet aucune donnée à des tiers&nbsp;; il compte seulement les pages vues et les clics sur les liens partenaires.</p>')
     html = re.sub(r'\n?<!-- SEO:START -->.*?<!-- SEO:END -->', '', html, flags=re.S)
     maj = date_page(f, html)
     title = re.sub(r'<[^>]+>', '', re.search(r'<title>(.*?)</title>', html, re.S).group(1)).replace('&nbsp;', ' ').replace('&amp;', '&')
@@ -144,7 +158,7 @@ for f, (path, kind) in PAGES.items():
              '<meta property="og:image:height" content="630">\n'
              '<meta name="twitter:card" content="summary_large_image">\n'
              '<script type="application/ld+json">%s</script>\n'
-             '<!-- SEO:END -->') % (url, kind, esc(NAME), esc(title), esc(desc), url, OG, ld)
+             '%s<!-- SEO:END -->') % (url, kind, esc(NAME), esc(title), esc(desc), url, OG, ld, umami_tag())
     html = html.replace('</head>', block + '\n</head>', 1)
     io.open(p, 'w', encoding='utf-8', newline='').write(html)
     if 'noindex' not in html:

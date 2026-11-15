@@ -1,0 +1,6 @@
+{
+ "src": "https://stats.lespace-libre.fr",
+ "website_id": "",
+ "domains": "www.roulelibre.fr",
+ "note": "Créer le site « Roulelibre » dans Umami (Paramètres > Sites > Ajouter), coller l'identifiant ici dans website_id, puis lancer python tools/set_domain.py"
+}

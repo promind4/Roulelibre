@@ -189,7 +189,7 @@ dict(
   'Le casque est obligatoire hors agglomération, et vivement conseillé en ville.',
  ],
  corps='''
-<h2 id="assurance">L’assurance&nbsp;: obligatoire, et pas chère</h2>
+<h2 id="assurance">Assurance obligatoire, et l’amende si vous n’en avez pas</h2>
 <p>C’est la règle qu’on oublie le plus souvent. Une trottinette électrique est un engin motorisé&nbsp;: comme une voiture ou un scooter, elle doit être couverte par une <strong>assurance responsabilité civile</strong>. Elle paie les dégâts que vous pourriez causer à quelqu’un d’autre. Selon la Sécurité routière, ce type de contrat coûte en général 2 ou 3&nbsp;euros par mois.</p>
 <p>Rouler sans assurance expose à une amende pouvant atteindre <strong>3&nbsp;750&nbsp;€</strong>. Et surtout, en cas d’accident, les frais seraient pour vous.</p>
 <aside class="tip"><p class="tip__t">À ne pas confondre</p><p>La couverture contre le vol proposée par Augment (2,95&nbsp;€/mois) protège votre trottinette contre le vol, la perte et le vandalisme. Elle ne remplace pas la responsabilité civile. Pensez à vérifier votre contrat habitation&nbsp;: certains incluent déjà les engins de déplacement personnels, d’autres non.</p></aside>

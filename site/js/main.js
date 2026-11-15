@@ -140,3 +140,20 @@
 
   if (!read()) show();
 })();
+
+/* Mesure d'audience (Umami, sans cookie) : événements sur les liens partenaires. Sans effet si Umami n'est pas chargé. */
+(function () {
+  'use strict';
+  function produit(href) {
+    var h = decodeURIComponent(href);
+    return /agaru-ultra/.test(h) ? 'agaru-ultra' : /agaru-smart/.test(h) ? 'agaru-smart' : /augment-360|360/.test(h) ? 'escooter-360' : 'autre';
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a || !window.umami || typeof window.umami.track !== 'function') return;
+    var href = a.getAttribute('href') || '';
+    if (/awin1\.com|augment\.eco/.test(href)) {
+      window.umami.track('clic-partenaire', { page: location.pathname, produit: produit(href), texte: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60) });
+    }
+  }, true);
+})();

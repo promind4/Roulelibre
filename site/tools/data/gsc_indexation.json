@@ -1,0 +1,104 @@
+{
+ "https://www.roulelibre.fr/": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-13",
+  true
+ ],
+ "https://www.roulelibre.fr/comparateur": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-09",
+  true
+ ],
+ "https://www.roulelibre.fr/configurateur": [
+  "NEUTRAL",
+  "Google ne reconnaît pas cette URL",
+  "",
+  null
+ ],
+ "https://www.roulelibre.fr/videos": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-10",
+  true
+ ],
+ "https://www.roulelibre.fr/a-propos": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-11",
+  true
+ ],
+ "https://www.roulelibre.fr/conseils/agaru-smart-ou-agaru-ultra-difference": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-11",
+  true
+ ],
+ "https://www.roulelibre.fr/conseils/batterie-trottinette-electrique-duree-de-vie": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-09",
+  true
+ ],
+ "https://www.roulelibre.fr/conseils/forfait-mobilites-durables-trottinette-electrique": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-14",
+  true
+ ],
+ "https://www.roulelibre.fr/conseils": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-09",
+  true
+ ],
+ "https://www.roulelibre.fr/conseils/louer-ou-acheter-trottinette-electrique": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-13",
+  true
+ ],
+ "https://www.roulelibre.fr/conseils/prendre-le-train-avec-sa-trottinette-electrique": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-11",
+  true
+ ],
+ "https://www.roulelibre.fr/conseils/rouler-sous-la-pluie-trottinette-electrique": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-10",
+  true
+ ],
+ "https://www.roulelibre.fr/conseils/scooter-electrique-pliable-45-km-h": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-09",
+  true
+ ],
+ "https://www.roulelibre.fr/conseils/trottinette-electrique-assurance-reglementation": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-12",
+  true
+ ],
+ "https://www.roulelibre.fr/conseils/trottinette-electrique-ecologique": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-12",
+  true
+ ],
+ "https://www.roulelibre.fr/conseils/trottinette-electrique-volee-que-faire": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-12",
+  true
+ ],
+ "https://www.roulelibre.fr/conseils/trottinette-ou-scooter-electrique-choisir": [
+  "PASS",
+  "Envoyée et indexée",
+  "2026-11-10",
+  true
+ ]
+}
