@@ -168,6 +168,7 @@ for a in ARTICLES:
           <p class="art__cta-t">%(cta_t)s</p>
           <p>%(cta_x)s</p>
           <div class="art__cta-btns">%(cta_b)s</div>
+          <p class="art__cta-more">À voir aussi&nbsp;: <a href="/">la location de trottinette électrique Augment</a>, <a href="/comparateur">le comparatif des trois modèles</a> et <a href="/videos">les tests en vidéo</a>.</p>
           <p class="art__cta-note">Les boutons vers augment.eco sont des liens partenaires&nbsp;: <a href="../a-propos.html#financement">comment le site est financé</a>.</p>
         </section>
         <section class="art__faq" aria-labelledby="faq-art"><h2 id="faq-art">Questions fréquentes</h2>%(faq)s</section>

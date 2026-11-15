@@ -311,7 +311,7 @@ dict(
 <p>Dès qu’un véhicule électrique dépasse 25&nbsp;km/h et monte jusqu’à 45&nbsp;km/h, il change de famille&nbsp;: c’est un <strong>cyclomoteur</strong>, catégorie L1e. Les règles des trottinettes ne s’appliquent plus. On passe à celles des scooters 50&nbsp;cm³.</p>
 <p>La bonne nouvelle&nbsp;: à 45&nbsp;km/h, vous roulez dans le trafic, sur la chaussée, sans vous faire doubler par tout le monde. Idéal pour des trajets de 10 à 20&nbsp;km.</p>
 
-<h2 id="permis">Quel permis faut-il&nbsp;?</h2>
+<h2 id="permis">Quel permis pour un scooter 45&nbsp;km/h&nbsp;?</h2>
 <p>Il faut le <strong>permis AM</strong> (l’ancien BSR), accessible dès 14&nbsp;ans après une formation courte, ou le <strong>permis B</strong> si vous conduisez déjà une voiture. Les personnes nées avant le 1<sup>er</sup>&nbsp;janvier 1988 en sont dispensées pour un cyclomoteur.</p>
 
 <h2 id="papiers">Carte grise et assurance</h2>
@@ -575,6 +575,22 @@ dict(
 </ul>
 <p>Ce qui tue prématurément une batterie, ce ne sont pas les kilomètres parcourus, mais les erreurs d’usage : la décharge profonde prolongée et les écarts thermiques extrêmes.</p>
 
+<h2 id="autonomie-temps-de-charge">Autonomie et temps de charge&nbsp;: les chiffres</h2>
+<p>L’autonomie annoncée par un constructeur est mesurée dans de bonnes conditions. Au quotidien, comptez plutôt 70 à 85&nbsp;% de ce chiffre&nbsp;: le poids du conducteur, les montées, le mode de vitesse et la température la font varier.</p>
+<div class="art-table-wrap">
+<table class="art-table">
+ <caption>Autonomie et temps de charge des trottinettes Augment</caption>
+ <thead><tr><th scope="col"></th><th scope="col">Agaru Smart</th><th scope="col">Agaru Ultra</th></tr></thead>
+ <tbody>
+  <tr><th scope="row">Batterie</th><td>499 Wh</td><td>768 Wh</td></tr>
+  <tr><th scope="row">Autonomie constructeur</th><td>Jusqu’à 50 km</td><td>Jusqu’à 70 km</td></tr>
+  <tr><th scope="row">Autonomie au quotidien</th><td>30 à 40 km</td><td>50 à 60 km</td></tr>
+  <tr><th scope="row">Temps de charge (0 à 100&nbsp;%)</th><td>Environ 5 h</td><td>Environ 7 h 30</td></tr>
+ </tbody>
+</table>
+</div>
+<p>En pratique, une recharge de 20 à 80&nbsp;% prend un peu plus de la moitié de ce temps&nbsp;: un soir suffit pour une semaine de trajets courts. Le détail des deux modèles est dans notre comparatif <a href="/conseils/agaru-smart-ou-agaru-ultra-difference">Agaru Smart ou Agaru Ultra</a>.</p>
+
 <h2 id="hiver-froid">Pourquoi l’autonomie s’effondre en hiver&nbsp;?</h2>
 <p>Dès que le thermomètre passe sous la barre des 5 °C, vous constatez que votre jauge de batterie descend plus vite que d’habitude. Ce n’est pas une panne : c’est une propriété physique du lithium.</p>
 <p>Le froid augmente la résistance interne de l’électrolyte liquide au sein des cellules. Les ions lithium se déplacent moins vite, la tension chute plus vite sous l’effort du moteur et la batterie délivre moins d’énergie utile. Vous perdez couramment <strong>20 à 30 % d’autonomie réelle</strong> à 0 °C par rapport à un trajet effectué par 20 °C.</p>
@@ -595,6 +611,7 @@ dict(
  cta=dict(titre='Ne craignez plus la panne de batterie', texte='Avec le service tout compris d’Augment, l’usure de la batterie et les réparations sont incluses pendant toute la durée de votre location.',
           boutons=['<a class="btn btn--primary" href="../comparateur.html#service">Découvrir le service Augment <span class="arr" aria-hidden="true">→</span></a>', lien_partenaire(ULTRA, 'Voir l’Agaru Ultra sur augment.eco')]),
  faq=[
+  ('Combien de temps faut-il pour charger une trottinette électrique ?', 'Comptez environ 5 heures pour une charge complète de l’Agaru Smart (499 Wh) et environ 7 h 30 pour l’Agaru Ultra (768 Wh). Une recharge de 20 à 80 % prend un peu plus de la moitié de ce temps.'),
   ('Peut-on laisser sa trottinette électrique branchée toute la nuit ?', 'Oui, les chargeurs modernes et le boîtier de gestion électronique (BMS) coupent automatiquement le courant une fois la charge complète atteinte. Il reste néanmoins conseillé de débrancher dès que le voyant passe au vert pour éviter les micros-cycles d’entretien.'),
   ('Pourquoi la trottinette avance-t-elle moins vite quand la batterie est faible ?', 'La tension globale du pack diminue au fur et à mesure de la décharge. Le contrôleur réduit la puissance envoyée au moteur pour protéger les cellules contre la sous-tension.'),
   ('Est-il possible d’augmenter la capacité de batterie de son Agaru Smart ?', 'Les châssis de l’Agaru Smart (499 Wh) et de l’Agaru Ultra (768 Wh) sont identiques, mais le pack batterie et le contrôleur sont calibrés en usine. Il n’est pas recommandé de modifier la batterie soi-même sous peine d’annuler les garanties et certifications.'),

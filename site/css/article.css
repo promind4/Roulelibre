@@ -65,6 +65,8 @@
 .art__cta .btn--ink { background: var(--white); color: var(--ink); }
 .art__cta-note { margin-top: 14px !important; font-size: 12.5px; color: #9EA29B !important; }
 .art__cta-note a { color: inherit !important; }
+.art__cta-more { margin-top: 14px !important; font-size: 14.5px; }
+.art__cta-more a { color: #FFFFFF !important; text-decoration: underline; text-underline-offset: 3px; }
 
 .art__faq { margin-top: 2.4em !important; }
 .art__faq h2 { margin-top: 0; margin-bottom: .6em; }
