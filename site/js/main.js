@@ -141,19 +141,94 @@
   if (!read()) show();
 })();
 
-/* Mesure d'audience (Umami, sans cookie) : événements sur les liens partenaires. Sans effet si Umami n'est pas chargé. */
+/* Mesure d'audience (Umami auto-hébergé, sans cookie, anonyme) : parcours détaillé de chaque visite.
+   Chaque événement apparaît dans la fiche de la session (Umami > Sessions) et dans Événements.
+   Sans effet si Umami n'est pas chargé (local, bloqueur, « Do Not Track »). */
 (function () {
   'use strict';
+  function ok() { return window.umami && typeof window.umami.track === 'function'; }
+  function track(nom, data) {
+    if (!ok()) return;
+    data = data || {};
+    data.page = location.pathname;
+    try { window.umami.track(nom, data); } catch (err) { /* jamais bloquant */ }
+  }
+  function texte(el) { return ((el && (el.getAttribute('aria-label') || el.textContent)) || '').replace(/\s+/g, ' ').trim().slice(0, 60); }
+  function zone(el) {
+    if (el.closest('header')) return 'en-tete';
+    if (el.closest('footer')) return 'pied';
+    if (el.closest('[data-cookie]')) return 'bandeau-cookies';
+    var s = el.closest('section[id], section[aria-labelledby], article, aside, main');
+    return s ? (s.id || s.getAttribute('aria-labelledby') || s.tagName.toLowerCase()) : 'page';
+  }
   function produit(href) {
     var h = decodeURIComponent(href);
     return /agaru-ultra/.test(h) ? 'agaru-ultra' : /agaru-smart/.test(h) ? 'agaru-smart' : /augment-360|360/.test(h) ? 'escooter-360' : 'autre';
   }
+
+  // Clics : liens partenaires, vidéos, liens sortants, menu, liens et boutons internes, galerie, cookies
   document.addEventListener('click', function (e) {
-    var a = e.target.closest ? e.target.closest('a[href]') : null;
-    if (!a || !window.umami || typeof window.umami.track !== 'function') return;
-    var href = a.getAttribute('href') || '';
-    if (/awin1\.com|augment\.eco/.test(href)) {
-      window.umami.track('clic-partenaire', { page: location.pathname, produit: produit(href), texte: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60) });
+    var t = e.target.closest ? e.target.closest('a[href], button, summary') : null;
+    if (!t) return;
+    if (t.tagName === 'A') {
+      var href = t.getAttribute('href') || '';
+      if (/awin1\.com|augment\.eco/.test(href)) track('clic-partenaire', { produit: produit(href), texte: texte(t), zone: zone(t) });
+      else if (/youtube\.com|youtu\.be/.test(href)) track('video-ouverte', { titre: texte(t.closest('article, li') || t), lien: href.slice(0, 80) });
+      else if (/^https?:/.test(href) && href.indexOf(location.host) < 0 && href.indexOf('roulelibre.fr') < 0) track('clic-sortant', { domaine: href.split('/')[2], texte: texte(t) });
+      else if (t.closest('nav')) track('clic-menu', { cible: href, texte: texte(t), zone: zone(t) });
+      else track('clic-interne', { cible: href, texte: texte(t), zone: zone(t) });
+      return;
     }
+    if (t.tagName === 'SUMMARY') {
+      var d = t.parentElement;
+      if (d && !d.open) track('faq-ouverte', { question: texte(t) });
+      return;
+    }
+    if (t.hasAttribute('data-cookie-accept')) return track('cookies', { choix: 'accepter' });
+    if (t.hasAttribute('data-cookie-refuse')) return track('cookies', { choix: 'refuser' });
+    if (t.hasAttribute('data-cookie-save')) return track('cookies', { choix: 'personnaliser' });
+    if (t.hasAttribute('data-view') || t.hasAttribute('data-view-prev') || t.hasAttribute('data-view-next')) {
+      var m = document.querySelector('input[name="model"]:checked');
+      return track('galerie-vue', { vue: t.hasAttribute('data-view') ? texte(t) : (t.hasAttribute('data-view-prev') ? 'precedente' : 'suivante'), modele: m ? m.value : '' });
+    }
+    if (t.classList.contains('hotspot') || t.hasAttribute('data-goto')) return track('galerie-point', { point: texte(t) });
+    if (t.hasAttribute('data-m') || t.closest('.videos__filters')) return track('filtre', { valeur: t.getAttribute('data-m') || texte(t), zone: zone(t) });
+    if (t.hasAttribute('data-cookie-open') || t.hasAttribute('data-cookie-customize')) return;
+    track('clic-bouton', { texte: texte(t), zone: zone(t) });
   }, true);
+
+  // Simulateur : chaque choix (modèle, formule, durée, apport, options)
+  document.addEventListener('change', function (e) {
+    var el = e.target;
+    if (!el || !el.closest || !el.closest('main') || el.closest('[data-cookie]')) return;
+    var champ = el.getAttribute('data-opt') || el.name || el.id || 'champ';
+    var valeur = el.type === 'checkbox' ? (el.checked ? 'oui' : 'non') : el.value;
+    track('simulateur-choix', { champ: champ, valeur: String(valeur).slice(0, 40) });
+  }, true);
+
+  // Défilement : 25, 50, 75 et 100 % de la page, une fois chacun
+  var paliers = [25, 50, 75, 100], vus = {};
+  function defil() {
+    var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+    var pct = max > 0 ? Math.round((h.scrollTop || document.body.scrollTop) / max * 100) : 100;
+    paliers.forEach(function (p) { if (pct >= p && !vus[p]) { vus[p] = 1; track('defilement', { seuil: p }); } });
+  }
+  window.addEventListener('scroll', function () { clearTimeout(defil.t); defil.t = setTimeout(defil, 250); }, { passive: true });
+
+  // Temps de lecture réel (onglet visible) : 30 s, 1 min, 2 min, 5 min
+  var actif = 0, envoyes = {};
+  setInterval(function () {
+    if (document.visibilityState !== 'visible') return;
+    actif += 5;
+    [30, 60, 120, 300].forEach(function (s) { if (actif >= s && !envoyes[s]) { envoyes[s] = 1; track('temps-lecture', { secondes: s }); } });
+  }, 5000);
+
+  // Fin d'article atteinte (rubrique Conseils)
+  var fin = document.querySelector('.art__related, .art__sources, footer');
+  if (fin && 'IntersectionObserver' in window && /^\/conseils\/./.test(location.pathname)) {
+    var io = new IntersectionObserver(function (en) {
+      if (en[0].isIntersecting) { track('article-lu-fin', {}); io.disconnect(); }
+    });
+    io.observe(fin);
+  }
 })();

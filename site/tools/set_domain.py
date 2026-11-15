@@ -123,8 +123,8 @@ sitemap = []
 for f, (path, kind) in PAGES.items():
     p = S + f
     html = io.open(p, encoding='utf-8').read()
-    if '<!--MESURE-->' in html and umami_tag():
-        html = html.replace('<!--MESURE-->', '<p>Mesure d’audience&nbsp;: le site utilise Umami, un outil de statistiques que nous hébergeons nous-mêmes. Il ne dépose aucun cookie, n’identifie pas les visiteurs et ne transmet aucune donnée à des tiers&nbsp;; il compte seulement les pages vues et les clics sur les liens partenaires.</p>')
+    if umami_tag() and ('<!--MESURE-->' in html or '<p>Mesure d’audience' in html):
+        html = re.sub(r'<!--MESURE-->|<p>Mesure d’audience.*?</p>', lambda m: '<p>Mesure d’audience&nbsp;: le site utilise Umami, un outil de statistiques que nous hébergeons nous-mêmes. Il ne dépose aucun cookie, n’identifie pas les visiteurs et ne transmet aucune donnée à des tiers&nbsp;; il mesure de façon anonyme les pages vues et l’utilisation du site (clics, défilement, temps de lecture, choix dans le simulateur).</p>', html, count=1)
     html = re.sub(r'\n?<!-- SEO:START -->.*?<!-- SEO:END -->', '', html, flags=re.S)
     maj = date_page(f, html)
     title = re.sub(r'<[^>]+>', '', re.search(r'<title>(.*?)</title>', html, re.S).group(1)).replace('&nbsp;', ' ').replace('&amp;', '&')
