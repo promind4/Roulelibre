@@ -146,7 +146,14 @@
    Sans effet si Umami n'est pas chargé (local, bloqueur, « Do Not Track »). */
 (function () {
   'use strict';
-  function ok() { return window.umami && typeof window.umami.track === 'function'; }
+  // Interrupteur propriétaire : ouvrir n'importe quelle page avec ?umami=off exclut ce navigateur des statistiques (?umami=on le réactive).
+  // Umami lit lui-même la clé « umami.disabled » dans le stockage local.
+  try {
+    var q = /[?&]umami=(on|off)/.exec(location.search);
+    if (q) { if (q[1] === 'off') localStorage.setItem('umami.disabled', '1'); else localStorage.removeItem('umami.disabled'); }
+  } catch (e) { /* stockage indisponible */ }
+  function exclu() { try { return !!localStorage.getItem('umami.disabled'); } catch (e) { return false; } }
+  function ok() { return !exclu() && window.umami && typeof window.umami.track === 'function'; }
   function track(nom, data) {
     if (!ok()) return;
     data = data || {};

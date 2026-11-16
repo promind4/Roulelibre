@@ -13,7 +13,7 @@
  ],
  "https://www.roulelibre.fr/configurateur": [
   "NEUTRAL",
-  "Google ne reconnaît pas cette URL",
+  "Détectée, actuellement non indexée",
   "",
   null
  ],
@@ -29,11 +29,35 @@
   "2026-11-11",
   true
  ],
+ "https://www.roulelibre.fr/agaru-ultra": [
+  "NEUTRAL",
+  "Google ne reconnaît pas cette URL",
+  "",
+  null
+ ],
+ "https://www.roulelibre.fr/e-scooter-360": [
+  "NEUTRAL",
+  "Google ne reconnaît pas cette URL",
+  "",
+  null
+ ],
+ "https://www.roulelibre.fr/agaru-smart": [
+  "NEUTRAL",
+  "Google ne reconnaît pas cette URL",
+  "",
+  null
+ ],
  "https://www.roulelibre.fr/conseils/agaru-smart-ou-agaru-ultra-difference": [
   "PASS",
   "Envoyée et indexée",
   "2026-11-11",
   true
+ ],
+ "https://www.roulelibre.fr/conseils/augment-avis-service-client": [
+  "NEUTRAL",
+  "Google ne reconnaît pas cette URL",
+  "",
+  null
  ],
  "https://www.roulelibre.fr/conseils/batterie-trottinette-electrique-duree-de-vie": [
   "PASS",
@@ -80,7 +104,7 @@
  "https://www.roulelibre.fr/conseils/trottinette-electrique-assurance-reglementation": [
   "PASS",
   "Envoyée et indexée",
-  "2026-11-12",
+  "2026-11-15",
   true
  ],
  "https://www.roulelibre.fr/conseils/trottinette-electrique-ecologique": [
@@ -88,6 +112,12 @@
   "Envoyée et indexée",
   "2026-11-12",
   true
+ ],
+ "https://www.roulelibre.fr/conseils/trottinette-electrique-loa-leasing-paiement-plusieurs-fois": [
+  "NEUTRAL",
+  "Google ne reconnaît pas cette URL",
+  "",
+  null
  ],
  "https://www.roulelibre.fr/conseils/trottinette-electrique-volee-que-faire": [
   "PASS",
