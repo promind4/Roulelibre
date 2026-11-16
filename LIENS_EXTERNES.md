@@ -2,6 +2,8 @@
 
 Objectif : obtenir des mentions et des liens de qualité vers roulelibre.fr, surtout vers les fiches produits et les guides. C'est ce qui manque pour remonter sur « location / abonnement trottinette électrique » (positions 70 à 90).
 
+**Avant tout : lire la charte de chaque forum.** Beaucoup interdisent tout lien vers son propre site, même utile (c'est le cas d'Esprit Roue). Sans autorisation écrite de la charte ou d'un modérateur, on ne poste pas de lien : on lit, on apprend, on écrit ensuite l'article qui répond.
+
 **Règles d'or**
 - Jamais de lien affilié (AWIN) sur un forum, un réseau ou un commentaire : seulement des liens vers vos pages, et seulement quand ils répondent vraiment à une question.
 - Toujours dire que vous éditez le site (« je tiens roulelibre.fr »). La transparence évite le bannissement et inspire confiance.
@@ -25,14 +27,14 @@ Objectif : obtenir des mentions et des liens de qualité vers roulelibre.fr, sur
 
 | Communauté | Public | Comment s'y prendre | Lien |
 |---|---|---|---|
-| **Esprit Roue** | Le plus grand forum français de trottinettes et engins électriques, très actif | Présentation dans la section des nouveaux, puis réponses aux questions « quelle trottinette pour mon usage », « location ou achat », « assurance ». Citer un guide seulement quand il répond précisément | https://www.espritroue.fr |
-| **Dealabs, groupe Trottinettes électriques** | Grosse audience acheteuse, sensible au prix | Participer aux discussions sur Augment (il existe un fil sur la location longue durée Augment). Pas de lien affilié (interdit), vos comparatifs de coût total sont utiles ici | https://www.dealabs.com/groupe/trottinettes-electriques |
-| **Forum Cleanrider** | Passionnés de deux-roues électriques (forum lancé par le média Cleanrider) | Mêmes règles que ci-dessus ; bon endroit pour les sujets scooter 45 km/h et E-scooter 360 | https://www.cleanrider.com/actus/cleanrider-lance-son-forum-de-discussion/ |
+| **Esprit Roue** | Forum le plus actif, mais **sa charte interdit toute publicité, tout démarchage et toute publicité comparative ou nominative**, sauf réponse à une demande expresse d'un autre utilisateur | **Ne pas y poster de lien vers le site.** Usage possible : lecture seule pour repérer les questions et objections réelles des acheteurs, qui nourrissent nos articles et nos FAQ | https://www.espritroue.fr |
+| **Dealabs, groupe Trottinettes électriques** (charte à lire avant tout : le lien vers son propre site y est souvent restreint) | Grosse audience acheteuse, sensible au prix | Participer aux discussions sur Augment (il existe un fil sur la location longue durée Augment). Pas de lien affilié (interdit), vos comparatifs de coût total sont utiles ici | https://www.dealabs.com/groupe/trottinettes-electriques |
+| **Forum Cleanrider** (charte à lire avant tout) | Passionnés de deux-roues électriques (forum lancé par le média Cleanrider) | Mêmes règles que ci-dessus ; bon endroit pour les sujets scooter 45 km/h et E-scooter 360 | https://www.cleanrider.com/actus/cleanrider-lance-son-forum-de-discussion/ |
 | **Reddit** (r/france, r/vosfinances, communautés trottinette) | Jeune, très méfiant envers l'autopromotion | Uniquement des réponses détaillées ; lire les règles de chaque communauté avant de poster. Existence et activité des communautés trottinette à vérifier sur place | https://www.reddit.com |
 | **Quora en français** | Questions de débutants (« faut-il une assurance », « louer ou acheter ») | Réponses complètes de 150 à 300 mots, lien vers le guide correspondant en fin de réponse | https://fr.quora.com |
 | **Groupes Facebook** locaux (« Trottinette électrique Bordeaux », « Vélotaf / mobilité douce + ville ») | Utilisateurs réels, questions pratiques | Rechercher par ville dans Facebook ; partager les guides pratiques (pluie, vol, train), pas les fiches produits | — |
 
-**Sujets qui marchent sur les forums** (vos pages qui répondent) :
+**Sujets récurrents à traiter dans nos articles** (repérés sur les forums, sans y poster de lien) :
 - Louer ou acheter, combien ça coûte vraiment → `/conseils/louer-ou-acheter-trottinette-electrique`, `/conseils/trottinette-electrique-loa-leasing-paiement-plusieurs-fois`
 - Assurance et amendes → `/conseils/trottinette-electrique-assurance-reglementation`
 - Forfait mobilités durables → `/conseils/forfait-mobilites-durables-trottinette-electrique`
@@ -40,6 +42,15 @@ Objectif : obtenir des mentions et des liens de qualité vers roulelibre.fr, sur
 - Trottinette dans le train → `/conseils/prendre-le-train-avec-sa-trottinette-electrique`
 
 ---
+
+## 2 bis. Ce qui reste solide quand les forums sont fermés
+
+Les liens qui comptent le plus sont ceux qu'on *obtient* et non ceux qu'on dépose : un média ou un créateur qui vous cite parce que votre contenu lui est utile.
+
+- **Répondre à des demandes expresses** : les chartes autorisent généralement de répondre à une question directe. Si quelqu'un demande « où trouver une comparaison ? », la réponse avec le lien est alors admise (à vérifier au cas par cas).
+- **Votre propre territoire** : chaîne YouTube, Instagram, Facebook, Pinterest. Vous y publiez librement vos guides, avec le lien du site dans le profil.
+- **Documents officiels et institutionnels** : pages de ressources de collectivités ou d'associations d'usagers qui listent des guides utiles (réglementation, forfait mobilités).
+- **Créateurs et médias** (ci-dessous) : une demande directe et courte, sans insister.
 
 ## 3. Médias, blogs et YouTubeurs (mentions et liens « éditoriaux »)
 
